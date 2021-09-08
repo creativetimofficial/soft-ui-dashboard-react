@@ -78,6 +78,11 @@ export default makeStyles(
         marginTop: 0,
       },
 
+      sidenav_footer: {
+        margin: `auto ${pxToRem(16)} ${pxToRem(16)}`,
+        paddingTop: pxToRem(16),
+      },
+
       sidenav_open: {
         transform: "translateX(0)",
         transition: transitions.create("transform", {
