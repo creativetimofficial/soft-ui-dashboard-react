@@ -50,7 +50,7 @@ function DefaultNavbarLink({ icon, name, route, light }) {
           fontWeight="regular"
           textColor={light ? "white" : "dark"}
           textTransform="capitalize"
-          customClass="w-100"
+          customClass="w-100 line-height-0"
         >
           &nbsp;{name}
         </SuiTypography>
