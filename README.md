@@ -2,7 +2,7 @@
 
 ![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/soft-ui-dashboard-material-ui.svg)](https://github.com/creativetimofficial/soft-ui-dashboard-material-ui/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/soft-ui-dashboard-material-ui.svg)](https://github.com/creativetimofficial/soft-ui-dashboard-material-ui/issues?q=is%3Aissue+is%3Aclosed)
 
-![Image](https://s3.amazonaws.com/creativetim_bucket/products/499/original/soft-ui-dashboard-pro-material-ui.jpg)
+![Image](https://s3.amazonaws.com/creativetim_bucket/products/500/original/soft-ui-dashboard-material-ui.jpg)
 
 Start your Development with an Innovative Admin Template for Material-UI and React. If you like the look & feel of the hottest design trend right now, Soft UI, you will fall in love with this dashboard! It features a huge number of components built to fit together and look amazing.
 
@@ -60,7 +60,7 @@ Let us know your thoughts below. And good luck with development!
 | Material-UI |
 | ----------- |
 
-| [![Soft UI Dashboard Material-UI](https://s3.amazonaws.com/creativetim_bucket/products/499/original/soft-ui-dashboard-pro-material-ui.jpg)](http://demos.creative-tim.com/soft-ui-dashboard-pro-material-ui/#/dashboards/default?ref=readme-sudmui)
+| [![Soft UI Dashboard Material-UI](https://s3.amazonaws.com/creativetim_bucket/products/500/thumb/soft-ui-dashboard-material-ui.jpg)](http://demos.creative-tim.com/soft-ui-dashboard-pro-material-ui/#/dashboards/default?ref=readme-sudmui)
 
 ## Demo
 
