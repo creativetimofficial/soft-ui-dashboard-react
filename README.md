@@ -92,7 +92,7 @@ The documentation for the Soft UI Dashboard is hosted at our [website](https://w
 Within the download you'll find the following directories and files:
 
 ```
-soft-ui-dashboard-pro
+soft-ui-dashboard-material-ui
     ├── public
     │   ├── apple-icon.png
     │   ├── favicon.png
@@ -165,7 +165,7 @@ At present, we officially aim to support the last two versions of the following 
 
 ## Resources
 
-- [Live Preview](https://demos.creative-tim.com/soft-ui-dashboard-pro-material-ui/#/dashboards/default?ref=readme-sudmui)
+- [Live Preview](https://demos.creative-tim.com/soft-ui-dashboard-pro-material-ui/#/dashboard?ref=readme-sudmui)
 - [Buy Page](https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui?ref=readme-sudmui)
 - Documentation is [here](https://www.creative-tim.com/learning-lab/material-ui/overview/soft-ui-dashboard?ref=readme-sudmui)
 - [License Agreement](https://www.creative-tim.com/license?ref=readme-sudmui)

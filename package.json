@@ -23,6 +23,7 @@
     "chart.js": "^3.4.1",
     "chroma-js": "^2.1.2",
     "clsx": "^1.1.1",
+    "gh-pages": "^3.2.3",
     "jss": "^10.7.1",
     "jss-rtl": "^0.3.0",
     "prop-types": "^15.7.2",
@@ -41,7 +42,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
