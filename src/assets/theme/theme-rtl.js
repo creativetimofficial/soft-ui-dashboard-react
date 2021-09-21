@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -13,11 +13,10 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// @material-ui core components
-import { createTheme } from "@material-ui/core/styles";
-import Fade from "@material-ui/core/Fade";
+// @mui material components
+import { createTheme } from "@mui/material/styles";
 
-// Soft UI Dashboard Material-UI base styles
+// Soft UI Dashboard PRO React base styles
 import colors from "assets/theme/base/colors";
 import breakpoints from "assets/theme/base/breakpoints";
 import typography from "assets/theme/base/typography";
@@ -25,14 +24,14 @@ import boxShadows from "assets/theme/base/boxShadows";
 import borders from "assets/theme/base/borders";
 import globals from "assets/theme/base/globals";
 
-// Soft UI Dashboard Material-UI helper functions
+// Soft UI Dashboard PRO React helper functions
 import boxShadow from "assets/theme/functions/boxShadow";
 import hexToRgb from "assets/theme/functions/hexToRgb";
 import linearGradient from "assets/theme/functions/linearGradient";
 import pxToRem from "assets/theme/functions/pxToRem";
 import rgba from "assets/theme/functions/rgba";
 
-// Soft UI Dashboard Material-UI components base styles for @material-ui core components
+// Soft UI Dashboard PRO React components base styles for @mui material components
 import sidenav from "assets/theme/components/sidenav";
 import list from "assets/theme/components/list";
 import listItem from "assets/theme/components/list/listItem";
@@ -63,13 +62,19 @@ import step from "assets/theme/components/stepper/step";
 import stepConnector from "assets/theme/components/stepper/stepConnector";
 import stepLabel from "assets/theme/components/stepper/stepLabel";
 import stepIcon from "assets/theme/components/stepper/stepIcon";
-import select from "assets/theme/components/select";
-import FormControlLabel from "assets/theme/components/form/formControlLabel";
-import FormLabel from "assets/theme/components/form/formLabel";
+import select from "assets/theme/components/form/select";
+import formControlLabel from "assets/theme/components/form/formControlLabel";
+import formLabel from "assets/theme/components/form/formLabel";
 import checkbox from "assets/theme/components/form/checkbox";
 import radio from "assets/theme/components/form/radio";
+import autocomplete from "assets/theme/components/form/autocomplete";
+import input from "assets/theme/components/form/input";
 import container from "assets/theme/components/container";
 import popover from "assets/theme/components/popover";
+import buttonBase from "assets/theme/components/buttonBase";
+import icon from "assets/theme/components/icon";
+import svgIcon from "assets/theme/components/svgIcon";
+import link from "assets/theme/components/link";
 
 export default createTheme({
   direction: "rtl",
@@ -86,8 +91,13 @@ export default createTheme({
     rgba,
   },
 
-  overrides: {
-    MuiCssBaseline: { "@global": { ...globals, ...container } },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        ...globals,
+        ...container,
+      },
+    },
     MuiDrawer: { ...sidenav },
     MuiList: { ...list },
     MuiListItem: { ...listItem },
@@ -119,22 +129,18 @@ export default createTheme({
     MuiStepLabel: { ...stepLabel },
     MuiStepIcon: { ...stepIcon },
     MuiSelect: { ...select },
-    MuiFormControlLabel: { ...FormControlLabel },
-    MuiFormLabel: { ...FormLabel },
+    MuiFormControlLabel: { ...formControlLabel },
+    MuiFormLabel: { ...formLabel },
     MuiCheckbox: { ...checkbox },
     MuiRadio: { ...radio },
+    MuiAutocomplete: { ...autocomplete },
+    MuiInput: { ...input },
+    MuiOutlinedInput: { ...input },
+    MuiFilledInput: { ...input },
     MuiPopover: { ...popover },
-  },
-
-  props: {
-    MuiButtonBase: { disableRipple: true },
-    MuiListItem: { disableGutters: true },
-    MuiLink: { underline: "none" },
-    MuiSwitch: { disableRipple: true },
-    MuiAppBar: { color: "transparent" },
-    MuiIcon: { fontSize: "inherit", color: "inherit" },
-    MuiSvgIcon: { fontSize: "inherit", color: "inherit" },
-    MuiTooltip: { arrow: true, TransitionComponent: Fade },
-    MuiMenu: { disableAutoFocusItem: true },
+    MuiButtonBase: { ...buttonBase },
+    MuiIcon: { ...icon },
+    MuiSvgIcon: { ...svgIcon },
+    MuiLink: { ...link },
   },
 });

@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -16,14 +16,14 @@ Coded by www.creative-tim.com
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import Grid from "@material-ui/core/Grid";
+// @mui material components
+import Grid from "@mui/material/Grid";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Soft UI Dashboard Material-UI example components
+// Soft UI Dashboard React example components
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import PageLayout from "examples/LayoutContainers/PageLayout";
 
@@ -33,7 +33,7 @@ import Footer from "layouts/authentication/components/Footer";
 // Custom styles for the BaiseLayout
 import styles from "layouts/authentication/components/BasicLayout/styles";
 
-// Soft UI Dashboard Material-UI page layout routes
+// Soft UI Dashboard React page layout routes
 import routes from "routes";
 
 function BasicLayout({ title, description, image, children }) {

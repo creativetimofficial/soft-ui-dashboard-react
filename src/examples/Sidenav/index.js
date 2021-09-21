@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -24,19 +24,19 @@ import PropTypes from "prop-types";
 // clsx is a utility for constructing className strings conditionally
 import clsx from "clsx";
 
-// @material-ui core components
-import Drawer from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
-import Icon from "@material-ui/core/Icon";
-import Link from "@material-ui/core/Link";
+// @mui material components
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import Icon from "@mui/material/Icon";
+import Link from "@mui/material/Link";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiButton from "components/SuiButton";
 
-// Soft UI Dashboard Material-UI example components
+// Soft UI Dashboard React example components
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
 import SidenavCard from "examples/Sidenav/SidenavCard";
 
@@ -46,7 +46,7 @@ import styles from "examples/Sidenav/styles/sidenav";
 // Images
 import SoftUILogo from "assets/images/logo-ct.png";
 
-// Soft UI Dashboard Material-UI context
+// Soft UI Dashboard React context
 import { useSoftUIController } from "context";
 
 function Sidenav({ routes, ...rest }) {
@@ -151,7 +151,7 @@ function Sidenav({ routes, ...rest }) {
           onClick={closeSizenav}
         >
           <SuiTypography variant="h6" textColor="secondary">
-            <Icon className="material-icons-round font-bold">close</Icon>
+            <Icon className="font-bold">close</Icon>
           </SuiTypography>
         </SuiBox>
         <NavLink to="/">
@@ -175,7 +175,7 @@ function Sidenav({ routes, ...rest }) {
         <SuiBox mt={2}>
           <SuiButton
             component="a"
-            href="https://creative-tim.com/product/soft-ui-dashboard-pro-material-ui"
+            href="https://creative-tim.com/product/soft-ui-dashboard-pro-react"
             target="_blank"
             rel="noreferrer"
             variant="gradient"

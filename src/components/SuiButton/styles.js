@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -13,8 +13,8 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// @material-ui core components
-import { makeStyles } from "@material-ui/core/styles";
+// @mui material components
+import { makeStyles } from "@mui/styles";
 
 export default makeStyles(({ palette, functions }) => {
   const { white, black, text, transparent, gradients } = palette;
@@ -76,6 +76,7 @@ export default makeStyles(({ palette, functions }) => {
 
       "&:hover": {
         backgroundColor: transparent.main,
+        borderColor: ({ buttonColor }) => palette[buttonColor].main,
       },
 
       "&:focus:not(:hover)": {
@@ -120,6 +121,10 @@ export default makeStyles(({ palette, functions }) => {
         }
 
         return color;
+      },
+
+      "&:focus:not(:hover)": {
+        boxShadow: "none",
       },
 
       "&:disabled": {

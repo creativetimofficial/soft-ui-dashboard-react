@@ -1,14 +1,14 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard PRO React - v1.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
- =========================================================
+=========================================================
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
@@ -21,8 +21,8 @@ import PropTypes from "prop-types";
 // clsx is a utility for constructing className strings conditionally
 import clsx from "clsx";
 
-// @material-ui core components
-import Button from "@material-ui/core/Button";
+// @mui material components
+import Button from "@mui/material/Button";
 
 // Custom styles for SuiButton
 import styles from "components/SuiButton/styles";
@@ -30,11 +30,11 @@ import styles from "components/SuiButton/styles";
 const SuiButton = forwardRef(
   ({ buttonColor, variant, size, circular, iconOnly, children, customClass, ...rest }, ref) => {
     const classes = styles({ buttonColor, variant, size, iconOnly });
-
     return (
       <Button
         {...rest}
         ref={ref}
+        color="primary"
         variant={variant === "gradient" ? "contained" : variant}
         size={size}
         className={clsx(classes[variant], customClass, {

@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -13,7 +13,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 // react-router components
 import { Route, Switch, Redirect, useLocation } from "react-router-dom";
@@ -24,52 +24,56 @@ import { create } from "jss";
 // jss-rtl components
 import rtl from "jss-rtl";
 
-// @material-ui core components
-import { ThemeProvider, StylesProvider, jssPreset } from "@material-ui/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Icon from "@material-ui/core/Icon";
+// @mui style components
+import { StylesProvider, jssPreset } from "@mui/styles";
 
-// Soft UI Dashboard Material-UI components
+// @mui material components
+import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import Icon from "@mui/material/Icon";
+
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 
-// Soft UI Dashboard Material-UI example components
+// Soft UI Dashboard PRO React example components
 import Sidenav from "examples/Sidenav";
 import Configurator from "examples/Configurator";
 
-// Soft UI Dashboard Material-UI themes
+// Soft UI Dashboard PRO React themes
 import theme from "assets/theme";
 import themeRTL from "assets/theme/theme-rtl";
 
-// Soft UI Dashboard Material-UI routes
+// Soft UI Dashboard PRO React routes
 import routes from "routes";
 
-// Soft UI Dashboard Material-UI contexts
+// Soft UI Dashboard PRO React contexts
 import { useSoftUIController } from "context";
+
+import rtlPlugin from "stylis-plugin-rtl";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
 
 export default function App() {
   const [controller, dispatch] = useSoftUIController();
-  const { miniSidenav, direction, layout, openConfigurator } = controller;
-  const [onMouseEnter, setOnMouseEnter] = useState(false);
+  const { direction, layout, openConfigurator } = controller;
+  const [rtlCache, setRtlCache] = useState(null);
   const { pathname } = useLocation();
 
   // JSS presets for the rtl
-  const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
+  const jss = create({
+    plugins: [...jssPreset().plugins, rtl()],
+  });
 
-  // Open sidenav when mouse enter on mini sidenav
-  const handleOnMouseEnter = () => {
-    if (miniSidenav && !onMouseEnter) {
-      dispatch({ type: "MINI_SIDENAV", value: false });
-      setOnMouseEnter(true);
-    }
-  };
+  // Cache for the rtl
+  useMemo(() => {
+    const cacheRtl = createCache({
+      key: "rtl",
+      prepend: true,
+      stylisPlugins: [rtlPlugin],
+    });
 
-  // Close sidenav when mouse leave mini sidenav
-  const handleOnMouseLeave = () => {
-    if (onMouseEnter) {
-      dispatch({ type: "MINI_SIDENAV", value: true });
-      setOnMouseEnter(false);
-    }
-  };
+    setRtlCache(cacheRtl);
+  }, []);
 
   // Change the openConfigurator state
   const handleConfiguratorOpen = () => {
@@ -117,23 +121,40 @@ export default function App() {
       customClass="cursor-pointer"
       onClick={handleConfiguratorOpen}
     >
-      <Icon className="material-icons-round text-dark" fontSize="medium">
+      <Icon className=" text-dark" fontSize="default">
         settings
       </Icon>
     </SuiBox>
   );
 
   return direction === "rtl" ? (
-    <StylesProvider jss={jss}>
-      <ThemeProvider theme={themeRTL}>
+    <CacheProvider value={rtlCache}>
+      <StylesProvider jss={jss}>
+        <ThemeProvider theme={themeRTL}>
+          <CssBaseline />
+          {layout === "dashboard" && (
+            <>
+              <Sidenav routes={routes} />
+              <Configurator />
+              {configsButton}
+            </>
+          )}
+          {layout === "vr" && <Configurator />}
+          <Switch>
+            {getRoutes(routes)}
+            <Redirect from="*" to="/dashboard" />
+          </Switch>
+        </ThemeProvider>
+      </StylesProvider>
+    </CacheProvider>
+  ) : (
+    // </CacheProvider>
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         {layout === "dashboard" && (
           <>
-            <Sidenav
-              routes={routes}
-              onMouseEnter={handleOnMouseEnter}
-              onMouseLeave={handleOnMouseLeave}
-            />
+            <Sidenav routes={routes} />
             <Configurator />
             {configsButton}
           </>
@@ -141,29 +162,9 @@ export default function App() {
         {layout === "vr" && <Configurator />}
         <Switch>
           {getRoutes(routes)}
-          <Redirect from="*" to="/dashboards/default" />
+          <Redirect from="*" to="/dashboard" />
         </Switch>
       </ThemeProvider>
-    </StylesProvider>
-  ) : (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      {layout === "dashboard" && (
-        <>
-          <Sidenav
-            routes={routes}
-            onMouseEnter={handleOnMouseEnter}
-            onMouseLeave={handleOnMouseLeave}
-          />
-          <Configurator />
-          {configsButton}
-        </>
-      )}
-      {layout === "vr" && <Configurator />}
-      <Switch>
-        {getRoutes(routes)}
-        <Redirect from="*" to="/dashboard" />
-      </Switch>
-    </ThemeProvider>
+    </StyledEngineProvider>
   );
 }

@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -19,11 +19,11 @@ import { Link } from "react-router-dom";
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import { Breadcrumbs as MuiBreadcrumbs } from "@material-ui/core";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import { Breadcrumbs as MuiBreadcrumbs } from "@mui/material";
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
@@ -45,7 +45,7 @@ function Breadcrumbs({ icon, title, route, light }) {
             opacity={light ? 0.8 : 0.5}
             customClass="line-height-0"
           >
-            <Icon className="material-icons-round">{icon}</Icon>
+            <Icon>{icon}</Icon>
           </SuiTypography>
         </Link>
         {routes.map((el) => (

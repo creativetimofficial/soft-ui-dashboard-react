@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -19,11 +19,11 @@ import { Link } from "react-router-dom";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import MuiLink from "@material-ui/core/Link";
+// @mui material components
+import Card from "@mui/material/Card";
+import MuiLink from "@mui/material/Link";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiAvatar from "components/SuiAvatar";

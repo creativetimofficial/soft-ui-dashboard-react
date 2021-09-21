@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -23,10 +23,10 @@ import { createContext, useContext, useReducer } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// The Soft UI Dashboard Material-UI main context
+// The Soft UI Dashboard React main context
 const SoftUI = createContext();
 
-// Soft UI Dashboard Material-UI reducer
+// Soft UI Dashboard React reducer
 function reducer(state, action) {
   switch (action.type) {
     case "MINI_SIDENAV": {
@@ -59,7 +59,7 @@ function reducer(state, action) {
   }
 }
 
-// Soft UI Dashboard Material-UI context provider
+// Soft UI Dashboard React context provider
 function SoftUIControllerProvider({ children }) {
   const initialState = {
     miniSidenav: false,
@@ -77,7 +77,7 @@ function SoftUIControllerProvider({ children }) {
   return <SoftUI.Provider value={[controller, dispatch]}>{children}</SoftUI.Provider>;
 }
 
-// Soft UI Dashboard Material-UI custom hook for using context
+// Soft UI Dashboard React custom hook for using context
 function useSoftUIController() {
   return useContext(SoftUI);
 }

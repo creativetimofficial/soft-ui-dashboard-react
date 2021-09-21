@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -13,17 +13,17 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// @material-ui core components
-import Grid from "@material-ui/core/Grid";
+// @mui material components
+import Grid from "@mui/material/Grid";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import MasterCard from "examples/Cards/MasterCard";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
-// Soft UI Dashboard Material-UI example components
+// Soft UI Dashboard React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 

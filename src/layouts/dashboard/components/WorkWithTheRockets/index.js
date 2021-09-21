@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -13,11 +13,11 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
@@ -51,7 +51,7 @@ function WorkWithTheRockets() {
             customClass={classes.workWithTheRockets_button}
           >
             Read More
-            <Icon className="material-icons-round font-bold">arrow_forward</Icon>
+            <Icon className="font-bold">arrow_forward</Icon>
           </SuiTypography>
         </SuiBox>
       </SuiBox>

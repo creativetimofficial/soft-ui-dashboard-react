@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -19,13 +19,13 @@ import { Link } from "react-router-dom";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
-import Icon from "@material-ui/core/Icon";
-import MuiLink from "@material-ui/core/Link";
+// @mui material components
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Icon from "@mui/material/Icon";
+import MuiLink from "@mui/material/Link";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
@@ -79,7 +79,7 @@ function TransparentBlogCard({ image, title, description, action }) {
               component="span"
             >
               {action.label}
-              <Icon className="material-icons-round font-bold">arrow_forward</Icon>
+              <Icon className="font-bold">arrow_forward</Icon>
             </SuiTypography>
           </Link>
         ) : (
@@ -96,7 +96,7 @@ function TransparentBlogCard({ image, title, description, action }) {
               component="span"
             >
               {action.label}
-              <Icon className="material-icons-round font-bold">arrow_forward</Icon>
+              <Icon className="font-bold">arrow_forward</Icon>
             </SuiTypography>
           </MuiLink>
         )}

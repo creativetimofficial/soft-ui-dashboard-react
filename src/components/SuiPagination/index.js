@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -18,7 +18,7 @@ import { forwardRef, createContext, useContext } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiButton from "components/SuiButton";
 

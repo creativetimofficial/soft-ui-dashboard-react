@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -13,9 +13,9 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO Material-UI components
 import SuiBox from "components/SuiBox";
@@ -34,7 +34,7 @@ function OrdersOverview() {
         <SuiBox mt={1} mb={2}>
           <SuiTypography variant="button" textColor="text" fontWeight="regular">
             <SuiTypography display="inline" variant="body2" verticalAlign="middle">
-              <Icon className="material-icons-round font-bold text-success">arrow_upward</Icon>
+              <Icon className="font-bold text-success">arrow_upward</Icon>
             </SuiTypography>
             &nbsp;
             <SuiTypography variant="button" textColor="text" fontWeight="medium">

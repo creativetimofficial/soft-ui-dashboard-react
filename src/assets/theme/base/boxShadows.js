@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -14,15 +14,15 @@ Coded by www.creative-tim.com
 */
 
 /**
- * The base box-shadow styles for the Soft UI Dashboard Material-UI.
+ * The base box-shadow styles for the Soft UI Dashboard PRO Material.
  * You can add new box-shadow using this file.
- * You can customized the box-shadow for the entire Soft UI Dashboard Material-UI using thie file.
+ * You can customized the box-shadow for the entire Soft UI Dashboard PRO Material using thie file.
  */
 
-// Soft UI Dashboard Material-UI Base Styles
+// Soft UI Dashboard PRO React Base Styles
 import colors from "assets/theme/base/colors";
 
-// Soft UI Dashboard Material-UI Helper Functions
+// Soft UI Dashboard PRO React Helper Functions
 import boxShadow from "assets/theme/functions/boxShadow";
 
 const { black, white, info, inputColors, tabs } = colors;

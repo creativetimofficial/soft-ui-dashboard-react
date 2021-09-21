@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -13,11 +13,11 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// Soft UI Dashboard Material-UI Base Styles
+// Soft UI Dashboard PRO React Base Styles
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 
-// Soft UI Dashboard Material-UI Helper Functions
+// Soft UI Dashboard PRO React Helper Functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { transparent, info, secondary, grey } = colors;
@@ -51,21 +51,25 @@ export default {
       color: grey[600],
       boxShadow: "none",
     },
+
+    "& .material-icons, .material-icons-round, svg, span": {
+      fontSize: `${pxToRem(16)} !important`,
+    },
   },
 
   small: {
     fontSize: size.xs,
 
-    "& .material-icons, span": {
-      fontSize: pxToRem(12),
+    "& .material-icons, .material-icons-round, svg, span": {
+      fontSize: `${pxToRem(12)} !important`,
     },
   },
 
   large: {
     fontSize: size.sm,
 
-    "& .material-icons, span": {
-      fontSize: pxToRem(22),
+    "& .material-icons, .material-icons-round, svg, span": {
+      fontSize: `${pxToRem(22)} !important`,
     },
   },
 

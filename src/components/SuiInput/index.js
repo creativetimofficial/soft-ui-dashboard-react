@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -21,17 +21,17 @@ import PropTypes from "prop-types";
 // clsx is a utility for constructing className strings conditionally
 import clsx from "clsx";
 
-// @material-ui core components
-import InputBase from "@material-ui/core/InputBase";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import InputBase from "@mui/material/InputBase";
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 
 // Custom styles for SuiInput
 import styles from "components/SuiInput/styles";
 
-// Soft UI Dashboard Material-UI contexts
+// Soft UI Dashboard PRO React contexts
 import { useSoftUIController } from "context";
 
 const SuiInput = forwardRef(
@@ -44,8 +44,8 @@ const SuiInput = forwardRef(
     if (withIcon.icon && withIcon.direction === "left") {
       template = (
         <SuiBox ref={ref} customClass={clsx(classes.suiInputIcon, customClass)}>
-          <SuiBox customClass={classes.suiInputIcon_Right}>
-            <Icon className={`material-icons-round ${classes.suiInputIcon_icon}`} fontSize="small">
+          <SuiBox customClass={classes.suiInputIcon_right}>
+            <Icon className={classes.suiInputIcon_icon} fontSize="small">
               {withIcon.icon}
             </Icon>
           </SuiBox>
@@ -82,8 +82,8 @@ const SuiInput = forwardRef(
               multiline: classes.suiInput_multiline,
             }}
           />
-          <SuiBox customClass={classes.suiInputIcon_Right}>
-            <Icon className={`material-icons-round ${classes.suiInputIcon_icon}`} fontSize="small">
+          <SuiBox customClass={classes.suiInputIcon_right}>
+            <Icon className={classes.suiInputIcon_icon} fontSize="small">
               {withIcon.icon}
             </Icon>
           </SuiBox>

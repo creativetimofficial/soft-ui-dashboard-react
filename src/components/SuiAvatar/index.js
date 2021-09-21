@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -21,8 +21,8 @@ import clsx from "clsx";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import Avatar from "@material-ui/core/Avatar";
+// @mui material components
+import Avatar from "@mui/material/Avatar";
 
 // Custom styles for SuiAvatar
 import styles from "components/SuiAvatar/styles";
