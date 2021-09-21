@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -16,12 +16,12 @@ Coded by www.creative-tim.com
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Grid from "@material-ui/core/Grid";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 

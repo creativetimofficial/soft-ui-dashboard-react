@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -13,8 +13,8 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// @material-ui core components
-import { makeStyles } from "@material-ui/core/styles";
+// @mui material components
+import { makeStyles } from "@mui/styles";
 
 export default makeStyles(
   ({ palette, boxShadows, functions, transitions, breakpoints, borders, typography }) => {
@@ -110,8 +110,8 @@ export default makeStyles(
       navbar_icon_button: {
         padding: `0 ${pxToRem(6)}`,
 
-        "& .material-icons": {
-          fontSize: size.regular,
+        "& .material-icons, .material-icons-round": {
+          fontSize: `${size.regular} !important`,
         },
 
         "& .MuiTypography-root": {
@@ -134,7 +134,7 @@ export default makeStyles(
       },
 
       navbar_input: {
-        "& .material-icons": {
+        "& .material-icons, .material-icons-round": {
           color: text.main,
         },
       },

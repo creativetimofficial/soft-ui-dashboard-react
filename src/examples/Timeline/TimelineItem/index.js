@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -16,10 +16,10 @@ Coded by www.creative-tim.com
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiBadge from "components/SuiBadge";
@@ -49,7 +49,7 @@ function TimelineItem({ color, icon, title, dateTime, description, badges, lastI
   return (
     <SuiBox customClass={classes.timelineItem}>
       <SuiBox customClass={classes.timelineItem_iconBox}>
-        <Icon className={`material-icons-round ${classes.timelineItem_icon}`}>{icon}</Icon>
+        <Icon className={classes.timelineItem_icon}>{icon}</Icon>
       </SuiBox>
       <SuiBox ml={5.75} pt={description ? 0.7 : 0.5} lineHeight={0} maxWidth="30rem">
         <SuiTypography variant="button" fontWeight="medium" textColor={isDark ? "white" : "dark"}>

@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -18,11 +18,11 @@ import { useState } from "react";
 // react-router-dom components
 import { Link } from "react-router-dom";
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Checkbox from "@material-ui/core/Checkbox";
+// @mui material components
+import Card from "@mui/material/Card";
+import Checkbox from "@mui/material/Checkbox";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiInput from "components/SuiInput";

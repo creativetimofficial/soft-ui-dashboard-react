@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -21,19 +21,19 @@ import GitHubButton from "react-github-btn";
 // clsx is a utility for constructing className strings conditionally
 import clsx from "clsx";
 
-// @material-ui core components
-import Drawer from "@material-ui/core/Drawer";
-import Divider from "@material-ui/core/Divider";
-import Switch from "@material-ui/core/Switch";
-import IconButton from "@material-ui/core/IconButton";
-import Link from "@material-ui/core/Link";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Drawer from "@mui/material/Drawer";
+import Divider from "@mui/material/Divider";
+import Switch from "@mui/material/Switch";
+import IconButton from "@mui/material/IconButton";
+import Link from "@mui/material/Link";
+import Icon from "@mui/material/Icon";
 
-// @material-ui icons
-import TwitterIcon from "@material-ui/icons/Twitter";
-import FacebookIcon from "@material-ui/icons/Facebook";
+// @mui icons
+import TwitterIcon from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiButton from "components/SuiButton";
@@ -41,7 +41,7 @@ import SuiButton from "components/SuiButton";
 // Custom styles for the Configurator
 import styles from "examples/Configurator/styles";
 
-// Soft UI Dashboard Material-UI context
+// Soft UI Dashboard React context
 import { useSoftUIController } from "context";
 
 function Configurator() {
@@ -110,7 +110,7 @@ function Configurator() {
         </SuiBox>
 
         <Icon
-          className={`material-icons-round font-bold ${classes.configurator_close_icon}`}
+          className={`font-bold ${classes.configurator_close_icon}`}
           onClick={handleCloseConfigurator}
         >
           close
@@ -175,7 +175,7 @@ function Configurator() {
           <SuiBox mb={2}>
             <SuiButton
               component={Link}
-              href="https://www.creative-tim.com/product/soft-ui-dashboard-material-ui"
+              href="https://www.creative-tim.com/product/soft-ui-dashboard-react"
               target="_blank"
               rel="noreferrer"
               buttonColor="dark"
@@ -187,7 +187,7 @@ function Configurator() {
           </SuiBox>
           <SuiButton
             component={Link}
-            href="https://www.creative-tim.com/learning-lab/material-ui/quick-start/soft-ui-dashboard"
+            href="https://www.creative-tim.com/learning-lab/react/quick-start/soft-ui-dashboard"
             target="_blank"
             rel="noreferrer"
             buttonColor="dark"
@@ -199,11 +199,11 @@ function Configurator() {
         </SuiBox>
         <SuiBox display="flex" justifyContent="center">
           <GitHubButton
-            href="https://github.com/creativetimofficial/soft-ui-dashboard-material-ui"
+            href="https://github.com/creativetimofficial/soft-ui-dashboard-react"
             data-icon="octicon-star"
             data-size="large"
             data-show-count="true"
-            aria-label="Star creativetimofficial/soft-ui-dashboard-material-ui on GitHub"
+            aria-label="Star creativetimofficial/soft-ui-dashboard-react on GitHub"
           >
             Star
           </GitHubButton>
@@ -217,7 +217,7 @@ function Configurator() {
             <SuiBox mr={1.5}>
               <SuiButton
                 component={Link}
-                href="//twitter.com/intent/tweet?text=Check%20Soft%20UI%20Dashboard%20%20Material-UI%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard-pro-material"
+                href="//twitter.com/intent/tweet?text=Check%20Soft%20UI%20Dashboard%20%20React%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard-react"
                 target="_blank"
                 rel="noreferrer"
                 buttonColor="dark"
@@ -228,7 +228,7 @@ function Configurator() {
             </SuiBox>
             <SuiButton
               component={Link}
-              href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/soft-ui-dashboard-material-ui"
+              href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/soft-ui-dashboard-react"
               target="_blank"
               rel="noreferrer"
               buttonColor="dark"

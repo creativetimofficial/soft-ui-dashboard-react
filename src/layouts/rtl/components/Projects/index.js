@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -15,13 +15,13 @@ Coded by www.creative-tim.com
 
 import { useState } from "react";
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Icon from "@material-ui/core/Icon";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+// @mui material components
+import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
@@ -46,7 +46,10 @@ function Projects() {
     <Menu
       id="simple-menu"
       anchorEl={menu}
-      getContentAnchorEl={null}
+      anchorOrigin={{
+        vertical: "top",
+        horizontal: "left",
+      }}
       transformOrigin={{
         vertical: "top",
         horizontal: "left",
@@ -68,18 +71,14 @@ function Projects() {
             المشاريع
           </SuiTypography>
           <SuiBox display="flex" alignItems="center" lineHeight={0}>
-            <Icon className="material-icons-round font-bold text-info">done</Icon>
+            <Icon className="font-bold text-info">done</Icon>
             <SuiTypography variant="button" fontWeight="regular" textColor="text">
               &nbsp;<strong>30 انتهى</strong> هذا الشهر
             </SuiTypography>
           </SuiBox>
         </SuiBox>
         <SuiBox color="text" px={2}>
-          <Icon
-            className="material-icons-round cursor-pointer font-bold"
-            fontSize="small"
-            onClick={openMenu}
-          >
+          <Icon className="cursor-pointer font-bold" fontSize="small" onClick={openMenu}>
             more_vert
           </Icon>
         </SuiBox>

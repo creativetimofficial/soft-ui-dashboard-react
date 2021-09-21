@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -19,17 +19,17 @@ import { Link } from "react-router-dom";
 // prop-types is library for typechecking of props
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Divider from "@material-ui/core/Divider";
-import Tooltip from "@material-ui/core/Tooltip";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Card from "@mui/material/Card";
+import Divider from "@mui/material/Divider";
+import Tooltip from "@mui/material/Tooltip";
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Soft UI Dashboard Material-UI base styles
+// Soft UI Dashboard React base styles
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 
@@ -92,12 +92,12 @@ function ProfileInfoCard({ title, description, info, social, action }) {
         </SuiTypography>
         <SuiTypography component={Link} to={action.route} variant="body2" textColor="secondary">
           <Tooltip title={action.tooltip} placement="top">
-            <Icon className="material-icons-round">edit</Icon>
+            <Icon>edit</Icon>
           </Tooltip>
         </SuiTypography>
       </SuiBox>
       <SuiBox p={2}>
-        <SuiBox mb={2} lineHeight={1.5}>
+        <SuiBox mb={2} lineHeight={1.25}>
           <SuiTypography variant="button" textColor="text" fontWeight="regular">
             {description}
           </SuiTypography>

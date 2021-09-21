@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -15,11 +15,11 @@ Coded by www.creative-tim.com
 
 import { useState } from "react";
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Switch from "@material-ui/core/Switch";
+// @mui material components
+import Card from "@mui/material/Card";
+import Switch from "@mui/material/Switch";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
@@ -38,7 +38,7 @@ function PlatformSettings() {
           platform settings
         </SuiTypography>
       </SuiBox>
-      <SuiBox pt={1.5} pb={2} px={2}>
+      <SuiBox pt={1.5} pb={2} px={2} lineHeight={1.25}>
         <SuiTypography
           variant="caption"
           fontWeight="bold"

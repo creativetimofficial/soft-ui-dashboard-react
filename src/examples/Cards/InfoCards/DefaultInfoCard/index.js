@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -16,12 +16,12 @@ Coded by www.creative-tim.com
 // prop-types is library for typechecking of props
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Divider from "@material-ui/core/Divider";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Card from "@mui/material/Card";
+import Divider from "@mui/material/Divider";
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
@@ -41,12 +41,10 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
           borderRadius="lg"
           backgroundGradient
         >
-          <Icon className="material-icons-round" fontSize="medium">
-            {icon}
-          </Icon>
+          <Icon fontSize="medium">{icon}</Icon>
         </SuiBox>
       </SuiBox>
-      <SuiBox pb={2} px={2} textAlign="center">
+      <SuiBox pb={2} px={2} textAlign="center" lineHeight={1}>
         <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}
         </SuiTypography>

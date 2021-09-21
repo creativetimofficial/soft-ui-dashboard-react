@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -21,8 +21,8 @@ import PropTypes from "prop-types";
 // clsx is a utility for constructing className strings conditionally
 import clsx from "clsx";
 
-// @material-ui core components
-import Badge from "@material-ui/core/Badge";
+// @mui material components
+import Badge from "@mui/material/Badge";
 
 // Custom styles for the SuiBadge
 import styles from "components/SuiBadge/styles";

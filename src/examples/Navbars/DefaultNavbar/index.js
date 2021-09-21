@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -21,20 +21,20 @@ import { Link } from "react-router-dom";
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import Container from "@material-ui/core/Container";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Container from "@mui/material/Container";
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiButton from "components/SuiButton";
 
-// Soft UI Dashboard Material-UI example components
+// Soft UI Dashboard React example components
 import DefaultNavbarLink from "examples/Navbars/DefaultNavbar/DefaultNavbarLink";
 import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMobile";
 
-// Soft UI Dashboard Material-UI base styles
+// Soft UI Dashboard React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
 // Custom styles for DashboardNavbar
@@ -140,9 +140,7 @@ function DefaultNavbar({ transparent, light, action }) {
           customClass="cursor-pointer"
           onClick={openMobileNavbar}
         >
-          <Icon className="material-icons-round" fontSize="medium">
-            {mobileNavbar ? "close" : "menu"}
-          </Icon>
+          <Icon fontSize="medium">{mobileNavbar ? "close" : "menu"}</Icon>
         </SuiBox>
       </SuiBox>
       {mobileView && (

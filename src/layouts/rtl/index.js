@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -15,15 +15,15 @@ Coded by www.creative-tim.com
 
 import { useEffect } from "react";
 
-// @material-ui core components
-import Grid from "@material-ui/core/Grid";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Grid from "@mui/material/Grid";
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Soft UI Dashboard Material-UI example components
+// Soft UI Dashboard React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
@@ -31,7 +31,7 @@ import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCar
 import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
 import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
 
-// Soft UI Dashboard Material-UI base styles
+// Soft UI Dashboard React base styles
 import typography from "assets/theme/base/typography";
 
 // RTL layout components
@@ -40,7 +40,7 @@ import WorkWithTheRockets from "layouts/rtl/components/WorkWithTheRockets";
 import Projects from "layouts/rtl/components/Projects";
 import OrderOverview from "layouts/rtl/components/OrderOverview";
 
-// Soft UI Dashboard Material-UI contexts
+// Soft UI Dashboard React contexts
 import { useSoftUIController } from "context";
 
 // Data
@@ -63,7 +63,7 @@ function RTL() {
     <DashboardLayout>
       <DashboardNavbar />
       <SuiBox py={3}>
-        <SuiBox mb={1.5}>
+        <SuiBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6} xl={3}>
               <MiniStatisticsCard
@@ -102,7 +102,7 @@ function RTL() {
             </Grid>
           </Grid>
         </SuiBox>
-        <SuiBox mb={1.5}>
+        <SuiBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={7}>
               <BuildByDevelopers />
@@ -112,7 +112,7 @@ function RTL() {
             </Grid>
           </Grid>
         </SuiBox>
-        <SuiBox mb={1.5}>
+        <SuiBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={5}>
               <ReportsBarChart
@@ -132,7 +132,7 @@ function RTL() {
                 description={
                   <SuiBox display="flex" alignItems="center">
                     <SuiBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
-                      <Icon className="material-icons-round font-bold">arrow_upward</Icon>
+                      <Icon className="font-bold">arrow_upward</Icon>
                     </SuiBox>
                     <SuiTypography variant="button" textColor="text" fontWeight="medium">
                       4% أكثر في عام{" "}

@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -13,18 +13,18 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Grid from "@material-ui/core/Grid";
-import Icon from "@material-ui/core/Icon";
-import Tooltip from "@material-ui/core/Tooltip";
+// @mui material components
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
+import Icon from "@mui/material/Icon";
+import Tooltip from "@mui/material/Tooltip";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiButton from "components/SuiButton";
 
-// Soft UI Dashboard Material-UI base styles
+// Soft UI Dashboard React base styles
 import borders from "assets/theme/base/borders";
 
 // Images
@@ -41,7 +41,7 @@ function PaymentMethod() {
           Payment Method
         </SuiTypography>
         <SuiButton variant="gradient" buttonColor="dark">
-          <Icon className="material-icons-round font-bold">add</Icon>
+          <Icon className="font-bold">add</Icon>
           &nbsp;add new card
         </SuiButton>
       </SuiBox>
@@ -62,7 +62,7 @@ function PaymentMethod() {
               </SuiTypography>
               <SuiBox ml="auto" lineHeight={0}>
                 <Tooltip title="Edit Card" placement="top">
-                  <Icon className="material-icons-round cursor-pointer" fontSize="small">
+                  <Icon className="cursor-pointer" fontSize="small">
                     edit
                   </Icon>
                 </Tooltip>
@@ -84,7 +84,7 @@ function PaymentMethod() {
               </SuiTypography>
               <SuiBox ml="auto" lineHeight={0}>
                 <Tooltip title="Edit Card" placement="top">
-                  <Icon className="material-icons-round cursor-pointer" fontSize="small">
+                  <Icon className="cursor-pointer" fontSize="small">
                     edit
                   </Icon>
                 </Tooltip>

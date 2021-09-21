@@ -1,22 +1,26 @@
 {
-  "name": "soft-ui-dashboard-material-ui",
-  "version": "1.0.0",
+  "name": "soft-ui-dashboard-react",
+  "version": "2.0.0",
   "private": true,
   "author": "Creative Tim",
   "license": "See license in https://www.creative-tim.com/license",
   "description": "Material UI version of Soft UI Dashboard by Creative Tim",
-  "homepage": "https://demos.creative-tim.com/soft-ui-dashboard-material-ui/#/dashboard",
+  "homepage": "https://demos.creative-tim.com/soft-ui-dashboard-react/#/dashboard",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/soft-ui-dashboard-material-ui/issues"
+    "url": "https://github.com/creativetimofficial/soft-ui-dashboard-react/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/soft-ui-dashboard-material-ui.git"
+    "url": "git+https://github.com/creativetimofficial/soft-ui-dashboard-react.git"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.4",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/styles": "^4.11.4",
+    "@emotion/cache": "^11.4.0",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.0",
+    "@mui/material": "^5.0.0",
+    "@mui/styled-engine": "^5.0.0",
+    "@mui/styles": "^5.0.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -34,6 +38,8 @@
     "react-github-btn": "^1.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "stylis": "^4.0.10",
+    "stylis-plugin-rtl": "^2.1.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

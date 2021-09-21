@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -19,11 +19,11 @@ import PropTypes from "prop-types";
 // clsx is a utility for constructing className strings conditionally
 import clsx from "clsx";
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
@@ -49,7 +49,7 @@ function PlaceholderCard({ icon, title, hasBorder, outlined }) {
         p={3}
       >
         <SuiBox color="secondary" mb={0.5}>
-          <Icon fontSize="medium" className="material-icons-round font-bold">
+          <Icon fontSize="medium" className="font-bold">
             {icon}
           </Icon>
         </SuiBox>

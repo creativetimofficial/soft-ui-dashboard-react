@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -16,10 +16,10 @@ Coded by www.creative-tim.com
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
@@ -34,7 +34,7 @@ function Invoice({ date, id, price, noGutter }) {
       pr={1}
       mb={noGutter ? 0 : 1}
     >
-      <SuiBox lineHeight={1.45}>
+      <SuiBox lineHeight={1}>
         <SuiTypography display="block" variant="button" fontWeight="medium">
           {date}
         </SuiTypography>

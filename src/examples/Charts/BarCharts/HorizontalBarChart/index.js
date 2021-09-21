@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -21,17 +21,17 @@ import PropTypes from "prop-types";
 // react-chartjs-2 components
 import { Bar } from "react-chartjs-2";
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
+// @mui material components
+import Card from "@mui/material/Card";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
 // HorizontalBarChart configurations
 import configs from "examples/Charts/BarCharts/HorizontalBarChart/configs";
 
-// Soft UI Dashboard Material-UI base styles
+// Soft UI Dashboard React base styles
 import colors from "assets/theme/base/colors";
 
 function HorizontalBarChart({ title, description, height, chart }) {

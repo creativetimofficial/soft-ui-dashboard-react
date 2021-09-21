@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -13,12 +13,12 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Icon from "@material-ui/core/Icon";
-import Tooltip from "@material-ui/core/Tooltip";
+// @mui material components
+import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
+import Tooltip from "@mui/material/Tooltip";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
@@ -49,7 +49,7 @@ function TodoCard() {
         </SuiBox>
         <Tooltip title="Show More" placement="top" className="cursor-pointer">
           <SuiBox textAlign="center" py={0.5} lineHeight={0}>
-            <Icon className="material-icons-round font-bold text-white" fontSize="medium">
+            <Icon className="font-bold text-white" fontSize="medium">
               keyboard_arrow_down
             </Icon>
           </SuiBox>

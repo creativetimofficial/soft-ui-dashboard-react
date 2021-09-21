@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -21,26 +21,26 @@ import { useLocation, Link } from "react-router-dom";
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Menu from "@material-ui/core/Menu";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiInput from "components/SuiInput";
 
-// Soft UI Dashboard Material-UI example components
+// Soft UI Dashboard React example components
 import Breadcrumbs from "examples/Breadcrumbs";
 import NotificationItem from "examples/NotificationItem";
 
 // Custom styles for DashboardNavbar
 import styles from "examples/Navbars/DashboardNavbar/styles";
 
-// Soft UI Dashboard Material-UI context
+// Soft UI Dashboard React context
 import { useSoftUIController } from "context";
 
 // Images
@@ -154,9 +154,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
             >
               <Link to="/authentication/sign-in/basic">
                 <IconButton className={classes.navbar_icon_button}>
-                  <Icon className={`material-icons-round ${light ? "text-white" : "text-dark"}`}>
-                    account_circle
-                  </Icon>
+                  <Icon className={light ? "text-white" : "text-dark"}>account_circle</Icon>
                   <SuiTypography
                     variant="button"
                     fontWeight="medium"
@@ -172,14 +170,14 @@ function DashboardNavbar({ absolute, light, isMini }) {
                 className={classes.navbar_mobile_menu}
                 onClick={handleMiniSidenav}
               >
-                <Icon className="material-icons-round">{miniSidenav ? "menu_open" : "menu"}</Icon>
+                <Icon>{miniSidenav ? "menu_open" : "menu"}</Icon>
               </IconButton>
               <IconButton
                 color="inherit"
                 className={classes.navbar_icon_button}
                 onClick={handleConfiguratorOpen}
               >
-                <Icon className="material-icons-round">settings</Icon>
+                <Icon>settings</Icon>
               </IconButton>
               <IconButton
                 color="inherit"
@@ -189,7 +187,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
                 variant="contained"
                 onClick={handleOpenMenu}
               >
-                <Icon className="material-icons-round">notifications</Icon>
+                <Icon>notifications</Icon>
               </IconButton>
               {renderMenu()}
             </SuiBox>

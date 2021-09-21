@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -15,27 +15,27 @@ Coded by www.creative-tim.com
 
 import { useState, useEffect } from "react";
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Grid from "@material-ui/core/Grid";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+// @mui material components
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
+import AppBar from "@mui/material/AppBar";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiAvatar from "components/SuiAvatar";
 
-// Soft UI Dashboard Material-UI example components
+// Soft UI Dashboard PRO React example components
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 
-// Soft UI Dashboard Material-UI icons
+// Soft UI Dashboard PRO React icons
 import Cube from "examples/Icons/Cube";
 import Document from "examples/Icons/Document";
 import Settings from "examples/Icons/Settings";
 
-// Soft UI Dashboard Material-UI base styles
+// Soft UI Dashboard PRO React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
 // Custom styles for Header
@@ -87,7 +87,7 @@ function Header() {
             />
           </Grid>
           <Grid item>
-            <SuiBox height="100%" mt={0.5}>
+            <SuiBox height="100%" mt={0.5} lineHeight={1}>
               <SuiTypography variant="h5" fontWeight="medium">
                 Alex Thompson
               </SuiTypography>

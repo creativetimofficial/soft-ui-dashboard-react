@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard Material-UI - v1.0.0
+* Soft UI Dashboard React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -19,11 +19,11 @@ import { Link } from "react-router-dom";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// @material-ui core components
-import Card from "@material-ui/core/Card";
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiBadge from "components/SuiBadge";
@@ -45,7 +45,7 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
         mr={2}
       >
         <SuiTypography variant="button" textColor="white" customClass="line-height-0">
-          <Icon className="material-icons-round font-bold">{includes ? "done" : "remove"}</Icon>
+          <Icon className="font-bold">{includes ? "done" : "remove"}</Icon>
         </SuiTypography>
       </SuiBox>
       <SuiTypography variant="body2" textColor="text">
@@ -85,7 +85,7 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
               fullWidth
             >
               {action.label}&nbsp;
-              <Icon className="material-icons-round font-bold">arrow_forward</Icon>
+              <Icon className="font-bold">arrow_forward</Icon>
             </SuiButton>
           </SuiBox>
         ) : (
@@ -100,7 +100,7 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
               fullWidth
             >
               {action.label}&nbsp;
-              <Icon className="material-icons-round font-bold">arrow_forward</Icon>
+              <Icon className="font-bold">arrow_forward</Icon>
             </SuiButton>
           </SuiBox>
         )}

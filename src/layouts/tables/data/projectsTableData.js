@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-// @material-ui core components
-import Icon from "@material-ui/core/Icon";
+// @mui material components
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiProgress from "components/SuiProgress";
@@ -29,7 +29,7 @@ function Completion({ value, color }) {
 }
 
 const action = (
-  <Icon className="material-icons-round font-bold text-secondary cursor-pointer" fontSize="small">
+  <Icon className="font-bold text-secondary cursor-pointer" fontSize="small">
     more_vert
   </Icon>
 );

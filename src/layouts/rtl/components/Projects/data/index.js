@@ -1,7 +1,7 @@
-// @material-ui core components
-import Tooltip from "@material-ui/core/Tooltip";
+// @mui material components
+import Tooltip from "@mui/material/Tooltip";
 
-// Soft UI Dashboard Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiAvatar from "components/SuiAvatar";
