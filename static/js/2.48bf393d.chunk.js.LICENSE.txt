@@ -25,24 +25,16 @@ object-assign
  */
 
 /*!
- * Chart.js v3.5.1
+ * Chart.js v3.4.1
  * https://www.chartjs.org
  * (c) 2021 Chart.js Contributors
  * Released under the MIT License
  */
 
 /*!
- * github-buttons v2.19.0
+ * github-buttons v2.20.0
  * (c) 2021 なつき
  * @license BSD-2-Clause
- */
-
-/**
- * A better abstraction over CSS.
- *
- * @copyright Oleg Isonen (Slobodskoi) / Isonen 2014-present
- * @website https://github.com/cssinjs/jss
- * @license MIT
  */
 
 /**
@@ -102,7 +94,7 @@ object-assign
  * @preserve
  */
 
-/** @license MUI v5.0.0
+/** @license MUI v5.2.0
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
