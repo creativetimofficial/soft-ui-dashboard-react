@@ -1,5 +1,47 @@
 # Change Log
 
+## [3.0.0] 2021-11-23
+
+### Bug fixing
+
+### Major style changes
+
+- Migration from JSS to MUI `styled` api, emotion and `sx` prop.
+- The `box-shadow`, `border-radius` and `typography` `regular` size renamed to `md` for theme
+- The `backgroundColor` prop renamed to `bgColor` for components
+- The `boxShadow` prop renamed to `shadow` for components
+- SuiBox `backgroundGradient` prop replaced with `variant: ["contained", "gradient"]`
+- SuiButton `buttonColor` prop renamed to `color`
+- SuiBadge `size` prop updated to ["xs", "sm", "md", "lg"]
+- SuiInput `withIcon` prop renamed to `icon`
+- SuiProgress `gradient` prop replaced with `variant: ["contained", "gradient"]`
+- SuiTypography `textColor` prop renamed to `color`
+- Sidenav is more dynamic now, color, brand, brandName props are added
+
+### Deleted components
+
+### Added components
+
+### Deleted dependencies
+
+```
+- jss
+- jss-rtl
+- @mui/styles
+```
+
+### Added dependencies
+
+### Updated dependencies
+
+```
+@mui/icons-material                5.0.0     →     5.1.1
+@mui/material                      5.0.0     →     5.1.1
+@mui/styled-engine                 5.0.0     →     5.1.1
+```
+
+### Warning
+
 ## [2.0.0] 2021-09-21
 
 ### Bug fixing
