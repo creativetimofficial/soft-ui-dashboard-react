@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -17,33 +17,21 @@ Coded by www.creative-tim.com
 import Card from "@mui/material/Card";
 import Tooltip from "@mui/material/Tooltip";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
 function Emails() {
   return (
     <Card>
-      <SuiBox
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        p={3}
-        lineHeight={1}
-      >
-        <SuiTypography variant="body2" textColor="text">
+      <SuiBox display="flex" justifyContent="space-between" p={3} lineHeight={1}>
+        <SuiTypography variant="body2" color="text">
           Emails (21)
         </SuiTypography>
         <Tooltip title="Check your emails" placement="top">
-          <SuiTypography
-            component="a"
-            href="#"
-            variant="body2"
-            fontWeight="regular"
-            customClass="link"
-          >
-            Check
-          </SuiTypography>
+          <SuiBox component="a" href="#">
+            <SuiTypography variant="body2">Check</SuiTypography>
+          </SuiBox>
         </Tooltip>
       </SuiBox>
     </Card>

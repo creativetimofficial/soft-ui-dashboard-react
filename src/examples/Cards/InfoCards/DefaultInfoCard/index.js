@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -21,7 +21,7 @@ import Card from "@mui/material/Card";
 import Divider from "@mui/material/Divider";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
@@ -33,23 +33,23 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
           display="grid"
           justifyContent="center"
           alignItems="center"
-          backgroundColor={color}
+          bgColor={color}
           color="white"
           width="4rem"
           height="4rem"
-          boxShadow="regular"
+          shadow="md"
           borderRadius="lg"
-          backgroundGradient
+          variant="gradient"
         >
-          <Icon fontSize="medium">{icon}</Icon>
+          <Icon fontSize="default">{icon}</Icon>
         </SuiBox>
       </SuiBox>
-      <SuiBox pb={2} px={2} textAlign="center" lineHeight={1}>
+      <SuiBox pb={2} px={2} textAlign="center" lineHeight={1.25}>
         <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}
         </SuiTypography>
         {description && (
-          <SuiTypography variant="caption" textColor="text" fontWeight="regular">
+          <SuiTypography variant="caption" color="text" fontWeight="regular">
             {description}
           </SuiTypography>
         )}

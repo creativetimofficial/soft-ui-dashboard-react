@@ -39,12 +39,7 @@ function PlatformSettings() {
         </SuiTypography>
       </SuiBox>
       <SuiBox pt={1.5} pb={2} px={2} lineHeight={1.25}>
-        <SuiTypography
-          variant="caption"
-          fontWeight="bold"
-          textColor="text"
-          textTransform="uppercase"
-        >
+        <SuiTypography variant="caption" fontWeight="bold" color="text" textTransform="uppercase">
           account
         </SuiTypography>
         <SuiBox display="flex" py={1} mb={0.25}>
@@ -52,7 +47,7 @@ function PlatformSettings() {
             <Switch checked={followsMe} onChange={() => setFollowsMe(!followsMe)} />
           </SuiBox>
           <SuiBox width="80%" ml={2}>
-            <SuiTypography variant="button" fontWeight="regular" textColor="text">
+            <SuiTypography variant="button" fontWeight="regular" color="text">
               Email me when someone follows me
             </SuiTypography>
           </SuiBox>
@@ -62,7 +57,7 @@ function PlatformSettings() {
             <Switch checked={answersPost} onChange={() => setAnswersPost(!answersPost)} />
           </SuiBox>
           <SuiBox width="80%" ml={2}>
-            <SuiTypography variant="button" fontWeight="regular" textColor="text">
+            <SuiTypography variant="button" fontWeight="regular" color="text">
               Email me when someone answers on my post
             </SuiTypography>
           </SuiBox>
@@ -72,18 +67,13 @@ function PlatformSettings() {
             <Switch checked={mentionsMe} onChange={() => setMentionsMe(!mentionsMe)} />
           </SuiBox>
           <SuiBox width="80%" ml={2}>
-            <SuiTypography variant="button" fontWeight="regular" textColor="text">
+            <SuiTypography variant="button" fontWeight="regular" color="text">
               Email me when someone mentions me
             </SuiTypography>
           </SuiBox>
         </SuiBox>
         <SuiBox mt={3}>
-          <SuiTypography
-            variant="caption"
-            fontWeight="bold"
-            textColor="text"
-            textTransform="uppercase"
-          >
+          <SuiTypography variant="caption" fontWeight="bold" color="text" textTransform="uppercase">
             application
           </SuiTypography>
         </SuiBox>
@@ -92,7 +82,7 @@ function PlatformSettings() {
             <Switch checked={newLaunches} onChange={() => setNewLaunches(!newLaunches)} />
           </SuiBox>
           <SuiBox width="80%" ml={2}>
-            <SuiTypography variant="button" fontWeight="regular" textColor="text">
+            <SuiTypography variant="button" fontWeight="regular" color="text">
               New launches and projects
             </SuiTypography>
           </SuiBox>
@@ -102,7 +92,7 @@ function PlatformSettings() {
             <Switch checked={productUpdate} onChange={() => setProductUpdate(!productUpdate)} />
           </SuiBox>
           <SuiBox width="80%" ml={2}>
-            <SuiTypography variant="button" fontWeight="regular" textColor="text">
+            <SuiTypography variant="button" fontWeight="regular" color="text">
               Monthly product updates
             </SuiTypography>
           </SuiBox>
@@ -112,7 +102,7 @@ function PlatformSettings() {
             <Switch checked={newsletter} onChange={() => setNewsletter(!newsletter)} />
           </SuiBox>
           <SuiBox width="80%" ml={2}>
-            <SuiTypography variant="button" fontWeight="regular" textColor="text">
+            <SuiTypography variant="button" fontWeight="regular" color="text">
               Subscribe to newsletter
             </SuiTypography>
           </SuiBox>

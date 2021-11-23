@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -30,20 +30,20 @@ function Transaction({ color, icon, name, description, value }) {
       <SuiBox display="flex" justifyContent="space-between" alignItems="center">
         <SuiBox display="flex" alignItems="center">
           <SuiBox mr={2}>
-            <SuiButton variant="outlined" buttonColor={color} size="small" iconOnly circular>
-              <Icon className="font-bold">{icon}</Icon>
+            <SuiButton variant="outlined" color={color} size="small" iconOnly circular>
+              <Icon sx={{ fontWeight: "bold" }}>{icon}</Icon>
             </SuiButton>
           </SuiBox>
           <SuiBox display="flex" flexDirection="column">
             <SuiTypography variant="button" fontWeight="medium" gutterBottom>
               {name}
             </SuiTypography>
-            <SuiTypography variant="caption" textColor="text">
+            <SuiTypography variant="caption" color="text">
               {description}
             </SuiTypography>
           </SuiBox>
         </SuiBox>
-        <SuiTypography variant="button" textColor={color} fontWeight="medium" textGradient>
+        <SuiTypography variant="button" color={color} fontWeight="medium" textGradient>
           {value}
         </SuiTypography>
       </SuiBox>

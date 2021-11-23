@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -24,17 +24,13 @@ import SuiTypography from "components/SuiTypography";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
-import Table from "examples/Table";
-
-// Custom styles for the Tables
-import styles from "layouts/tables/styles";
+import Table from "examples/Tables/Table";
 
 // Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
 import projectsTableData from "layouts/tables/data/projectsTableData";
 
 function Tables() {
-  const classes = styles();
   const { columns, rows } = authorsTableData;
   const { columns: prCols, rows: prRows } = projectsTableData;
 
@@ -47,7 +43,16 @@ function Tables() {
             <SuiBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
               <SuiTypography variant="h6">Authors table</SuiTypography>
             </SuiBox>
-            <SuiBox customClass={classes.tables_table}>
+            <SuiBox
+              sx={{
+                "& .MuiTableRow-root:not(:last-child)": {
+                  "& td": {
+                    borderBottom: ({ borders: { borderWidth, borderColor } }) =>
+                      `${borderWidth[1]} solid ${borderColor}`,
+                  },
+                },
+              }}
+            >
               <Table columns={columns} rows={rows} />
             </SuiBox>
           </Card>
@@ -56,7 +61,16 @@ function Tables() {
           <SuiBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
             <SuiTypography variant="h6">Projects table</SuiTypography>
           </SuiBox>
-          <SuiBox customClass={classes.tables_table}>
+          <SuiBox
+            sx={{
+              "& .MuiTableRow-root:not(:last-child)": {
+                "& td": {
+                  borderBottom: ({ borders: { borderWidth, borderColor } }) =>
+                    `${borderWidth[1]} solid ${borderColor}`,
+                },
+              },
+            }}
+          >
             <Table columns={prCols} rows={prRows} />
           </SuiBox>
         </Card>

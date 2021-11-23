@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -28,7 +28,7 @@ export default {
     label: {
       marginTop: `${pxToRem(8)} !important`,
       fontWeight: fontWeightRegular,
-      fontSize: size.regular,
+      fontSize: size.md,
       color: grey[300],
 
       "&.Mui-active": {

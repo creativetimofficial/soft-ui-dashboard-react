@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -17,11 +17,11 @@ Coded by www.creative-tim.com
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard PRO Material-UI components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Soft UI Dashboard PRO Material-UI example components
+// Soft UI Dashboard React example components
 import TimelineItem from "examples/Timeline/TimelineItem";
 
 function OrdersOverview() {
@@ -29,18 +29,20 @@ function OrdersOverview() {
     <Card className="h-100">
       <SuiBox pt={3} px={3}>
         <SuiTypography variant="h6" fontWeight="medium">
-          نظرة عامة على الطلبات
+          Orders overview
         </SuiTypography>
         <SuiBox mt={1} mb={2}>
-          <SuiTypography variant="button" textColor="text" fontWeight="medium">
+          <SuiTypography variant="button" color="text" fontWeight="regular">
             <SuiTypography display="inline" variant="body2" verticalAlign="middle">
-              <Icon className="font-bold text-success">arrow_upward</Icon>
+              <Icon sx={{ fontWeight: "bold", color: ({ palette: { success } }) => success.main }}>
+                arrow_upward
+              </Icon>
             </SuiTypography>
             &nbsp;
-            <SuiTypography variant="button" textColor="text" fontWeight="bold">
+            <SuiTypography variant="button" color="text" fontWeight="medium">
               24%
             </SuiTypography>{" "}
-            هذا الشهر
+            this month
           </SuiTypography>
         </SuiBox>
       </SuiBox>

@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -19,49 +19,47 @@ import PropTypes from "prop-types";
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Soft UI Dashboard React example components
+// Soft UI Dashboard PRO React example components
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Authentication layout components
 import Footer from "layouts/authentication/components/Footer";
 
-// Custom styles for the Baise
-import styles from "layouts/authentication/components/CoverLayout/styles";
-
-// Soft UI Dashboard React page layout routes
-import routes from "routes";
-
 function CoverLayout({ color, header, title, description, image, top, children }) {
-  const classes = styles({ image });
-
   return (
     <PageLayout background="white">
       <DefaultNavbar
-        routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/soft-ui-dashboard-material-ui",
+          route: "https://creative-tim.com/product/soft-ui-dashboard-react",
           label: "free download",
           color: "dark",
         }}
       />
-      <Grid container justifyContent="center" className={classes.coverLayout}>
+      <Grid
+        container
+        justifyContent="center"
+        sx={{
+          minHeight: "75vh",
+          margin: 0,
+        }}
+      >
         <Grid item xs={11} sm={8} md={5} xl={3}>
           <SuiBox mt={top}>
             <SuiBox pt={3} px={3}>
               {!header ? (
                 <>
                   <SuiBox mb={1}>
-                    <SuiTypography variant="h3" fontWeight="bold" textColor={color} textGradient>
+                    <SuiTypography variant="h3" fontWeight="bold" color={color} textGradient>
                       {title}
                     </SuiTypography>
                   </SuiBox>
-                  <SuiTypography variant="body2" fontWeight="regular" textColor="text">
+                  <SuiTypography variant="body2" fontWeight="regular" color="text">
                     {description}
                   </SuiTypography>
                 </>
@@ -74,12 +72,26 @@ function CoverLayout({ color, header, title, description, image, top, children }
         </Grid>
         <Grid item xs={12} md={5}>
           <SuiBox
+            height="100%"
             display={{ xs: "none", md: "block" }}
             position="relative"
             right={{ md: "-12rem", xl: "-16rem" }}
-            customClass={classes.coverLayout_imageBox}
+            mr={-16}
+            sx={{
+              transform: "skewX(-10deg)",
+              overflow: "hidden",
+              borderBottomLeftRadius: ({ borders: { borderRadius } }) => borderRadius.lg,
+            }}
           >
-            <SuiBox customClass={classes.coverLayout_image} />
+            <SuiBox
+              ml={-8}
+              height="100%"
+              sx={{
+                backgroundImage: `url(${image})`,
+                backgroundSize: "cover",
+                transform: "skewX(10deg)",
+              }}
+            />
           </SuiBox>
         </Grid>
       </Grid>

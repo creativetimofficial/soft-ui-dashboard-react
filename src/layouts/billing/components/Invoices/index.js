@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -26,12 +26,12 @@ import Invoice from "layouts/billing/components/Invoice";
 
 function Invoices() {
   return (
-    <Card id="delete-account">
+    <Card id="delete-account" sx={{ height: "100%" }}>
       <SuiBox pt={2} px={2} display="flex" justifyContent="space-between" alignItems="center">
         <SuiTypography variant="h6" fontWeight="medium">
           Invoices
         </SuiTypography>
-        <SuiButton variant="outlined" buttonColor="info" size="small">
+        <SuiButton variant="outlined" color="info" size="small">
           view all
         </SuiButton>
       </SuiBox>

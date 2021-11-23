@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -13,14 +13,14 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiButton from "components/SuiButton";
 import SuiBox from "components/SuiBox";
 
 function Socials() {
   return (
     <SuiBox display="flex" justifyContent="center">
-      <SuiButton variant="outlined" buttonColor="light">
+      <SuiButton variant="outlined" color="light">
         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g transform="translate(3.000000, 3.000000)" fillRule="nonzero">
@@ -34,7 +34,7 @@ function Socials() {
         </svg>
       </SuiButton>
       <SuiBox px={1}>
-        <SuiButton variant="outlined" buttonColor="light">
+        <SuiButton variant="outlined" color="light">
           <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g transform="translate(7.000000, 0.564551)" fill="#000000" fillRule="nonzero">
@@ -44,7 +44,7 @@ function Socials() {
           </svg>
         </SuiButton>
       </SuiBox>
-      <SuiButton variant="outlined" buttonColor="light">
+      <SuiButton variant="outlined" color="light">
         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g transform="translate(3.000000, 2.000000)" fillRule="nonzero">

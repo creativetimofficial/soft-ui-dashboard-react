@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -36,15 +36,22 @@ function DefaultNavbarLink({ icon, name, route, light }) {
         p={1}
         display="flex"
         alignItems="center"
-        className="cursor-pointer user-select-none"
+        sx={{ cursor: "pointer", userSelect: "none" }}
       >
-        <Icon className={`vertical-middle ${light ? "text-white" : "text-secondary"}`}>{icon}</Icon>
+        <Icon
+          sx={{
+            color: ({ palette: { white, secondary } }) => (light ? white.main : secondary.main),
+            verticalAlign: "middle",
+          }}
+        >
+          {icon}
+        </Icon>
         <SuiTypography
           variant="button"
           fontWeight="regular"
-          textColor={light ? "white" : "dark"}
+          color={light ? "white" : "dark"}
           textTransform="capitalize"
-          customClass="w-100 line-height-0"
+          sx={{ width: "100%", lineHeight: 0 }}
         >
           &nbsp;{name}
         </SuiTypography>

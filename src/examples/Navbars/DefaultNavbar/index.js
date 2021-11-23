@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -25,23 +25,19 @@ import PropTypes from "prop-types";
 import Container from "@mui/material/Container";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiButton from "components/SuiButton";
 
-// Soft UI Dashboard React example components
+// Soft UI Dashboard PRO React example components
 import DefaultNavbarLink from "examples/Navbars/DefaultNavbar/DefaultNavbarLink";
 import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMobile";
 
-// Soft UI Dashboard React base styles
+// Soft UI Dashboard PRO React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
-// Custom styles for DashboardNavbar
-import styles from "examples/Navbars/DefaultNavbar/styles/defaultNavbar";
-
 function DefaultNavbar({ transparent, light, action }) {
-  const classes = styles({ transparent, light });
   const [mobileNavbar, setMobileNavbar] = useState(false);
   const [mobileView, setMobileView] = useState(false);
 
@@ -76,12 +72,27 @@ function DefaultNavbar({ transparent, light, action }) {
   return (
     <Container>
       <SuiBox
-        customClass={classes.defaultNavbar}
-        py={1}
+        py={1.5}
         px={{ xs: transparent ? 4 : 5, sm: transparent ? 2 : 5, lg: transparent ? 0 : 5 }}
+        my={2}
+        mx={3}
+        width="calc(100% - 48px)"
+        borderRadius="section"
+        shadow={transparent ? "none" : "md"}
+        color={light ? "white" : "dark"}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        position="absolute"
+        left={0}
+        zIndex={3}
+        sx={({ palette: { transparent: transparentColor, white }, functions: { rgba } }) => ({
+          backgroundColor: transparent ? transparentColor.main : rgba(white.main, 0.8),
+          backdropFilter: transparent ? "none" : `saturate(200%) blur(30px)`,
+        })}
       >
-        <SuiBox component={Link} to="/" py={transparent ? 1.5 : 0.75}>
-          <SuiTypography variant="button" fontWeight="bold" textColor={light ? "white" : "dark"}>
+        <SuiBox component={Link} to="/" py={transparent ? 1.5 : 0.75} lineHeight={1}>
+          <SuiTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
             Soft UI Dashboard
           </SuiTypography>
         </SuiBox>
@@ -108,7 +119,7 @@ function DefaultNavbar({ transparent, light, action }) {
                 component={Link}
                 to={action.route}
                 variant="gradient"
-                buttonColor={action.color ? action.color : "info"}
+                color={action.color ? action.color : "info"}
                 size="small"
                 circular
               >
@@ -123,7 +134,7 @@ function DefaultNavbar({ transparent, light, action }) {
                 target="_blank"
                 rel="noreferrer"
                 variant="gradient"
-                buttonColor={action.color ? action.color : "info"}
+                color={action.color ? action.color : "info"}
                 size="small"
                 circular
               >
@@ -137,17 +148,13 @@ function DefaultNavbar({ transparent, light, action }) {
           py={1.5}
           pl={1.5}
           color="inherit"
-          customClass="cursor-pointer"
+          sx={{ cursor: "pointer" }}
           onClick={openMobileNavbar}
         >
-          <Icon fontSize="medium">{mobileNavbar ? "close" : "menu"}</Icon>
+          <Icon fontSize="default">{mobileNavbar ? "close" : "menu"}</Icon>
         </SuiBox>
       </SuiBox>
-      {mobileView && (
-        <DefaultNavbarMobile open={mobileNavbar} close={closeMobileNavbar}>
-          Hello
-        </DefaultNavbarMobile>
-      )}
+      {mobileView && <DefaultNavbarMobile open={mobileNavbar} close={closeMobileNavbar} />}
     </Container>
   );
 }
@@ -177,7 +184,6 @@ DefaultNavbar.propTypes = {
         "error",
         "dark",
         "light",
-        "white",
       ]),
       label: PropTypes.string.isRequired,
     }),

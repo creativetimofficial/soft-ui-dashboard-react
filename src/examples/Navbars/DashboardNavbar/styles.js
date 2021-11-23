@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -12,132 +12,121 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
+function navbar(theme, ownerState) {
+  const { palette, boxShadows, functions, transitions, breakpoints, borders } = theme;
+  const { transparentNavbar, absolute, light } = ownerState;
 
-// @mui material components
-import { makeStyles } from "@mui/styles";
+  const { dark, white, text, transparent } = palette;
+  const { navbarBoxShadow } = boxShadows;
+  const { rgba, pxToRem } = functions;
+  const { borderRadius } = borders;
 
-export default makeStyles(
-  ({ palette, boxShadows, functions, transitions, breakpoints, borders, typography }) => {
-    const { dark, white, text, transparent } = palette;
-    const { navbarBoxShadow } = boxShadows;
-    const { rgba, pxToRem } = functions;
-    const { borderRadius } = borders;
-    const { size } = typography;
+  return {
+    boxShadow: transparentNavbar || absolute ? "none" : navbarBoxShadow,
+    backdropFilter: transparentNavbar || absolute ? "none" : `saturate(200%) blur(${pxToRem(30)})`,
+    backgroundColor:
+      transparentNavbar || absolute ? `${transparent.main} !important` : rgba(white.main, 0.8),
 
-    return {
-      navbar: {
-        boxShadow: ({ transparentNavbar, absolute }) =>
-          transparentNavbar || absolute ? "none" : navbarBoxShadow,
-        backdropFilter: ({ transparentNavbar, absolute }) =>
-          transparentNavbar || absolute ? "none" : `saturate(200%) blur(${pxToRem(30)})`,
-        backgroundColor: ({ transparentNavbar, absolute }) =>
-          transparentNavbar || absolute ? transparent.main : rgba(white.main, 0.8),
+    color: () => {
+      let color;
 
-        color: ({ transparentNavbar, light }) => {
-          let color;
+      if (light) {
+        color = white.main;
+      } else if (transparentNavbar) {
+        color = text.main;
+      } else {
+        color = dark.main;
+      }
 
-          if (light) {
-            color = white.main;
-          } else if (transparentNavbar) {
-            color = text.main;
-          } else {
-            color = dark.main;
-          }
+      return color;
+    },
+    top: absolute ? 0 : pxToRem(12),
+    minHeight: pxToRem(75),
+    display: "grid",
+    alignItems: "center",
+    borderRadius: borderRadius.xl,
+    paddingTop: pxToRem(8),
+    paddingBottom: pxToRem(8),
+    paddingRight: absolute ? pxToRem(8) : 0,
+    paddingLeft: absolute ? pxToRem(16) : 0,
 
-          return color;
-        },
-        top: ({ absolute }) => (absolute ? 0 : pxToRem(12)),
-        minHeight: pxToRem(75),
-        display: "grid",
-        alignItems: "center",
-        borderRadius: borderRadius.xl,
-        paddingTop: pxToRem(8),
-        paddingBottom: pxToRem(8),
-        paddingRight: ({ absolute }) => (absolute ? pxToRem(8) : 0),
-        paddingLeft: ({ absolute }) => (absolute ? pxToRem(16) : 0),
+    "& > *": {
+      transition: transitions.create("all", {
+        easing: transitions.easing.easeInOut,
+        duration: transitions.duration.standard,
+      }),
+    },
 
-        "& > *": {
-          transition: transitions.create("all", {
-            easing: transitions.easing.easeInOut,
-            duration: transitions.duration.standard,
-          }),
-        },
+    "& .MuiToolbar-root": {
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
 
-        "& .MuiToolbar-root": {
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-
-          [breakpoints.up("sm")]: {
-            minHeight: "auto",
-            padding: `${pxToRem(4)} ${pxToRem(16)}`,
-          },
-        },
+      [breakpoints.up("sm")]: {
+        minHeight: "auto",
+        padding: `${pxToRem(4)} ${pxToRem(16)}`,
       },
+    },
+  };
+}
 
-      navbar_container: {
-        flexDirection: "column",
-        alignItems: "flex-start",
-        justifyContent: "space-between",
-        paddingTop: pxToRem(4),
-        paddingBottom: pxToRem(4),
+const navbarContainer = ({ breakpoints }) => ({
+  flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "space-between",
+  pt: 0.5,
+  pb: 0.5,
 
-        [breakpoints.up("md")]: {
-          flexDirection: "row",
-          alignItems: "center",
-          paddingTop: "0",
-          paddingBottom: "0",
-        },
-      },
+  [breakpoints.up("md")]: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingTop: "0",
+    paddingBottom: "0",
+  },
+});
 
-      navbar_row: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        width: "100%",
+const navbarRow = ({ breakpoints }, { isMini }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  width: "100%",
 
-        [breakpoints.up("md")]: {
-          justifyContent: ({ isMini }) => (isMini ? "space-between" : "stretch"),
-          width: ({ isMini }) => (isMini ? "100%" : "max-content"),
-        },
+  [breakpoints.up("md")]: {
+    justifyContent: isMini ? "space-between" : "stretch",
+    width: isMini ? "100%" : "max-content",
+  },
 
-        [breakpoints.up("xl")]: {
-          justifyContent: "stretch !important",
-          width: "max-content !important",
-        },
-      },
+  [breakpoints.up("xl")]: {
+    justifyContent: "stretch !important",
+    width: "max-content !important",
+  },
+});
 
-      navbar_icon_button: {
-        padding: `0 ${pxToRem(6)}`,
+const navbarIconButton = ({ typography: { size }, breakpoints }) => ({
+  px: 0.75,
 
-        "& .material-icons, .material-icons-round": {
-          fontSize: `${size.regular} !important`,
-        },
+  "& .material-icons, .material-icons-round": {
+    fontSize: `${size.md} !important`,
+  },
 
-        "& .MuiTypography-root": {
-          display: "none",
+  "& .MuiTypography-root": {
+    display: "none",
 
-          [breakpoints.up("sm")]: {
-            display: "inline-block",
-            lineHeight: 1.2,
-            marginLeft: pxToRem(4),
-          },
-        },
-      },
+    [breakpoints.up("sm")]: {
+      display: "inline-block",
+      lineHeight: 1.2,
+      ml: 0.5,
+    },
+  },
+});
 
-      navbar_mobile_menu: {
-        display: "inline-block",
+const navbarMobileMenu = ({ breakpoints }) => ({
+  display: "inline-block",
+  lineHeight: 0,
 
-        [breakpoints.up("xl")]: {
-          display: "none",
-        },
-      },
+  [breakpoints.up("xl")]: {
+    display: "none",
+  },
+});
 
-      navbar_input: {
-        "& .material-icons, .material-icons-round": {
-          color: text.main,
-        },
-      },
-    };
-  }
-);
+export { navbar, navbarContainer, navbarRow, navbarIconButton, navbarMobileMenu };

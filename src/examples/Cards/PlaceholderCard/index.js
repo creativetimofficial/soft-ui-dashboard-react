@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -16,28 +16,23 @@ Coded by www.creative-tim.com
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// clsx is a utility for constructing className strings conditionally
-import clsx from "clsx";
-
 // @mui material components
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Custom styles for PlaceholderCard
-import styles from "examples/Cards/PlaceholderCard/styles";
-
 function PlaceholderCard({ icon, title, hasBorder, outlined }) {
-  const classes = styles({ hasBorder });
-
   return (
     <Card
       raised
-      className={clsx(classes.placeholderCard, {
-        [classes.placeholderCard_outlined]: outlined,
+      sx={({ borders: { borderWidth, borderColor } }) => ({
+        height: "100%",
+        backgroundColor: outlined && "transparent",
+        boxShadow: outlined && "none",
+        border: hasBorder || outlined ? `${borderWidth[1]} solid ${borderColor}` : "none",
       })}
     >
       <SuiBox
@@ -49,11 +44,11 @@ function PlaceholderCard({ icon, title, hasBorder, outlined }) {
         p={3}
       >
         <SuiBox color="secondary" mb={0.5}>
-          <Icon fontSize="medium" className="font-bold">
+          <Icon fontSize="default" sx={{ fontWeight: "bold" }}>
             {icon}
           </Icon>
         </SuiBox>
-        <SuiTypography variant={title.variant} textColor="secondary">
+        <SuiTypography variant={title.variant} color="secondary">
           {title.text}
         </SuiTypography>
       </SuiBox>

@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -24,28 +24,34 @@ import { Bubble } from "react-chartjs-2";
 // @mui material components
 import Card from "@mui/material/Card";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
 // BubbleChart configurations
 import configs from "examples/Charts/BubbleChart/configs";
 
-// Soft UI Dashboard React base styles
+// Soft UI Dashboard PRO React base styles
 import colors from "assets/theme/base/colors";
 
 function BubbleChart({ title, description, height, chart }) {
-  const chartDatasets = chart.datasets.map((dataset) => ({
-    ...dataset,
-    tension: 0.4,
-    borderWidth: 3,
-    pointRadius: 2,
-    pointBackgroundColor: colors[dataset.color].main,
-    borderColor: colors[dataset.color].main,
-    maxBarThickness: 6,
-  }));
+  const chartDatasets = chart.datasets
+    ? chart.datasets.map((dataset) => ({
+        ...dataset,
+        tension: 0.4,
+        borderWidth: 3,
+        pointRadius: 2,
+        backgroundColor: colors[dataset.color]
+          ? colors[dataset.color || "dark"].main
+          : colors.dark.main,
+        borderColor: colors[dataset.color]
+          ? colors[dataset.color || "dark"].main
+          : colors.dark.main,
+        maxBarThickness: 6,
+      }))
+    : [];
 
-  const { data, options } = configs(chart.labels, chartDatasets);
+  const { data, options } = configs(chart.labels || [], chartDatasets);
 
   const renderChart = (
     <SuiBox p={2}>
@@ -57,7 +63,7 @@ function BubbleChart({ title, description, height, chart }) {
             </SuiBox>
           )}
           <SuiBox mb={2}>
-            <SuiTypography variant="button" fontWeight="regular" textColor="text">
+            <SuiTypography component="div" variant="button" fontWeight="regular" color="text">
               {description}
             </SuiTypography>
           </SuiBox>

@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -38,21 +38,15 @@ function Invoice({ date, id, price, noGutter }) {
         <SuiTypography display="block" variant="button" fontWeight="medium">
           {date}
         </SuiTypography>
-        <SuiTypography variant="caption" fontWeight="regular" textColor="text">
+        <SuiTypography variant="caption" fontWeight="regular" color="text">
           {id}
         </SuiTypography>
       </SuiBox>
       <SuiBox display="flex" alignItems="center">
-        <SuiTypography variant="button" fontWeight="regular" textColor="text">
+        <SuiTypography variant="button" fontWeight="regular" color="text">
           {price}
         </SuiTypography>
-        <SuiBox
-          display="flex"
-          alignItems="center"
-          lineHeight={0}
-          ml={3}
-          customClass="cursor-pointer"
-        >
+        <SuiBox display="flex" alignItems="center" lineHeight={0} ml={3} sx={{ cursor: "poiner" }}>
           <Icon fontSize="small">picture_as_pdf</Icon>
           <SuiTypography variant="button" fontWeight="bold">
             &nbsp;PDF

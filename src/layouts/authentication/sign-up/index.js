@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -74,7 +74,7 @@ function SignUp() {
                 variant="button"
                 fontWeight="regular"
                 onClick={handleSetAgremment}
-                customClass="cursor-pointer user-select-none"
+                sx={{ cursor: "poiner", userSelect: "none" }}
               >
                 &nbsp;&nbsp;I agree the&nbsp;
               </SuiTypography>
@@ -83,18 +83,18 @@ function SignUp() {
               </SuiTypography>
             </SuiBox>
             <SuiBox mt={4} mb={1}>
-              <SuiButton variant="gradient" buttonColor="dark" fullWidth>
+              <SuiButton variant="gradient" color="dark" fullWidth>
                 sign up
               </SuiButton>
             </SuiBox>
             <SuiBox mt={3} textAlign="center">
-              <SuiTypography variant="button" textColor="text" fontWeight="regular">
+              <SuiTypography variant="button" color="text" fontWeight="regular">
                 Already have an account?&nbsp;
                 <SuiTypography
                   component={Link}
                   to="/authentication/sign-in"
                   variant="button"
-                  textColor="dark"
+                  color="dark"
                   fontWeight="bold"
                   textGradient
                 >

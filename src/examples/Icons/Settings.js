@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -16,7 +16,7 @@ Coded by www.creative-tim.com
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Soft UI Dashboard React base styles
+// Soft UI Dashboard PRO React base styles
 import colors from "assets/theme/base/colors";
 
 function Settings({ color, size }) {
@@ -34,7 +34,7 @@ function Settings({ color, size }) {
         <g
           id="Rounded-Icons"
           transform="translate(-2020.000000, -442.000000)"
-          fill={colors[color].main}
+          fill={colors[color] ? colors[color].main : colors.dark.main}
           fillRule="nonzero"
         >
           <g id="Icons-with-opacity" transform="translate(1716.000000, 291.000000)">

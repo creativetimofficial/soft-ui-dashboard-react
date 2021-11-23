@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -23,41 +23,43 @@ import PropTypes from "prop-types";
 import { Breadcrumbs as MuiBreadcrumbs } from "@mui/material";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Custom styles for Breadcrumbs
-import styles from "examples/Breadcrumbs/styles";
-
 function Breadcrumbs({ icon, title, route, light }) {
-  const classes = styles({ light });
   const routes = route.slice(0, -1);
 
   return (
     <SuiBox mr={{ xs: 0, xl: 8 }}>
-      <MuiBreadcrumbs className={classes.breadcrumbs}>
+      <MuiBreadcrumbs
+        sx={{
+          "& .MuiBreadcrumbs-separator": {
+            color: ({ palette: { white, grey } }) => (light ? white.main : grey[600]),
+          },
+        }}
+      >
         <Link to="/">
           <SuiTypography
             component="span"
             variant="body2"
-            textColor={light ? "white" : "dark"}
+            color={light ? "white" : "dark"}
             opacity={light ? 0.8 : 0.5}
-            customClass="line-height-0"
+            sx={{ lineHeight: 0 }}
           >
             <Icon>{icon}</Icon>
           </SuiTypography>
         </Link>
         {routes.map((el) => (
-          <Link to={`/${el}`} key={el} className="decoration-none">
+          <Link to={`/${el}`} key={el}>
             <SuiTypography
               component="span"
               variant="button"
               fontWeight="regular"
               textTransform="capitalize"
-              textColor={light ? "white" : "dark"}
+              color={light ? "white" : "dark"}
               opacity={light ? 0.8 : 0.5}
-              customClass="line-height-0"
+              sx={{ lineHeight: 0 }}
             >
               {el}
             </SuiTypography>
@@ -67,8 +69,8 @@ function Breadcrumbs({ icon, title, route, light }) {
           variant="button"
           fontWeight="regular"
           textTransform="capitalize"
-          textColor={light ? "white" : "dark"}
-          customClass="line-height-0"
+          color={light ? "white" : "dark"}
+          sx={{ lineHeight: 0 }}
         >
           {title.replace("-", " ")}
         </SuiTypography>
@@ -77,7 +79,7 @@ function Breadcrumbs({ icon, title, route, light }) {
         fontWeight="bold"
         textTransform="capitalize"
         variant="h6"
-        textColor={light ? "white" : "dark"}
+        color={light ? "white" : "dark"}
         noWrap
       >
         {title.replace("-", " ")}

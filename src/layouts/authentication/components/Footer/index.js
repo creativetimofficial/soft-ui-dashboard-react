@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -23,7 +23,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
@@ -34,33 +34,35 @@ function Footer() {
         <Grid item xs={10} lg={8}>
           <SuiBox display="flex" justifyContent="center" flexWrap="wrap" mb={3}>
             <SuiBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SuiTypography component="a" href="#" variant="body2" textColor="secondary">
+              <SuiTypography component="a" href="#" variant="body2" color="secondary">
                 Company
               </SuiTypography>
             </SuiBox>
             <SuiBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SuiTypography component="a" href="#" variant="body2" textColor="secondary">
+              <SuiTypography component="a" href="#" variant="body2" color="secondary">
                 About Us
               </SuiTypography>
             </SuiBox>
             <SuiBox mr={{ xs: 0, lg: 3, xl: 6 }}>
-              <SuiTypography component="a" href="#" variant="body2" textColor="secondary">
+              <SuiTypography component="a" href="#" variant="body2" color="secondary">
                 Team
               </SuiTypography>
             </SuiBox>
             <SuiBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SuiTypography component="a" href="#" variant="body2" textColor="secondary">
+              <SuiTypography component="a" href="#" variant="body2" color="secondary">
                 Product
               </SuiTypography>
             </SuiBox>
             <SuiBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SuiTypography component="a" href="#" variant="body2" textColor="secondary">
+              <SuiTypography component="a" href="#" variant="body2" color="secondary">
                 Blog
               </SuiTypography>
             </SuiBox>
-            <SuiTypography component="a" href="#" variant="body2" textColor="secondary">
-              Pricing
-            </SuiTypography>
+            <SuiBox>
+              <SuiTypography component="a" href="#" variant="body2" color="secondary">
+                Pricing
+              </SuiTypography>
+            </SuiBox>
           </SuiBox>
         </Grid>
         <Grid item xs={12} lg={8}>
@@ -82,8 +84,8 @@ function Footer() {
             </SuiBox>
           </SuiBox>
         </Grid>
-        <Grid item xs={12} lg={8} className="text-center">
-          <SuiTypography variant="body2" textColor="secondary">
+        <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
+          <SuiTypography variant="body2" color="secondary">
             Copyright &copy; 2021 Soft by Creative Tim.
           </SuiTypography>
         </Grid>

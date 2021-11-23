@@ -1,106 +1,99 @@
-/**
-=========================================================
-* Soft UI Dashboard React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
-import { makeStyles } from "@mui/styles";
-
 // Images
-import BackgroundImage from "assets/images/curved-images/white-curved.jpeg";
+import backgroundImage from "assets/images/curved-images/white-curved.jpeg";
 
-export default makeStyles(
-  ({ palette, boxShadows, borders, functions, transitions, breakpoints }) => {
-    const { white, dark, gradients, transparent } = palette;
-    const { regular } = boxShadows;
-    const { borderRadius } = borders;
-    const { pxToRem, linearGradient } = functions;
+function card(theme, ownerState) {
+  const { borders, functions, transitions, breakpoints } = theme;
+  const { miniSidenav } = ownerState;
 
-    return {
-      card: {
-        minWidth: "auto",
-        backgroundImage: `url(${BackgroundImage})`,
-        backgroundPosition: "50%",
-        backgroundSize: "cover",
-        borderRadius: borderRadius.xl,
-        boxShadow: "none",
+  const { borderRadius } = borders;
+  const { pxToRem } = functions;
 
-        [breakpoints.up("xl")]: {
-          maxHeight: ({ miniSidenav }) => (miniSidenav ? pxToRem(64) : pxToRem(192)),
-          transition: transitions.create("max-height", {
-            easing: transitions.easing.easeInOut,
-            duration: transitions.duration.standard,
-          }),
-        },
-      },
+  return {
+    minWidth: "auto",
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundPosition: "50%",
+    backgroundSize: "cover",
+    borderRadius: borderRadius.xl,
+    boxShadow: "none",
 
-      card_content: {
-        color: white.main,
-        position: "relative",
-        zIndex: 2,
-        padding: pxToRem(16),
-        width: "100%",
-        height: "100%",
+    [breakpoints.up("xl")]: {
+      maxHeight: miniSidenav ? pxToRem(64) : pxToRem(192),
+      transition: transitions.create("max-height", {
+        easing: transitions.easing.easeInOut,
+        duration: transitions.duration.standard,
+      }),
+    },
+  };
+}
 
-        "&::after": {
-          content: '""',
-          backgroundImage: ({ sidenavColor }) =>
-            sidenavColor === "default"
-              ? linearGradient(gradients.secondary.main, gradients.secondary.state)
-              : linearGradient(gradients[sidenavColor].main, gradients[sidenavColor].state),
-          display: "block",
-          height: "100%",
-          width: "100%",
-          borderRadius: borderRadius.xl,
-          position: "absolute",
-          top: 0,
-          left: 0,
-          opacity: 0.65,
-          zIndex: -1,
-        },
+function cardContent(theme, ownerState) {
+  const { palette, functions, borders } = theme;
+  const { sidenavColor } = ownerState;
 
-        "& .MuiButton-root": {
-          color: dark.main,
-        },
+  const { white, dark, gradients } = palette;
+  const { linearGradient } = functions;
+  const { borderRadius } = borders;
 
-        "&:last-child": {
-          paddingBottom: pxToRem(16),
-        },
-      },
+  return {
+    color: white.main,
+    position: "relative",
+    zIndex: 2,
+    width: "100%",
+    height: "100%",
+    p: 2,
 
-      card_iconBox: {
-        background: white.main,
-        width: pxToRem(32),
-        height: pxToRem(32),
-        borderRadius: borderRadius.md,
-        marginBottom: pxToRem(16),
-        display: "grid",
-        placeItems: "center",
-        boxShadow: regular,
-        transition: transitions.create("margin", {
-          easing: transitions.easing.easeInOut,
-          duration: transitions.duration.standard,
-        }),
-      },
+    "&::after": {
+      content: '""',
+      backgroundImage:
+        sidenavColor === "default"
+          ? linearGradient(gradients.secondary.main, gradients.secondary.state)
+          : linearGradient(gradients[sidenavColor].main, gradients[sidenavColor].state),
+      display: "block",
+      height: "100%",
+      width: "100%",
+      borderRadius: borderRadius.xl,
+      position: "absolute",
+      top: 0,
+      left: 0,
+      opacity: 0.65,
+      zIndex: -1,
+    },
 
-      card_icon: {
-        backgroundImage: ({ sidenavColor }) =>
-          sidenavColor === "default"
-            ? linearGradient(gradients.dark, gradients.dark.state)
-            : linearGradient(gradients[sidenavColor].main, gradients[sidenavColor].state),
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: transparent.main,
-      },
-    };
-  }
-);
+    "& .MuiButton-root": {
+      color: dark.main,
+    },
+
+    "&:last-child": {
+      pb: 2,
+    },
+  };
+}
+
+const cardIconBox = {
+  display: "grid",
+  placeItems: "center",
+  transition: ({ transitions }) =>
+    transitions.create("margin", {
+      easing: transitions.easing.easeInOut,
+      duration: transitions.duration.standard,
+    }),
+};
+
+function cardIcon(theme, ownerState) {
+  const { functions, palette } = theme;
+  const { sidenavColor } = ownerState;
+
+  const { linearGradient } = functions;
+  const { gradients, transparent } = palette;
+
+  return {
+    backgroundImage:
+      sidenavColor === "default"
+        ? linearGradient(gradients.dark, gradients.dark.state)
+        : linearGradient(gradients[sidenavColor].main, gradients[sidenavColor].state),
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: transparent.main,
+  };
+}
+
+export { card, cardContent, cardIconBox, cardIcon };

@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v1.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -18,51 +18,38 @@ import { forwardRef } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// clsx is a utility for constructing className strings conditionally
-import clsx from "clsx";
-
-// @mui material components
-import Button from "@mui/material/Button";
-
 // Custom styles for SuiButton
-import styles from "components/SuiButton/styles";
+import SuiButtonRoot from "components/SuiButton/SuiButtonRoot";
 
 const SuiButton = forwardRef(
-  ({ buttonColor, variant, size, circular, iconOnly, children, customClass, ...rest }, ref) => {
-    const classes = styles({ buttonColor, variant, size, iconOnly });
-    return (
-      <Button
-        {...rest}
-        ref={ref}
-        color="primary"
-        variant={variant === "gradient" ? "contained" : variant}
-        size={size}
-        className={clsx(classes[variant], customClass, {
-          [classes.circular]: circular,
-          [classes.iconOnly]: iconOnly,
-        })}
-      >
-        {children}
-      </Button>
-    );
-  }
+  ({ color, variant, size, circular, iconOnly, children, ...rest }, ref) => (
+    <SuiButtonRoot
+      {...rest}
+      ref={ref}
+      color="primary"
+      variant={variant === "gradient" ? "contained" : variant}
+      size={size}
+      ownerState={{ color, variant, size, circular, iconOnly }}
+    >
+      {children}
+    </SuiButtonRoot>
+  )
 );
 
 // Setting default values for the props of SuiButton
 SuiButton.defaultProps = {
   size: "medium",
   variant: "contained",
-  buttonColor: "white",
+  color: "white",
   circular: false,
   iconOnly: false,
-  customClass: "",
 };
 
 // Typechecking props for the SuiButton
 SuiButton.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
   variant: PropTypes.oneOf(["text", "contained", "outlined", "gradient"]),
-  buttonColor: PropTypes.oneOf([
+  color: PropTypes.oneOf([
     "white",
     "primary",
     "secondary",
@@ -76,7 +63,6 @@ SuiButton.propTypes = {
   circular: PropTypes.bool,
   iconOnly: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  customClass: PropTypes.string,
 };
 
 export default SuiButton;

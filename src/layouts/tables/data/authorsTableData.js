@@ -20,7 +20,7 @@ function Author({ image, name, email }) {
         <SuiTypography variant="button" fontWeight="medium">
           {name}
         </SuiTypography>
-        <SuiTypography variant="caption" textColor="secondary">
+        <SuiTypography variant="caption" color="secondary">
           {email}
         </SuiTypography>
       </SuiBox>
@@ -31,10 +31,10 @@ function Author({ image, name, email }) {
 function Function({ job, org }) {
   return (
     <SuiBox display="flex" flexDirection="column">
-      <SuiTypography variant="caption" fontWeight="medium" textColor="text">
+      <SuiTypography variant="caption" fontWeight="medium" color="text">
         {job}
       </SuiTypography>
-      <SuiTypography variant="caption" textColor="secondary">
+      <SuiTypography variant="caption" color="secondary">
         {org}
       </SuiTypography>
     </SuiBox>
@@ -55,10 +55,10 @@ export default {
       author: <Author image={team2} name="John Michael" email="john@creative-tim.com" />,
       function: <Function job="Manager" org="Organization" />,
       status: (
-        <SuiBadge variant="gradient" badgeContent="online" color="success" size="extra-small" />
+        <SuiBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
       ),
       employed: (
-        <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+        <SuiTypography variant="caption" color="secondary" fontWeight="medium">
           23/04/18
         </SuiTypography>
       ),
@@ -67,7 +67,7 @@ export default {
           component="a"
           href="#"
           variant="caption"
-          textColor="secondary"
+          color="secondary"
           fontWeight="medium"
         >
           Edit
@@ -78,10 +78,10 @@ export default {
       author: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
       function: <Function job="Programator" org="Developer" />,
       status: (
-        <SuiBadge variant="gradient" badgeContent="offline" color="secondary" size="extra-small" />
+        <SuiBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
       ),
       employed: (
-        <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+        <SuiTypography variant="caption" color="secondary" fontWeight="medium">
           11/01/19
         </SuiTypography>
       ),
@@ -90,7 +90,7 @@ export default {
           component="a"
           href="#"
           variant="caption"
-          textColor="secondary"
+          color="secondary"
           fontWeight="medium"
         >
           Edit
@@ -101,10 +101,10 @@ export default {
       author: <Author image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
       function: <Function job="Executive" org="Projects" />,
       status: (
-        <SuiBadge variant="gradient" badgeContent="online" color="success" size="extra-small" />
+        <SuiBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
       ),
       employed: (
-        <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+        <SuiTypography variant="caption" color="secondary" fontWeight="medium">
           19/09/17
         </SuiTypography>
       ),
@@ -113,7 +113,7 @@ export default {
           component="a"
           href="#"
           variant="caption"
-          textColor="secondary"
+          color="secondary"
           fontWeight="medium"
         >
           Edit
@@ -124,10 +124,10 @@ export default {
       author: <Author image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
       function: <Function job="Programator" org="Developer" />,
       status: (
-        <SuiBadge variant="gradient" badgeContent="online" color="success" size="extra-small" />
+        <SuiBadge variant="gradient" badgeContent="online" color="success" size="xs" container />
       ),
       employed: (
-        <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+        <SuiTypography variant="caption" color="secondary" fontWeight="medium">
           24/12/08
         </SuiTypography>
       ),
@@ -136,7 +136,7 @@ export default {
           component="a"
           href="#"
           variant="caption"
-          textColor="secondary"
+          color="secondary"
           fontWeight="medium"
         >
           Edit
@@ -147,10 +147,10 @@ export default {
       author: <Author image={team2} name="Richard Gran" email="richard@creative-tim.com" />,
       function: <Function job="Manager" org="Executive" />,
       status: (
-        <SuiBadge variant="gradient" badgeContent="offline" color="secondary" size="extra-small" />
+        <SuiBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
       ),
       employed: (
-        <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+        <SuiTypography variant="caption" color="secondary" fontWeight="medium">
           04/10/21
         </SuiTypography>
       ),
@@ -159,7 +159,7 @@ export default {
           component="a"
           href="#"
           variant="caption"
-          textColor="secondary"
+          color="secondary"
           fontWeight="medium"
         >
           Edit
@@ -170,10 +170,10 @@ export default {
       author: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
       function: <Function job="Programtor" org="Developer" />,
       status: (
-        <SuiBadge variant="gradient" badgeContent="offline" color="secondary" size="extra-small" />
+        <SuiBadge variant="gradient" badgeContent="offline" color="secondary" size="xs" container />
       ),
       employed: (
-        <SuiTypography variant="caption" textColor="secondary" fontWeight="medium">
+        <SuiTypography variant="caption" color="secondary" fontWeight="medium">
           14/09/20
         </SuiTypography>
       ),
@@ -182,7 +182,7 @@ export default {
           component="a"
           href="#"
           variant="caption"
-          textColor="secondary"
+          color="secondary"
           fontWeight="medium"
         >
           Edit

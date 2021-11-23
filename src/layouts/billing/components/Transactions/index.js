@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -27,7 +27,7 @@ import Transaction from "layouts/billing/components/Transaction";
 
 function Transactions() {
   return (
-    <Card className="h-100">
+    <Card sx={{ height: "100%" }}>
       <SuiBox display="flex" justifyContent="space-between" alignItems="center" pt={3} px={2}>
         <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           Your Transaction&apos;s
@@ -38,19 +38,14 @@ function Transactions() {
               date_range
             </Icon>
           </SuiBox>
-          <SuiTypography variant="button" textColor="text" fontWeight="regular">
+          <SuiTypography variant="button" color="text" fontWeight="regular">
             23 - 30 March 2020
           </SuiTypography>
         </SuiBox>
       </SuiBox>
       <SuiBox pt={3} pb={2} px={2}>
         <SuiBox mb={2}>
-          <SuiTypography
-            variant="caption"
-            textColor="text"
-            fontWeight="bold"
-            textTransform="uppercase"
-          >
+          <SuiTypography variant="caption" color="text" fontWeight="bold" textTransform="uppercase">
             newest
           </SuiTypography>
         </SuiBox>
@@ -60,7 +55,7 @@ function Transactions() {
           flexDirection="column"
           p={0}
           m={0}
-          customClass="no-list-style"
+          sx={{ listStyle: "none" }}
         >
           <Transaction
             color="error"
@@ -78,12 +73,7 @@ function Transactions() {
           />
         </SuiBox>
         <SuiBox mt={1} mb={2}>
-          <SuiTypography
-            variant="caption"
-            textColor="text"
-            fontWeight="bold"
-            textTransform="uppercase"
-          >
+          <SuiTypography variant="caption" color="text" fontWeight="bold" textTransform="uppercase">
             yesterday
           </SuiTypography>
         </SuiBox>
@@ -93,7 +83,7 @@ function Transactions() {
           flexDirection="column"
           p={0}
           m={0}
-          customClass="no-list-style"
+          sx={{ listStyle: "none" }}
         >
           <Transaction
             color="success"

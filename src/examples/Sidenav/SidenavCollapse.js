@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -23,41 +23,42 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 
 // Custom styles for the SidenavCollapse
-import styles from "examples/Sidenav/styles/sidenavCollapse";
+import {
+  collapseItem,
+  collapseIconBox,
+  collapseIcon,
+  collapseText,
+} from "examples/Sidenav/styles/sidenavCollapse";
 
-// Soft UI Dashboard React context
+// Soft UI Dashboard PRO React context
 import { useSoftUIController } from "context";
 
-function SidenavCollapse({ icon, name, children, active, noCollapse, open, ...rest }) {
+function SidenavCollapse({ color, icon, name, children, active, noCollapse, open, ...rest }) {
   const [controller] = useSoftUIController();
-  const { miniSidenav, transparentSidenav, sidenavColor } = controller;
-
-  const classes = styles({
-    active,
-    noCollapse,
-    open,
-    miniSidenav,
-    transparentSidenav,
-    sidenavColor,
-  });
+  const { miniSidenav, transparentSidenav } = controller;
 
   return (
     <>
       <ListItem component="li">
-        <SuiBox {...rest} customClass={classes.collapse_item}>
-          <ListItemIcon className={classes.collapse_iconBox}>
+        <SuiBox {...rest} sx={(theme) => collapseItem(theme, { active, transparentSidenav })}>
+          <ListItemIcon
+            sx={(theme) => collapseIconBox(theme, { active, transparentSidenav, color })}
+          >
             {typeof icon === "string" ? (
-              <Icon className={classes.collapse_icon}>{icon}</Icon>
+              <Icon sx={(theme) => collapseIcon(theme, { active })}>{icon}</Icon>
             ) : (
               icon
             )}
           </ListItemIcon>
 
-          <ListItemText primary={name} classes={{ root: classes.collapse_text }} />
+          <ListItemText
+            primary={name}
+            sx={(theme) => collapseText(theme, { miniSidenav, transparentSidenav, active })}
+          />
         </SuiBox>
       </ListItem>
       {children && (
@@ -71,6 +72,7 @@ function SidenavCollapse({ icon, name, children, active, noCollapse, open, ...re
 
 // Setting default values for the props of SidenavCollapse
 SidenavCollapse.defaultProps = {
+  color: "info",
   active: false,
   noCollapse: false,
   children: false,
@@ -79,6 +81,7 @@ SidenavCollapse.defaultProps = {
 
 // Typechecking props for the SidenavCollapse
 SidenavCollapse.propTypes = {
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   icon: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
   children: PropTypes.node,

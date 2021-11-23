@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -19,19 +19,19 @@ import PropTypes from "prop-types";
 // @mui material components
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiBadge from "components/SuiBadge";
 
-// Custom styles for the TimelineItem
-import styles from "examples/Timeline/TimelineItem/styles";
-
+// Timeline context
 import { useTimeline } from "examples/Timeline/context";
+
+// Custom styles for the TimelineItem
+import { timelineItem, timelineItemIcon } from "examples/Timeline/TimelineItem/styles";
 
 function TimelineItem({ color, icon, title, dateTime, description, badges, lastItem }) {
   const isDark = useTimeline();
-  const classes = styles({ color, lastItem, isDark });
 
   const renderBadges =
     badges.length > 0
@@ -40,33 +40,42 @@ function TimelineItem({ color, icon, title, dateTime, description, badges, lastI
 
           return (
             <SuiBox key={badgeKey} mr={key === badges.length - 1 ? 0 : 0.5}>
-              <SuiBadge color={color} size="extra-small" badgeContent={badge} container />
+              <SuiBadge color={color} size="xs" badgeContent={badge} container />
             </SuiBox>
           );
         })
       : null;
 
   return (
-    <SuiBox customClass={classes.timelineItem}>
-      <SuiBox customClass={classes.timelineItem_iconBox}>
-        <Icon className={classes.timelineItem_icon}>{icon}</Icon>
+    <SuiBox position="relative" sx={(theme) => timelineItem(theme, { color })}>
+      <SuiBox
+        bgColor={isDark ? "dark" : "white"}
+        width="1.625rem"
+        height="1.625rem"
+        borderRadius="50%"
+        position="absolute"
+        top="3.25%"
+        left="2px"
+        zIndex={2}
+      >
+        <Icon sx={(theme) => timelineItemIcon(theme, { color })}>{icon}</Icon>
       </SuiBox>
       <SuiBox ml={5.75} pt={description ? 0.7 : 0.5} lineHeight={0} maxWidth="30rem">
-        <SuiTypography variant="button" fontWeight="medium" textColor={isDark ? "white" : "dark"}>
+        <SuiTypography variant="button" fontWeight="medium" color={isDark ? "white" : "dark"}>
           {title}
         </SuiTypography>
         <SuiBox mt={0.5}>
           <SuiTypography
             variant="caption"
             fontWeight="medium"
-            textColor={isDark ? "secondary" : "text"}
+            color={isDark ? "secondary" : "text"}
           >
             {dateTime}
           </SuiTypography>
         </SuiBox>
         <SuiBox mt={2} mb={1.5}>
           {description ? (
-            <SuiTypography variant="button" fontWeight="regular" textColor="text">
+            <SuiTypography variant="button" fontWeight="regular" color="text">
               {description}
             </SuiTypography>
           ) : null}

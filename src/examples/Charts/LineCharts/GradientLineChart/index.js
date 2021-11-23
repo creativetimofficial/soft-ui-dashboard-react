@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -24,17 +24,17 @@ import { Line } from "react-chartjs-2";
 // @mui material components
 import Card from "@mui/material/Card";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Soft UI Dashboard React helper functions
+// Soft UI Dashboard PRO React helper functions
 import gradientChartLine from "assets/theme/functions/gradientChartLine";
 
 // GradientLineChart configurations
 import configs from "examples/Charts/LineCharts/GradientLineChart/configs";
 
-// Soft UI Dashboard React base styles
+// Soft UI Dashboard PRO React base styles
 import colors from "assets/theme/base/colors";
 
 function GradientLineChart({ title, description, height, chart }) {
@@ -43,18 +43,25 @@ function GradientLineChart({ title, description, height, chart }) {
   const { data, options } = chartData;
 
   useEffect(() => {
-    const chartDatasets = chart.datasets.map((dataset) => ({
-      ...dataset,
-      tension: 0.4,
-      pointRadius: 0,
-      borderWidth: 3,
-      borderColor: colors[dataset.color].main,
-      fill: true,
-      maxBarThickness: 6,
-      backgroundColor: gradientChartLine(chartRef.current.children[0], colors[dataset.color].main),
-    }));
+    const chartDatasets = chart.datasets
+      ? chart.datasets.map((dataset) => ({
+          ...dataset,
+          tension: 0.4,
+          pointRadius: 0,
+          borderWidth: 3,
+          borderColor: colors[dataset.color]
+            ? colors[dataset.color || "dark"].main
+            : colors.dark.main,
+          fill: true,
+          maxBarThickness: 6,
+          backgroundColor: gradientChartLine(
+            chartRef.current.children[0],
+            colors[dataset.color] ? colors[dataset.color || "dark"].main : colors.dark.main
+          ),
+        }))
+      : [];
 
-    setChartData(configs(chart.labels, chartDatasets));
+    setChartData(configs(chart.labels || [], chartDatasets));
   }, [chart]);
 
   const renderChart = (
@@ -67,7 +74,7 @@ function GradientLineChart({ title, description, height, chart }) {
             </SuiBox>
           )}
           <SuiBox mb={2}>
-            <SuiTypography variant="button" fontWeight="regular" textColor="text">
+            <SuiTypography component="div" variant="button" fontWeight="regular" color="text">
               {description}
             </SuiTypography>
           </SuiBox>
@@ -75,9 +82,9 @@ function GradientLineChart({ title, description, height, chart }) {
       ) : null}
       {useMemo(
         () => (
-          <div ref={chartRef} style={{ height }}>
+          <SuiBox ref={chartRef} sx={{ height }}>
             <Line data={data} options={options} />
-          </div>
+          </SuiBox>
         ),
         [chartData, height]
       )}

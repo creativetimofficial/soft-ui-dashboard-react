@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -21,18 +21,18 @@ import { useLocation } from "react-router-dom";
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 
-// Soft UI Dashboard React context
-import { useSoftUIController } from "context";
+// Soft UI Dashboard PRO React context
+import { useSoftUIController, setLayout } from "context";
 
 function PageLayout({ background, children }) {
   const [, dispatch] = useSoftUIController();
   const { pathname } = useLocation();
 
   useEffect(() => {
-    dispatch({ type: "LAYOUT", value: "page" });
+    setLayout(dispatch, "page");
   }, [pathname]);
 
   return (
@@ -40,8 +40,8 @@ function PageLayout({ background, children }) {
       width="100vw"
       height="100%"
       minHeight="100vh"
-      backgroundColor={background}
-      customClass="overflow-x-hidden"
+      bgColor={background}
+      sx={{ overflowX: "hidden" }}
     >
       {children}
     </SuiBox>

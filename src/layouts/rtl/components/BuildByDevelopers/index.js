@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -22,16 +22,11 @@ import Icon from "@mui/material/Icon";
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Custom styles for the BuildByDevelopers
-import styles from "layouts/rtl/components/BuildByDevelopers/styles";
-
 // Images
 import wavesWhite from "assets/images/shapes/waves-white.svg";
 import rocketWhite from "assets/images/illustrations/rocket-white.png";
 
 function BuildByDevelopers() {
-  const classes = styles();
-
   return (
     <Card>
       <SuiBox p={2}>
@@ -39,7 +34,7 @@ function BuildByDevelopers() {
           <Grid item xs={12} lg={6}>
             <SuiBox display="flex" flexDirection="column" height="100%">
               <SuiBox pt={1} mb={0.5}>
-                <SuiTypography variant="body2" textColor="text" fontWeight="bold">
+                <SuiTypography variant="body2" color="text" fontWeight="bold">
                   بناها المطورون
                 </SuiTypography>
               </SuiBox>
@@ -47,7 +42,7 @@ function BuildByDevelopers() {
                 Soft UI Dashboard
               </SuiTypography>
               <SuiBox mb={6}>
-                <SuiTypography variant="body2" textColor="text">
+                <SuiTypography variant="body2" color="text" fontWeight="bold">
                   من الألوان والبطاقات والطباعة إلى العناصر المعقدة ، ستجد الوثائق الكاملة.
                 </SuiTypography>
               </SuiBox>
@@ -55,24 +50,40 @@ function BuildByDevelopers() {
                 component="a"
                 href="#"
                 variant="button"
-                textColor="text"
+                color="text"
                 fontWeight="bold"
-                customClass={classes.buildByDevelopers_button}
+                sx={{
+                  mt: "auto",
+                  mr: "auto",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  cursor: "pointer",
+
+                  "& .material-icons-round": {
+                    fontSize: "1.125rem",
+                    transform: `translate(2px, -0.5px)`,
+                    transition: "transform 0.2s cubic-bezier(0.34,1.61,0.7,1.3)",
+                  },
+
+                  "&:hover .material-icons-round, &:focus  .material-icons-round": {
+                    transform: `translate(6px, -0.5px)`,
+                  },
+                }}
               >
                 اقرأ المستندات
-                <Icon className="font-bold">arrow_backward</Icon>
+                <Icon sx={{ fontWeight: "bold" }}>arrow_backward</Icon>
               </SuiTypography>
             </SuiBox>
           </Grid>
-          <Grid item xs={12} lg={5} className="ml-auto relative">
+          <Grid item xs={12} lg={5} sx={{ position: "relative", ml: "auto" }}>
             <SuiBox
               height="100%"
               display="grid"
               justifyContent="center"
               alignItems="center"
-              backgroundColor="info"
+              bgColor="info"
               borderRadius="lg"
-              backgroundGradient
+              variant="gradient"
             >
               <SuiBox
                 component="img"

@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -20,10 +20,9 @@ import PropTypes from "prop-types";
 
 // Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
-import SuiButton from "components/SuiButton";
 
 // Custom styles for SuiPagination
-import styles from "components/SuiPagination/styles";
+import SuiPaginationItemRoot from "components/SuiPagination/SuiPaginationItemRoot";
 
 // The Pagination main context
 const Context = createContext();
@@ -32,28 +31,27 @@ const SuiPagination = forwardRef(
   ({ item, variant, color, size, active, children, ...rest }, ref) => {
     const context = item ? useContext(Context) : null;
     const paginationSize = context ? context.size : null;
-    const classes = styles({ paginationSize, variant, active });
 
     return (
       <Context.Provider value={{ variant, color, size }}>
         {item ? (
-          <SuiButton
+          <SuiPaginationItemRoot
             {...rest}
             ref={ref}
             variant={active ? context.variant : "outlined"}
-            buttonColor={active ? context.color : "secondary"}
+            color={active ? context.color : "secondary"}
             iconOnly
             circular
-            customClass={classes.suiPagination}
+            ownerState={{ variant, active, paginationSize }}
           >
             {children}
-          </SuiButton>
+          </SuiPaginationItemRoot>
         ) : (
           <SuiBox
             display="flex"
             justifyContent="flex-end"
             alignItems="center"
-            customClass="no-list-style"
+            sx={{ listStyle: "none" }}
           >
             {children}
           </SuiBox>
@@ -77,6 +75,7 @@ SuiPagination.propTypes = {
   item: PropTypes.bool,
   variant: PropTypes.oneOf(["gradient", "contained"]),
   color: PropTypes.oneOf([
+    "white",
     "primary",
     "secondary",
     "info",

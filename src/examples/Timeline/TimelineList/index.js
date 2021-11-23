@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -19,7 +19,7 @@ import PropTypes from "prop-types";
 // @mui material components
 import Card from "@mui/material/Card";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
@@ -30,9 +30,9 @@ function TimelineList({ title, dark, children }) {
   return (
     <TimelineProvider value={dark}>
       <Card>
-        <SuiBox backgroundColor={dark ? "dark" : "white"} backgroundGradient={dark}>
+        <SuiBox bgColor={dark ? "dark" : "white"} variant="gradient">
           <SuiBox pt={3} px={3}>
-            <SuiTypography variant="h6" fontWeight="medium" textColor={dark ? "white" : "dark"}>
+            <SuiTypography variant="h6" fontWeight="medium" color={dark ? "white" : "dark"}>
               {title}
             </SuiTypography>
           </SuiBox>

@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -26,6 +26,7 @@ import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 // Soft UI Dashboard React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
 
 // Billing page components
 import PaymentMethod from "layouts/billing/components/PaymentMethod";
@@ -71,7 +72,7 @@ function Billing() {
             </Grid>
           </Grid>
         </SuiBox>
-        <SuiBox mb={3}>
+        <SuiBox my={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={7}>
               <BillingInformation />
@@ -82,6 +83,7 @@ function Billing() {
           </Grid>
         </SuiBox>
       </SuiBox>
+      <Footer />
     </DashboardLayout>
   );
 }
