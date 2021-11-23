@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -20,26 +20,22 @@ import PropTypes from "prop-types";
 import Link from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Soft UI Dashboard React base styles
+// Soft UI Dashboard PRO React base styles
 import typography from "assets/theme/base/typography";
-
-// Custom styles for the Footer
-import styles from "examples/Footer/styles";
 
 function Footer({ company, links }) {
   const { href, name } = company;
   const { size } = typography;
-  const classes = styles();
 
   const renderLinks = () =>
     links.map((link) => (
-      <SuiBox key={link.name} component="li" px={2}>
+      <SuiBox key={link.name} component="li" px={2} lineHeight={1}>
         <Link href={link.href} target="_blank">
-          <SuiTypography variant="button" fontWeight="regular" textColor="text">
+          <SuiTypography variant="button" fontWeight="regular" color="text">
             {link.name}
           </SuiTypography>
         </Link>
@@ -65,7 +61,7 @@ function Footer({ company, links }) {
         px={1.5}
       >
         &copy; {new Date().getFullYear()}, made with
-        <SuiBox fontSize={size.regular} color="text" mb={-0.5} mx={0.25}>
+        <SuiBox fontSize={size.md} color="text" mb={-0.5} mx={0.25}>
           <Icon color="inherit" fontSize="inherit">
             favorite
           </Icon>
@@ -78,7 +74,23 @@ function Footer({ company, links }) {
         </Link>
         for a better web.
       </SuiBox>
-      <SuiBox component="ul" customClass={classes.footer_list}>
+      <SuiBox
+        component="ul"
+        sx={({ breakpoints }) => ({
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "center",
+          listStyle: "none",
+          mt: 3,
+          mb: 0,
+          p: 0,
+
+          [breakpoints.up("lg")]: {
+            mt: 0,
+          },
+        })}
+      >
         {renderLinks()}
       </SuiBox>
     </SuiBox>

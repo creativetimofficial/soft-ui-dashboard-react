@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -25,31 +25,25 @@ import Fade from "@mui/material/Fade";
 import SuiBox from "components/SuiBox";
 
 // Custom styles for the SuiAlert
-import styles from "components/SuiAlert/styles";
+import SuiAlertRoot from "components/SuiAlert/SuiAlertRoot";
+import SuiAlertCloseIcon from "components/SuiAlert/SuiAlertCloseIcon";
 
 function SuiAlert({ color, dismissible, children, ...rest }) {
   const [alertStatus, setAlertStatus] = useState("mount");
-  const classes = styles({ color });
 
   const handleAlertStatus = () => setAlertStatus("fadeOut");
 
   // The base template for the alert
   const alertTemplate = (mount = true) => (
     <Fade in={mount} timeout={300}>
-      <SuiBox {...rest} customClass={classes.alert}>
-        <SuiBox display="flex" alignItems="center">
+      <SuiAlertRoot ownerState={{ color }} {...rest}>
+        <SuiBox display="flex" alignItems="center" color="white">
           {children}
         </SuiBox>
         {dismissible ? (
-          <SuiBox
-            component="span"
-            customClass={classes.alert_closeIcon}
-            onClick={mount ? handleAlertStatus : null}
-          >
-            &times;
-          </SuiBox>
+          <SuiAlertCloseIcon onClick={mount ? handleAlertStatus : null}>&times;</SuiAlertCloseIcon>
         ) : null}
-      </SuiBox>
+      </SuiAlertRoot>
     </Fade>
   );
 

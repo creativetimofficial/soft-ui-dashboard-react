@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -15,44 +15,26 @@ Coded by www.creative-tim.com
 
 import { forwardRef } from "react";
 
-// clsx is a utility for constructing className string conditionally
-import clsx from "clsx";
-
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// @mui material components
-import Avatar from "@mui/material/Avatar";
-
 // Custom styles for SuiAvatar
-import styles from "components/SuiAvatar/styles";
+import SuiAvatarRoot from "components/SuiAvatar/SuiAvatarRoot";
 
-const SuiAvatar = forwardRef(({ backgroundColor, size, boxShadow, customClass, ...rest }, ref) => {
-  const classes = styles({ boxShadow, backgroundColor });
-
-  return (
-    <Avatar
-      ref={ref}
-      {...rest}
-      className={clsx(classes.suiAvatar, customClass, {
-        [classes[`suiAvatar_${size}`]]: size,
-        [classes.suiAvatar_boxShadow]: boxShadow !== "none",
-      })}
-    />
-  );
-});
+const SuiAvatar = forwardRef(({ bgColor, size, shadow, ...rest }, ref) => (
+  <SuiAvatarRoot ref={ref} ownerState={{ shadow, bgColor, size }} {...rest} />
+));
 
 // Setting default values for the props of SuiAvatar
 SuiAvatar.defaultProps = {
-  backgroundColor: "transparent",
+  bgColor: "transparent",
   size: "md",
-  boxShadow: "none",
-  customClass: "",
+  shadow: "none",
 };
 
 // Typechecking props for the SuiAvatar
 SuiAvatar.propTypes = {
-  backgroundColor: PropTypes.oneOf([
+  bgColor: PropTypes.oneOf([
     "transparent",
     "primary",
     "secondary",
@@ -64,8 +46,7 @@ SuiAvatar.propTypes = {
     "dark",
   ]),
   size: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl", "xxl"]),
-  boxShadow: PropTypes.oneOf(["none", "xs", "sm", "regular", "lg", "xl", "xxl", "inset"]),
-  customClass: PropTypes.string,
+  shadow: PropTypes.oneOf(["none", "xs", "sm", "md", "lg", "xl", "xxl", "inset"]),
 };
 
 export default SuiAvatar;

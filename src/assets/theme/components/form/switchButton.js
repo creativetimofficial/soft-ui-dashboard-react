@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -25,7 +25,7 @@ import linearGradient from "assets/theme/functions/linearGradient";
 
 const { white, light, gradients } = colors;
 const { borderWidth } = borders;
-const { regular } = boxShadows;
+const { md } = boxShadows;
 
 export default {
   defaultProps: {
@@ -71,7 +71,7 @@ export default {
       width: pxToRem(16),
       height: pxToRem(16),
       backgroundColor: white.main,
-      boxShadow: regular,
+      boxShadow: md,
       top: "50%",
     },
 

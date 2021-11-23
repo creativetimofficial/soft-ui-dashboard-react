@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -21,51 +21,41 @@ import { useLocation, NavLink } from "react-router-dom";
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 
-// clsx is a utility for constructing className strings conditionally
-import clsx from "clsx";
-
 // @mui material components
-import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
-import Icon from "@mui/material/Icon";
 import Link from "@mui/material/Link";
+import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiButton from "components/SuiButton";
 
-// Soft UI Dashboard React example components
+// Soft UI Dashboard PRO React example components
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
 import SidenavCard from "examples/Sidenav/SidenavCard";
 
 // Custom styles for the Sidenav
-import styles from "examples/Sidenav/styles/sidenav";
+import SidenavRoot from "examples/Sidenav/SidenavRoot";
+import sidenavLogoLabel from "examples/Sidenav/styles/sidenav";
 
-// Images
-import SoftUILogo from "assets/images/logo-ct.png";
+// Soft UI Dashboard PRO React context
+import { useSoftUIController, setMiniSidenav } from "context";
 
-// Soft UI Dashboard React context
-import { useSoftUIController } from "context";
-
-function Sidenav({ routes, ...rest }) {
+function Sidenav({ color, brand, brandName, routes, ...rest }) {
   const [controller, dispatch] = useSoftUIController();
   const { miniSidenav, transparentSidenav } = controller;
-  const classes = styles({ miniSidenav, transparentSidenav });
   const location = useLocation();
   const { pathname } = location;
   const collapseName = pathname.split("/").slice(1)[0];
 
-  const closeSizenav = () => dispatch({ type: "MINI_SIDENAV", value: true });
+  const closeSidenav = () => setMiniSidenav(dispatch, true);
 
   useEffect(() => {
     // A function that sets the mini state of the sidenav.
     function handleMiniSidenav() {
-      dispatch({
-        type: "MINI_SIDENAV",
-        value: window.innerWidth < 1200,
-      });
+      setMiniSidenav(dispatch, window.innerWidth < 1200);
     }
 
     /** 
@@ -91,9 +81,10 @@ function Sidenav({ routes, ...rest }) {
           key={key}
           target="_blank"
           rel="noreferrer"
-          className={classes.sidenav_navlink}
+          sx={{ textDecoration: "none" }}
         >
           <SidenavCollapse
+            color={color}
             name={name}
             icon={icon}
             active={key === collapseName}
@@ -101,8 +92,10 @@ function Sidenav({ routes, ...rest }) {
           />
         </Link>
       ) : (
-        <NavLink to={route} key={key} className={classes.sidenav_navlink}>
+        <NavLink to={route} key={key}>
           <SidenavCollapse
+            color={color}
+            key={key}
             name={name}
             icon={icon}
             active={key === collapseName}
@@ -114,10 +107,15 @@ function Sidenav({ routes, ...rest }) {
       returnValue = (
         <SuiTypography
           key={key}
+          display="block"
           variant="caption"
           fontWeight="bold"
           textTransform="uppercase"
-          customClass={classes.sidenav_title}
+          opacity={0.6}
+          pl={3}
+          mt={2}
+          mb={1}
+          ml={1}
         >
           {title}
         </SuiTypography>
@@ -130,47 +128,36 @@ function Sidenav({ routes, ...rest }) {
   });
 
   return (
-    <Drawer
-      {...rest}
-      variant="permanent"
-      classes={{
-        paper: clsx(classes.sidenav, {
-          [classes.sidenav_open]: !miniSidenav,
-          [classes.sidenav_close]: miniSidenav,
-        }),
-      }}
-    >
-      <SuiBox customClass={classes.sidenav_header}>
+    <SidenavRoot {...rest} variant="permanent" ownerState={{ transparentSidenav, miniSidenav }}>
+      <SuiBox pt={3} pb={1} px={4} textAlign="center">
         <SuiBox
           display={{ xs: "block", xl: "none" }}
           position="absolute"
           top={0}
           right={0}
           p={1.625}
-          customClass="cursor-pointer"
-          onClick={closeSizenav}
+          onClick={closeSidenav}
+          sx={{ cursor: "pointer" }}
         >
-          <SuiTypography variant="h6" textColor="secondary">
-            <Icon className="font-bold">close</Icon>
+          <SuiTypography variant="h6" color="secondary">
+            <Icon sx={{ fontWeight: "bold" }}>close</Icon>
           </SuiTypography>
         </SuiBox>
-        <NavLink to="/">
+        <SuiBox component={NavLink} to="/" display="flex" alignItems="center">
+          {brand && <SuiBox component="img" src={brand} alt="Soft UI Logo" width="2rem" />}
           <SuiBox
-            component="img"
-            src={SoftUILogo}
-            alt="Soft UI Logo"
-            customClass={classes.sidenav_logo}
-          />
-          <SuiBox customClass={classes.sidenav_logoLabel}>
+            width={!brandName && "100%"}
+            sx={(theme) => sidenavLogoLabel(theme, { miniSidenav })}
+          >
             <SuiTypography component="h6" variant="button" fontWeight="medium">
-              Soft UI Dashboard
+              {brandName}
             </SuiTypography>
           </SuiBox>
-        </NavLink>
+        </SuiBox>
       </SuiBox>
       <Divider />
       <List>{renderRoutes}</List>
-      <SuiBox customClass={classes.sidenav_footer}>
+      <SuiBox pt={2} my={2} mx={2} mt="auto">
         <SidenavCard />
         <SuiBox mt={2}>
           <SuiButton
@@ -179,19 +166,28 @@ function Sidenav({ routes, ...rest }) {
             target="_blank"
             rel="noreferrer"
             variant="gradient"
-            buttonColor="info"
+            color={color}
             fullWidth
           >
             upgrade to pro
           </SuiButton>
         </SuiBox>
       </SuiBox>
-    </Drawer>
+    </SidenavRoot>
   );
 }
 
+// Setting default values for the props of Sidenav
+Sidenav.defaultProps = {
+  color: "info",
+  brand: "",
+};
+
 // Typechecking props for the Sidenav
 Sidenav.propTypes = {
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  brand: PropTypes.string,
+  brandName: PropTypes.string.isRequired,
   routes: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 

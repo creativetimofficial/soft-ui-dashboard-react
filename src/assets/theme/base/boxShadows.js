@@ -30,7 +30,7 @@ const { black, white, info, inputColors, tabs } = colors;
 export default {
   xs: boxShadow([0, 2], [9, -5], black.main, 0.15),
   sm: boxShadow([0, 5], [10, 0], black.main, 0.12),
-  regular: `${boxShadow([0, 4], [6, -1], black.light, 0.12)}, ${boxShadow(
+  md: `${boxShadow([0, 4], [6, -1], black.light, 0.12)}, ${boxShadow(
     [0, 2],
     [4, -1],
     black.light,

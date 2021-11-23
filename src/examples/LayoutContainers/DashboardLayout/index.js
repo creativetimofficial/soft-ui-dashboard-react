@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -21,31 +21,44 @@ import { useLocation } from "react-router-dom";
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 
-// Custom styles for the LayoutContainer
-import styles from "examples/LayoutContainers/DashboardLayout/styles";
+// Soft UI Dashboard PRO React context
+import { useSoftUIController, setLayout } from "context";
 
-// Soft UI Dashboard React context
-import { useSoftUIController } from "context";
-
-function LayoutContainer({ children }) {
+function DashboardLayout({ children }) {
   const [controller, dispatch] = useSoftUIController();
-  const { miniSidenav, direction } = controller;
+  const { miniSidenav } = controller;
   const { pathname } = useLocation();
-  const classes = styles({ miniSidenav, direction });
 
   useEffect(() => {
-    dispatch({ type: "LAYOUT", value: "dashboard" });
+    setLayout(dispatch, "dashboard");
   }, [pathname]);
 
-  return <SuiBox customClass={classes.layoutContainer}>{children}</SuiBox>;
+  return (
+    <SuiBox
+      sx={({ breakpoints, transitions, functions: { pxToRem } }) => ({
+        p: 3,
+        position: "relative",
+
+        [breakpoints.up("xl")]: {
+          marginLeft: miniSidenav ? pxToRem(120) : pxToRem(274),
+          transition: transitions.create(["margin-left", "margin-right"], {
+            easing: transitions.easing.easeInOut,
+            duration: transitions.duration.standard,
+          }),
+        },
+      })}
+    >
+      {children}
+    </SuiBox>
+  );
 }
 
-// Typechecking props for the LayoutContainer
-LayoutContainer.propTypes = {
+// Typechecking props for the DashboardLayout
+DashboardLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default LayoutContainer;
+export default DashboardLayout;

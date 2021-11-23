@@ -30,7 +30,7 @@ import SuiTypography from "components/SuiTypography";
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import Footer from "examples/Footer";
 import ProfileInfoCard from "examples/Cards/InfoCards/ProfileInfoCard";
-import ProfilesList from "examples/ProfilesList";
+import ProfilesList from "examples/Lists/ProfilesList";
 import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
 import PlaceholderCard from "examples/Cards/PlaceholderCard";
 
@@ -103,7 +103,7 @@ function Overview() {
               </SuiTypography>
             </SuiBox>
             <SuiBox mb={1}>
-              <SuiTypography variant="button" fontWeight="regular" textColor="text">
+              <SuiTypography variant="button" fontWeight="regular" color="text">
                 Architects design houses
               </SuiTypography>
             </SuiBox>

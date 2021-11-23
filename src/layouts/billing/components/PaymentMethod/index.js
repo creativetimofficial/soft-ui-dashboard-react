@@ -40,8 +40,8 @@ function PaymentMethod() {
         <SuiTypography variant="h6" fontWeight="medium">
           Payment Method
         </SuiTypography>
-        <SuiButton variant="gradient" buttonColor="dark">
-          <Icon className="font-bold">add</Icon>
+        <SuiButton variant="gradient" color="dark">
+          <Icon sx={{ fontWeight: "bold" }}>add</Icon>
           &nbsp;add new card
         </SuiButton>
       </SuiBox>
@@ -62,7 +62,7 @@ function PaymentMethod() {
               </SuiTypography>
               <SuiBox ml="auto" lineHeight={0}>
                 <Tooltip title="Edit Card" placement="top">
-                  <Icon className="cursor-pointer" fontSize="small">
+                  <Icon sx={{ cursor: "pointer" }} fontSize="small">
                     edit
                   </Icon>
                 </Tooltip>
@@ -84,7 +84,7 @@ function PaymentMethod() {
               </SuiTypography>
               <SuiBox ml="auto" lineHeight={0}>
                 <Tooltip title="Edit Card" placement="top">
-                  <Icon className="cursor-pointer" fontSize="small">
+                  <Icon sx={{ cursor: "pointer" }} fontSize="small">
                     edit
                   </Icon>
                 </Tooltip>

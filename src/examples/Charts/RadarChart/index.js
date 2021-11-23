@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -24,26 +24,30 @@ import { Radar } from "react-chartjs-2";
 // @mui material components
 import Card from "@mui/material/Card";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
 // RadarChart configurations
 import configs from "examples/Charts/RadarChart/configs";
 
-// Soft UI Dashboard React base styles
+// Soft UI Dashboard PRO React base styles
 import colors from "assets/theme/base/colors";
 
-// Soft UI Dashboard React helper functions
+// Soft UI Dashboard PRO React helper functions
 import rgba from "assets/theme/functions/rgba";
 
 function RadarChart({ title, description, chart }) {
-  const chartDatasets = chart.datasets.map((dataset) => ({
-    ...dataset,
-    backgroundColor: rgba(colors[dataset.color].main, 0.2),
-  }));
+  const chartDatasets = chart.datasets
+    ? chart.datasets.map((dataset) => ({
+        ...dataset,
+        backgroundColor: colors[dataset.color]
+          ? rgba(colors[dataset.color || "dark"].main, 0.2)
+          : rgba(colors.dark.main, 0.2),
+      }))
+    : [];
 
-  const { data, options } = configs(chart.labels, chartDatasets);
+  const { data, options } = configs(chart.labels || [], chartDatasets);
 
   const renderChart = (
     <SuiBox p={2}>
@@ -55,7 +59,7 @@ function RadarChart({ title, description, chart }) {
             </SuiBox>
           )}
           <SuiBox mb={2}>
-            <SuiTypography variant="button" fontWeight="regular" textColor="text">
+            <SuiTypography component="div" variant="button" fontWeight="regular" color="text">
               {description}
             </SuiTypography>
           </SuiBox>

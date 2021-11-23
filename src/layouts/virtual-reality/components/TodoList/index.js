@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -19,66 +19,66 @@ import Divider from "@mui/material/Divider";
 import Icon from "@mui/material/Icon";
 import Tooltip from "@mui/material/Tooltip";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
 function TodoList() {
   return (
-    <Card className="h-100">
+    <Card sx={{ height: "100%" }}>
       <SuiBox p={3}>
-        <SuiBox display="flex">
+        <SuiBox display="flex" lineHeight={1}>
           <SuiBox mr={2}>
             <SuiTypography variant="h6" fontWeight="medium">
               08:00
             </SuiTypography>
           </SuiBox>
-          <SuiBox lineHeight={1}>
+          <SuiBox>
             <SuiTypography variant="h6" fontWeight="medium">
               Synk up with Mark
             </SuiTypography>
-            <SuiTypography variant="button" fontWeight="regular" textColor="secondary">
+            <SuiTypography variant="button" fontWeight="regular" color="secondary">
               Hangouts
             </SuiTypography>
           </SuiBox>
         </SuiBox>
         <Divider />
-        <SuiBox display="flex">
+        <SuiBox display="flex" lineHeight={0}>
           <SuiBox mr={2}>
             <SuiTypography variant="h6" fontWeight="medium">
               09:30
             </SuiTypography>
           </SuiBox>
-          <SuiBox lineHeight={1}>
+          <SuiBox>
             <SuiTypography variant="h6" fontWeight="medium">
               Gym
             </SuiTypography>
-            <SuiTypography variant="button" fontWeight="regular" textColor="secondary">
+            <SuiTypography variant="button" fontWeight="regular" color="secondary">
               World Class
             </SuiTypography>
           </SuiBox>
         </SuiBox>
         <Divider />
-        <SuiBox display="flex">
+        <SuiBox display="flex" lineHeight={1}>
           <SuiBox mr={2}>
             <SuiTypography variant="h6" fontWeight="medium">
               11:00
             </SuiTypography>
           </SuiBox>
-          <SuiBox lineHeight={1}>
+          <SuiBox>
             <SuiTypography variant="h6" fontWeight="medium">
               Design Review
             </SuiTypography>
-            <SuiTypography variant="button" fontWeight="regular" textColor="secondary">
+            <SuiTypography variant="button" fontWeight="regular" color="secondary">
               Zoom
             </SuiTypography>
           </SuiBox>
         </SuiBox>
       </SuiBox>
-      <SuiBox backgroundColor="grey-100" mt="auto">
-        <Tooltip title="Show More" placement="top" className="cursor-pointer">
-          <SuiBox textAlign="center" py={0.5} lineHeight={0}>
-            <Icon className="font-bold text-info" fontSize="medium">
+      <SuiBox bgColor="grey-100" mt="auto">
+        <Tooltip title="Show More" placement="top" sx={{ cursor: "pointer" }}>
+          <SuiBox textAlign="center" py={0.5} color="info" lineHeight={0}>
+            <Icon sx={{ fontWeight: "bold" }} color="inherit" fontSize="default">
               keyboard_arrow_down
             </Icon>
           </SuiBox>

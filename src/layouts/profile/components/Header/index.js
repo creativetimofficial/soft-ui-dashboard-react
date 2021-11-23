@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -38,16 +38,13 @@ import Settings from "examples/Icons/Settings";
 // Soft UI Dashboard PRO React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
-// Custom styles for Header
-import styles from "layouts/profile/components/Header/styles";
-
 // Images
 import burceMars from "assets/images/bruce-mars.jpg";
+import curved0 from "assets/images/curved-images/curved0.jpg";
 
 function Header() {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
   const [tabValue, setTabValue] = useState(0);
-  const classes = styles();
 
   useEffect(() => {
     // A function that sets the orientation state of the tabs.
@@ -74,8 +71,35 @@ function Header() {
   return (
     <SuiBox position="relative">
       <DashboardNavbar absolute light />
-      <SuiBox customClass={classes.profileHeader_background} />
-      <Card className={classes.profileHeader_profile}>
+      <SuiBox
+        display="flex"
+        alignItems="center"
+        position="relative"
+        minHeight="18.75rem"
+        borderRadius="xl"
+        sx={{
+          backgroundImage: ({ functions: { rgba, linearGradient }, palette: { gradients } }) =>
+            `${linearGradient(
+              rgba(gradients.info.main, 0.6),
+              rgba(gradients.info.state, 0.6)
+            )}, url(${curved0})`,
+          backgroundSize: "cover",
+          backgroundPosition: "50%",
+          overflow: "hidden",
+        }}
+      />
+      <Card
+        sx={{
+          backdropFilter: `saturate(200%) blur(30px)`,
+          backgroundColor: ({ functions: { rgba }, palette: { white } }) => rgba(white.main, 0.8),
+          boxShadow: ({ boxShadows: { navbarBoxShadow } }) => navbarBoxShadow,
+          position: "relative",
+          mt: -8,
+          mx: 3,
+          py: 2,
+          px: 2,
+        }}
+      >
         <Grid container spacing={3} alignItems="center">
           <Grid item>
             <SuiAvatar
@@ -83,7 +107,7 @@ function Header() {
               alt="profile-image"
               variant="rounded"
               size="xl"
-              customClass="shadow-sm"
+              shadow="sm"
             />
           </Grid>
           <Grid item>
@@ -91,18 +115,18 @@ function Header() {
               <SuiTypography variant="h5" fontWeight="medium">
                 Alex Thompson
               </SuiTypography>
-              <SuiTypography variant="button" textColor="text" fontWeight="medium">
+              <SuiTypography variant="button" color="text" fontWeight="medium">
                 CEO / Co-Founder
               </SuiTypography>
             </SuiBox>
           </Grid>
-          <Grid item xs={12} md={6} lg={4} className="ml-auto">
+          <Grid item xs={12} md={6} lg={4} sx={{ ml: "auto" }}>
             <AppBar position="static">
               <Tabs
                 orientation={tabsOrientation}
                 value={tabValue}
                 onChange={handleSetTabValue}
-                className="bg-transparent"
+                sx={{ background: "transparent" }}
               >
                 <Tab label="App" icon={<Cube />} />
                 <Tab label="Message" icon={<Document />} />

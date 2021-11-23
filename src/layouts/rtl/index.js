@@ -12,7 +12,6 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-
 import { useEffect } from "react";
 
 // @mui material components
@@ -40,12 +39,12 @@ import WorkWithTheRockets from "layouts/rtl/components/WorkWithTheRockets";
 import Projects from "layouts/rtl/components/Projects";
 import OrderOverview from "layouts/rtl/components/OrderOverview";
 
-// Soft UI Dashboard React contexts
-import { useSoftUIController } from "context";
-
 // Data
 import reportsBarChartData from "layouts/rtl/data/reportsBarChartData";
 import gradientLineChartData from "layouts/rtl/data/gradientLineChartData";
+
+// Soft UI Dashboard React contexts
+import { useSoftUIController, setDirection } from "context";
 
 function RTL() {
   const [, dispatch] = useSoftUIController();
@@ -54,9 +53,9 @@ function RTL() {
 
   // Changing the direction to rtl
   useEffect(() => {
-    dispatch({ type: "DIRECTION", value: "rtl" });
+    setDirection(dispatch, "rtl");
 
-    return () => dispatch({ type: "DIRECTION", value: "ltr" });
+    return () => setDirection(dispatch, "ltr");
   }, []);
 
   return (
@@ -134,9 +133,9 @@ function RTL() {
                     <SuiBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
                       <Icon className="font-bold">arrow_upward</Icon>
                     </SuiBox>
-                    <SuiTypography variant="button" textColor="text" fontWeight="medium">
+                    <SuiTypography variant="button" color="text" fontWeight="medium">
                       4% أكثر في عام{" "}
-                      <SuiTypography variant="button" textColor="text" fontWeight="regular">
+                      <SuiTypography variant="button" color="text" fontWeight="regular">
                         2021
                       </SuiTypography>
                     </SuiTypography>

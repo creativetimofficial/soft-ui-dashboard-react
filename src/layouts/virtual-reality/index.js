@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -18,13 +18,13 @@ import Grid from "@mui/material/Grid";
 import Tooltip from "@mui/material/Tooltip";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiAvatar from "components/SuiAvatar";
 import SuiTypography from "components/SuiTypography";
 import SuiButton from "components/SuiButton";
 
-// Soft UI Dashboard React base styles
+// Soft UI Dashboard PRO React base styles
 import typography from "assets/theme/base/typography";
 
 // VR dashboards components
@@ -37,16 +37,12 @@ import Emails from "layouts/virtual-reality/components/Emails";
 import MediaPlayer from "layouts/virtual-reality/components/MediaPlayer";
 import Messages from "layouts/virtual-reality/components/Messages";
 
-// Custom styles for the VRDefault
-import styles from "layouts/virtual-reality/styles";
-
 // Images
 import team1 from "assets/images/team-1.jpg";
 import sunCloud from "assets/images/small-logos/icon-sun-cloud.png";
 
-function VirtualReality() {
+function VRInfo() {
   const { d1, h2, fontWeightMedium } = typography;
-  const classes = styles();
 
   return (
     <BaseLayout>
@@ -56,7 +52,7 @@ function VirtualReality() {
         mt={{ xs: 0, md: 4 }}
         pt={{ xs: 16, md: 32 }}
         pb={{ xs: 0, md: 3 }}
-        customClass={classes.vrInfo}
+        sx={{ transform: "scale(1.1)" }}
       >
         <Grid container>
           <Grid item xs={12} md={1}>
@@ -74,27 +70,48 @@ function VirtualReality() {
                   alt="Profile Picture"
                   size="lg"
                   variant="rounded"
-                  customClass="cursor-pointer"
+                  sx={{ cursor: "pointer" }}
                 />
               </Tooltip>
 
               <SuiBox my={{ xs: 0, md: 2 }} mx={{ xs: 2, md: 0 }}>
                 <Tooltip title="Home" placement="right">
-                  <SuiButton size="large" iconOnly customClass="text-dark radius-lg">
-                    <Icon className="material-icons-round">home</Icon>
+                  <SuiButton
+                    size="large"
+                    iconOnly
+                    sx={({ palette: { dark }, borders: { borderRadius } }) => ({
+                      color: dark.main,
+                      borderRadius: borderRadius.lg,
+                    })}
+                  >
+                    <Icon>home</Icon>
                   </SuiButton>
                 </Tooltip>
               </SuiBox>
               <SuiBox mb={{ xs: 0, md: 2 }} mr={{ xs: 2, md: 0 }}>
                 <Tooltip title="Search" placement="right">
-                  <SuiButton size="large" iconOnly customClass="text-dark radius-lg">
-                    <Icon className="material-icons-round">search</Icon>
+                  <SuiButton
+                    size="large"
+                    iconOnly
+                    sx={({ palette: { dark }, borders: { borderRadius } }) => ({
+                      color: dark.main,
+                      borderRadius: borderRadius.lg,
+                    })}
+                  >
+                    <Icon>search</Icon>
                   </SuiButton>
                 </Tooltip>
               </SuiBox>
               <Tooltip title="Minimize" placement="right">
-                <SuiButton size="large" iconOnly customClass="text-dark radius-lg">
-                  <Icon className="material-icons-round">more_horiz</Icon>
+                <SuiButton
+                  size="large"
+                  iconOnly
+                  sx={({ palette: { dark }, borders: { borderRadius } }) => ({
+                    color: dark.main,
+                    borderRadius: borderRadius.lg,
+                  })}
+                >
+                  <Icon>more_horiz</Icon>
                 </SuiButton>
               </Tooltip>
             </SuiBox>
@@ -147,4 +164,4 @@ function VirtualReality() {
   );
 }
 
-export default VirtualReality;
+export default VRInfo;

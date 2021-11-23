@@ -7,9 +7,6 @@ import SuiTypography from "components/SuiTypography";
 import SuiAvatar from "components/SuiAvatar";
 import SuiProgress from "components/SuiProgress";
 
-// Custom styles for the Projects
-import styles from "layouts/dashboard/components/Projects/styles";
-
 // Images
 import logoXD from "assets/images/small-logos/logo-xd.svg";
 import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
@@ -23,12 +20,28 @@ import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
 
 export default function data() {
-  const classes = styles();
-
   const avatars = (members) =>
     members.map(([image, name]) => (
       <Tooltip key={name} title={name} placeholder="bottom">
-        <SuiAvatar src={image} alt="name" size="xs" customClass={classes.projects_tableAvatar} />
+        <SuiAvatar
+          src={image}
+          alt="name"
+          size="xs"
+          sx={{
+            border: ({ borders: { borderWidth }, palette: { white } }) =>
+              `${borderWidth[2]} solid ${white.main}`,
+            cursor: "pointer",
+            position: "relative",
+
+            "&:not(:first-of-type)": {
+              ml: -1.25,
+            },
+
+            "&:hover, &:focus": {
+              zIndex: "10",
+            },
+          }}
+        />
       </Tooltip>
     ));
 
@@ -54,13 +67,13 @@ export default function data() {
           </SuiBox>
         ),
         budget: (
-          <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+          <SuiTypography variant="caption" color="text" fontWeight="medium">
             $14,000
           </SuiTypography>
         ),
         completion: (
           <SuiBox width="8rem" textAlign="left">
-            <SuiProgress value={60} color="info" gradient />
+            <SuiProgress value={60} color="info" variant="gradient" label={false} />
           </SuiBox>
         ),
       },
@@ -75,13 +88,13 @@ export default function data() {
           </SuiBox>
         ),
         budget: (
-          <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+          <SuiTypography variant="caption" color="text" fontWeight="medium">
             $3,000
           </SuiTypography>
         ),
         completion: (
           <SuiBox width="8rem" textAlign="left">
-            <SuiProgress value={10} color="info" gradient />
+            <SuiProgress value={10} color="info" variant="gradient" label={false} />
           </SuiBox>
         ),
       },
@@ -96,13 +109,13 @@ export default function data() {
           </SuiBox>
         ),
         budget: (
-          <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+          <SuiTypography variant="caption" color="text" fontWeight="medium">
             Not set
           </SuiTypography>
         ),
         completion: (
           <SuiBox width="8rem" textAlign="left">
-            <SuiProgress value={100} color="success" gradient />
+            <SuiProgress value={100} color="success" variant="gradient" label={false} />
           </SuiBox>
         ),
       },
@@ -119,13 +132,13 @@ export default function data() {
           </SuiBox>
         ),
         budget: (
-          <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+          <SuiTypography variant="caption" color="text" fontWeight="medium">
             $20,500
           </SuiTypography>
         ),
         completion: (
           <SuiBox width="8rem" textAlign="left">
-            <SuiProgress value={100} color="success" gradient />
+            <SuiProgress value={100} color="success" variant="gradient" label={false} />
           </SuiBox>
         ),
       },
@@ -137,13 +150,13 @@ export default function data() {
           </SuiBox>
         ),
         budget: (
-          <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+          <SuiTypography variant="caption" color="text" fontWeight="medium">
             $500
           </SuiTypography>
         ),
         completion: (
           <SuiBox width="8rem" textAlign="left">
-            <SuiProgress value={25} color="info" gradient />
+            <SuiProgress value={25} color="info" variant="gradient" label={false} />
           </SuiBox>
         ),
       },
@@ -158,13 +171,13 @@ export default function data() {
           </SuiBox>
         ),
         budget: (
-          <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+          <SuiTypography variant="caption" color="text" fontWeight="medium">
             $2,000
           </SuiTypography>
         ),
         completion: (
           <SuiBox width="8rem" textAlign="left">
-            <SuiProgress value={40} color="info" gradient />
+            <SuiProgress value={40} color="info" variant="gradient" label={false} />
           </SuiBox>
         ),
       },

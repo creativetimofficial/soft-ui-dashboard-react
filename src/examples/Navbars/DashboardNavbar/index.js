@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -21,27 +21,38 @@ import { useLocation, Link } from "react-router-dom";
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 
-// @mui material components
+// @material-ui core components
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiInput from "components/SuiInput";
 
-// Soft UI Dashboard React example components
+// Soft UI Dashboard PRO React example components
 import Breadcrumbs from "examples/Breadcrumbs";
-import NotificationItem from "examples/NotificationItem";
+import NotificationItem from "examples/Items/NotificationItem";
 
 // Custom styles for DashboardNavbar
-import styles from "examples/Navbars/DashboardNavbar/styles";
+import {
+  navbar,
+  navbarContainer,
+  navbarRow,
+  navbarIconButton,
+  navbarMobileMenu,
+} from "examples/Navbars/DashboardNavbar/styles";
 
-// Soft UI Dashboard React context
-import { useSoftUIController } from "context";
+// Soft UI Dashboard PRO React context
+import {
+  useSoftUIController,
+  setTransparentNavbar,
+  setMiniSidenav,
+  setOpenConfigurator,
+} from "context";
 
 // Images
 import team2 from "assets/images/team-2.jpg";
@@ -52,7 +63,6 @@ function DashboardNavbar({ absolute, light, isMini }) {
   const [controller, dispatch] = useSoftUIController();
   const { miniSidenav, transparentNavbar, fixedNavbar, openConfigurator } = controller;
   const [openMenu, setOpenMenu] = useState(false);
-  const classes = styles({ transparentNavbar, absolute, light, isMini });
   const route = useLocation().pathname.split("/").slice(1);
 
   useEffect(() => {
@@ -65,10 +75,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
 
     // A function that sets the transparent state of the navbar.
     function handleTransparentNavbar() {
-      dispatch({
-        type: "TRANSPARENT_NAVBAR",
-        value: (fixedNavbar && window.scrollY === 0) || !fixedNavbar,
-      });
+      setTransparentNavbar(dispatch, (fixedNavbar && window.scrollY === 0) || !fixedNavbar);
     }
 
     /** 
@@ -84,9 +91,8 @@ function DashboardNavbar({ absolute, light, isMini }) {
     return () => window.removeEventListener("scroll", handleTransparentNavbar);
   }, [dispatch, fixedNavbar]);
 
-  const handleMiniSidenav = () => dispatch({ type: "MINI_SIDENAV", value: !miniSidenav });
-  const handleConfiguratorOpen = () =>
-    dispatch({ type: "OPEN_CONFIGURATOR", value: !openConfigurator });
+  const handleMiniSidenav = () => setMiniSidenav(dispatch, !miniSidenav);
+  const handleConfiguratorOpen = () => setOpenConfigurator(dispatch, !openConfigurator);
   const handleOpenMenu = (event) => setOpenMenu(event.currentTarget);
   const handleCloseMenu = () => setOpenMenu(false);
 
@@ -94,14 +100,14 @@ function DashboardNavbar({ absolute, light, isMini }) {
   const renderMenu = () => (
     <Menu
       anchorEl={openMenu}
-      getContentAnchorEl={null}
+      anchorReference={null}
       anchorOrigin={{
         vertical: "bottom",
         horizontal: "left",
       }}
       open={Boolean(openMenu)}
       onClose={handleCloseMenu}
-      style={{ marginTop: "1rem" }}
+      sx={{ mt: 2 }}
     >
       <NotificationItem
         image={<img src={team2} alt="person" />}
@@ -118,7 +124,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
       <NotificationItem
         color="secondary"
         image={
-          <Icon fontSize="small" className="material-icon-round text-white">
+          <Icon fontSize="small" sx={{ color: ({ palette: { white } }) => white.main }}>
             payment
           </Icon>
         }
@@ -133,32 +139,34 @@ function DashboardNavbar({ absolute, light, isMini }) {
     <AppBar
       position={absolute ? "absolute" : navbarType}
       color="inherit"
-      className={classes.navbar}
+      sx={(theme) => navbar(theme, { transparentNavbar, absolute, light })}
     >
-      <Toolbar className={classes.navbar_container}>
-        <SuiBox customClass={classes.navbar_row} color="inherit" mb={{ xs: 1, md: 0 }}>
+      <Toolbar sx={(theme) => navbarContainer(theme)}>
+        <SuiBox color="inherit" mb={{ xs: 1, md: 0 }} sx={(theme) => navbarRow(theme, { isMini })}>
           <Breadcrumbs icon="home" title={route[route.length - 1]} route={route} light={light} />
         </SuiBox>
         {isMini ? null : (
-          <SuiBox customClass={classes.navbar_row}>
+          <SuiBox sx={(theme) => navbarRow(theme, { isMini })}>
             <SuiBox pr={1}>
               <SuiInput
                 placeholder="Type here..."
-                withIcon={{ icon: "search", direction: "left" }}
-                customClass={classes.navbar_input}
+                icon={{ component: "search", direction: "left" }}
               />
             </SuiBox>
-            <SuiBox
-              color={light ? "white" : "inherit"}
-              customClass={classes.navbar_section_desktop}
-            >
-              <Link to="/authentication/sign-in/basic">
-                <IconButton className={classes.navbar_icon_button}>
-                  <Icon className={light ? "text-white" : "text-dark"}>account_circle</Icon>
+            <SuiBox color={light ? "white" : "inherit"}>
+              <Link to="/authentication/sign-in">
+                <IconButton sx={navbarIconButton} size="small">
+                  <Icon
+                    sx={({ palette: { dark, white } }) => ({
+                      color: light ? white.main : dark.main,
+                    })}
+                  >
+                    account_circle
+                  </Icon>
                   <SuiTypography
                     variant="button"
                     fontWeight="medium"
-                    textColor={light ? "white" : "dark"}
+                    color={light ? "white" : "dark"}
                   >
                     Sign in
                   </SuiTypography>
@@ -167,27 +175,31 @@ function DashboardNavbar({ absolute, light, isMini }) {
               <IconButton
                 size="small"
                 color="inherit"
-                className={classes.navbar_mobile_menu}
+                sx={navbarMobileMenu}
                 onClick={handleMiniSidenav}
               >
-                <Icon>{miniSidenav ? "menu_open" : "menu"}</Icon>
+                <Icon className={light ? "text-white" : "text-dark"}>
+                  {miniSidenav ? "menu_open" : "menu"}
+                </Icon>
               </IconButton>
               <IconButton
+                size="small"
                 color="inherit"
-                className={classes.navbar_icon_button}
+                sx={navbarIconButton}
                 onClick={handleConfiguratorOpen}
               >
                 <Icon>settings</Icon>
               </IconButton>
               <IconButton
+                size="small"
                 color="inherit"
-                className={classes.navbar_icon_button}
+                sx={navbarIconButton}
                 aria-controls="notification-menu"
                 aria-haspopup="true"
                 variant="contained"
                 onClick={handleOpenMenu}
               >
-                <Icon>notifications</Icon>
+                <Icon className={light ? "text-white" : "text-dark"}>notifications</Icon>
               </IconButton>
               {renderMenu()}
             </SuiBox>

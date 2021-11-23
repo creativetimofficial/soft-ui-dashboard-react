@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -25,11 +25,11 @@ import Divider from "@mui/material/Divider";
 import Tooltip from "@mui/material/Tooltip";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Soft UI Dashboard React base styles
+// Soft UI Dashboard PRO React base styles
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 
@@ -60,7 +60,7 @@ function ProfileInfoCard({ title, description, info, social, action }) {
       <SuiTypography variant="button" fontWeight="bold" textTransform="capitalize">
         {label}: &nbsp;
       </SuiTypography>
-      <SuiTypography variant="button" fontWeight="regular" textColor="text">
+      <SuiTypography variant="button" fontWeight="regular" color="text">
         &nbsp;{values[key]}
       </SuiTypography>
     </SuiBox>
@@ -78,27 +78,27 @@ function ProfileInfoCard({ title, description, info, social, action }) {
       color={socialMediaColors[color].main}
       pr={1}
       pl={0.5}
-      mt={-0.1}
+      lineHeight={1}
     >
       {icon}
     </SuiBox>
   ));
 
   return (
-    <Card className="h-100">
+    <Card sx={{ height: "100%" }}>
       <SuiBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
         <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}
         </SuiTypography>
-        <SuiTypography component={Link} to={action.route} variant="body2" textColor="secondary">
+        <SuiTypography component={Link} to={action.route} variant="body2" color="secondary">
           <Tooltip title={action.tooltip} placement="top">
             <Icon>edit</Icon>
           </Tooltip>
         </SuiTypography>
       </SuiBox>
       <SuiBox p={2}>
-        <SuiBox mb={2} lineHeight={1.25}>
-          <SuiTypography variant="button" textColor="text" fontWeight="regular">
+        <SuiBox mb={2} lineHeight={1}>
+          <SuiTypography variant="button" color="text" fontWeight="regular">
             {description}
           </SuiTypography>
         </SuiBox>

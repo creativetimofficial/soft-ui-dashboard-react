@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -21,29 +21,29 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, direction }) {
+function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction }) {
   return (
     <Card>
-      <SuiBox backgroundColor={backgroundColor} backgroundGradient>
+      <SuiBox bgColor={bgColor} variant="gradient">
         <SuiBox p={2}>
           <Grid container alignItems="center">
             {direction === "left" ? (
               <Grid item>
                 <SuiBox
-                  backgroundColor={backgroundColor === "white" ? icon.color : "white"}
+                  variant="gradient"
+                  bgColor={bgColor === "white" ? icon.color : "white"}
+                  color={bgColor === "white" ? "white" : "dark"}
                   width="3rem"
                   height="3rem"
                   borderRadius="md"
                   display="flex"
                   justifyContent="center"
                   alignItems="center"
-                  color={backgroundColor === "white" ? "white" : "dark"}
-                  boxShadow="md"
-                  backgroundGradient
+                  shadow="md"
                 >
                   <Icon fontSize="small" color="inherit">
                     {icon.component}
@@ -52,11 +52,11 @@ function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, d
               </Grid>
             ) : null}
             <Grid item xs={8}>
-              <SuiBox ml={direction === "left" ? 2 : 0}>
+              <SuiBox ml={direction === "left" ? 2 : 0} lineHeight={1}>
                 <SuiTypography
                   variant="button"
-                  textColor={backgroundColor === "white" ? "text" : "white"}
-                  opacity={backgroundColor === "white" ? 1 : 0.7}
+                  color={bgColor === "white" ? "text" : "white"}
+                  opacity={bgColor === "white" ? 1 : 0.7}
                   textTransform="capitalize"
                   fontWeight={title.fontWeight}
                 >
@@ -65,10 +65,10 @@ function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, d
                 <SuiTypography
                   variant="h5"
                   fontWeight="bold"
-                  textColor={backgroundColor === "white" ? "dark" : "white"}
+                  color={bgColor === "white" ? "dark" : "white"}
                 >
                   {count}{" "}
-                  <SuiTypography variant="button" textColor={percentage.color} fontWeight="bold">
+                  <SuiTypography variant="button" color={percentage.color} fontWeight="bold">
                     {percentage.text}
                   </SuiTypography>
                 </SuiTypography>
@@ -77,7 +77,9 @@ function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, d
             {direction === "right" ? (
               <Grid item xs={4}>
                 <SuiBox
-                  backgroundColor={backgroundColor === "white" ? icon.color : "white"}
+                  variant="gradient"
+                  bgColor={bgColor === "white" ? icon.color : "white"}
+                  color={bgColor === "white" ? "white" : "dark"}
                   width="3rem"
                   height="3rem"
                   marginLeft="auto"
@@ -85,9 +87,7 @@ function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, d
                   display="flex"
                   justifyContent="center"
                   alignItems="center"
-                  color={backgroundColor === "white" ? "white" : "dark"}
-                  boxShadow="md"
-                  backgroundGradient
+                  shadow="md"
                 >
                   <Icon fontSize="small" color="inherit">
                     {icon.component}
@@ -104,7 +104,7 @@ function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, d
 
 // Setting default values for the props of MiniStatisticsCard
 MiniStatisticsCard.defaultProps = {
-  backgroundColor: "white",
+  bgColor: "white",
   title: {
     fontWeight: "medium",
     text: "",
@@ -118,7 +118,7 @@ MiniStatisticsCard.defaultProps = {
 
 // Typechecking props for the MiniStatisticsCard
 MiniStatisticsCard.propTypes = {
-  backgroundColor: PropTypes.oneOf([
+  bgColor: PropTypes.oneOf([
     "white",
     "primary",
     "secondary",

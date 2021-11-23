@@ -18,18 +18,18 @@ import logoXD from "assets/images/small-logos/logo-xd.svg";
 function Completion({ value, color }) {
   return (
     <SuiBox display="flex" alignItems="center">
-      <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+      <SuiTypography variant="caption" color="text" fontWeight="medium">
         {value}%&nbsp;
       </SuiTypography>
       <SuiBox width="8rem">
-        <SuiProgress value={value} color={color} gradient noLabel />
+        <SuiProgress value={value} color={color} variant="gradient" label={false} />
       </SuiBox>
     </SuiBox>
   );
 }
 
 const action = (
-  <Icon className="font-bold text-secondary cursor-pointer" fontSize="small">
+  <Icon sx={{ cursor: "pointer", fontWeight: "bold" }} fontSize="small">
     more_vert
   </Icon>
 );
@@ -47,12 +47,12 @@ export default {
     {
       project: [logoSpotify, "Spotift"],
       budget: (
-        <SuiTypography variant="button" textColor="text" fontWeight="medium">
+        <SuiTypography variant="button" color="text" fontWeight="medium">
           $2,500
         </SuiTypography>
       ),
       status: (
-        <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+        <SuiTypography variant="caption" color="text" fontWeight="medium">
           working
         </SuiTypography>
       ),
@@ -62,12 +62,12 @@ export default {
     {
       project: [logoInvesion, "Invesion"],
       budget: (
-        <SuiTypography variant="button" textColor="text" fontWeight="medium">
+        <SuiTypography variant="button" color="text" fontWeight="medium">
           $5,000
         </SuiTypography>
       ),
       status: (
-        <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+        <SuiTypography variant="caption" color="text" fontWeight="medium">
           done
         </SuiTypography>
       ),
@@ -77,12 +77,12 @@ export default {
     {
       project: [logoJira, "Jira"],
       budget: (
-        <SuiTypography variant="button" textColor="text" fontWeight="medium">
+        <SuiTypography variant="button" color="text" fontWeight="medium">
           $3,400
         </SuiTypography>
       ),
       status: (
-        <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+        <SuiTypography variant="caption" color="text" fontWeight="medium">
           canceled
         </SuiTypography>
       ),
@@ -92,12 +92,12 @@ export default {
     {
       project: [logoSlack, "Slack"],
       budget: (
-        <SuiTypography variant="button" textColor="text" fontWeight="medium">
+        <SuiTypography variant="button" color="text" fontWeight="medium">
           $1,400
         </SuiTypography>
       ),
       status: (
-        <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+        <SuiTypography variant="caption" color="text" fontWeight="medium">
           canceled
         </SuiTypography>
       ),
@@ -107,12 +107,12 @@ export default {
     {
       project: [logoWebDev, "Webdev"],
       budget: (
-        <SuiTypography variant="button" textColor="text" fontWeight="medium">
+        <SuiTypography variant="button" color="text" fontWeight="medium">
           $14,000
         </SuiTypography>
       ),
       status: (
-        <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+        <SuiTypography variant="caption" color="text" fontWeight="medium">
           working
         </SuiTypography>
       ),
@@ -122,12 +122,12 @@ export default {
     {
       project: [logoXD, "Adobe XD"],
       budget: (
-        <SuiTypography variant="button" textColor="text" fontWeight="medium">
+        <SuiTypography variant="button" color="text" fontWeight="medium">
           $2,300
         </SuiTypography>
       ),
       status: (
-        <SuiTypography variant="caption" textColor="text" fontWeight="medium">
+        <SuiTypography variant="caption" color="text" fontWeight="medium">
           done
         </SuiTypography>
       ),

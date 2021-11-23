@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -23,7 +23,7 @@ import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiBadge from "components/SuiBadge";
@@ -39,16 +39,16 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
         width="1.5rem"
         height="1.5rem"
         borderRadius="50%"
-        boxShadow="regular"
-        backgroundColor={includes ? "success" : "secondary"}
-        backgroundGradient
+        shaodw="md"
+        bgColor={includes ? "success" : "secondary"}
+        variant="gradient"
         mr={2}
       >
-        <SuiTypography variant="button" textColor="white" customClass="line-height-0">
-          <Icon className="font-bold">{includes ? "done" : "remove"}</Icon>
+        <SuiTypography variant="button" color="white" sx={{ lineHeight: 0 }}>
+          <Icon sx={{ fontWeight: "bold" }}>{includes ? "done" : "remove"}</Icon>
         </SuiTypography>
       </SuiBox>
-      <SuiTypography variant="body2" textColor="text">
+      <SuiTypography variant="body2" color="text">
         {label}
       </SuiTypography>
     </SuiBox>
@@ -60,6 +60,7 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
         <SuiBadge
           variant="contained"
           color={badge.color}
+          size="sm"
           badgeContent={badge.label}
           circular
           container
@@ -81,11 +82,11 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
               component={Link}
               to={action.route}
               variant="gradient"
-              buttonColor={action.color}
+              color={action.color}
               fullWidth
             >
               {action.label}&nbsp;
-              <Icon className="font-bold">arrow_forward</Icon>
+              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
             </SuiButton>
           </SuiBox>
         ) : (
@@ -96,11 +97,11 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
               target="_blank"
               rel="noreferrer"
               variant="gradient"
-              buttonColor={action.color}
+              color={action.color}
               fullWidth
             >
               {action.label}&nbsp;
-              <Icon className="font-bold">arrow_forward</Icon>
+              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
             </SuiButton>
           </SuiBox>
         )}

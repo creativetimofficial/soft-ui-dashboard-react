@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -19,48 +19,58 @@ import PropTypes from "prop-types";
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Soft UI Dashboard React example components
+// Soft UI Dashboard PRO React example components
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Authentication layout components
 import Footer from "layouts/authentication/components/Footer";
 
-// Custom styles for the BaiseLayout
-import styles from "layouts/authentication/components/BasicLayout/styles";
-
-// Soft UI Dashboard React page layout routes
-import routes from "routes";
-
 function BasicLayout({ title, description, image, children }) {
-  const classes = styles({ image });
-
   return (
     <PageLayout>
       <DefaultNavbar
-        routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/soft-ui-dashboard-material-ui",
+          route: "https://creative-tim.com/product/soft-ui-dashboard-react",
           label: "free download",
         }}
         transparent
         light
       />
-      <SuiBox customClass={classes.basicLayout}>
-        <Grid container spacing={3} justifyContent="center" className="text-center">
+      <SuiBox
+        width="calc(100% - 2rem)"
+        minHeight="50vh"
+        borderRadius="lg"
+        mx={2}
+        my={2}
+        pt={6}
+        pb={28}
+        sx={{
+          backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
+            image &&
+            `${linearGradient(
+              rgba(gradients.dark.main, 0.6),
+              rgba(gradients.dark.state, 0.6)
+            )}, url(${image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <Grid container spacing={3} justifyContent="center" sx={{ textAlign: "center" }}>
           <Grid item xs={10} lg={4}>
             <SuiBox mt={6} mb={1}>
-              <SuiTypography variant="h1" textColor="white" fontWeight="bold">
+              <SuiTypography variant="h1" color="white" fontWeight="bold">
                 {title}
               </SuiTypography>
             </SuiBox>
             <SuiBox mb={2}>
-              <SuiTypography variant="body2" textColor="white" fontWeight="regular">
+              <SuiTypography variant="body2" color="white" fontWeight="regular">
                 {description}
               </SuiTypography>
             </SuiBox>

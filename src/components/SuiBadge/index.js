@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -18,57 +18,27 @@ import { forwardRef } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// clsx is a utility for constructing className strings conditionally
-import clsx from "clsx";
-
-// @mui material components
-import Badge from "@mui/material/Badge";
-
 // Custom styles for the SuiBadge
-import styles from "components/SuiBadge/styles";
+import SuiBadgeRoot from "components/SuiBadge/SuiBadgeRoot";
 
 const SuiBadge = forwardRef(
-  (
-    {
-      color,
-      variant,
-      size,
-      badgeContent,
-      circular,
-      indicator,
-      border,
-      container,
-      children,
-      ...rest
-    },
-    ref
-  ) => {
-    const classes = styles({ color, circular, border, size });
-
-    return (
-      <Badge
-        {...rest}
-        ref={ref}
-        badgeContent={badgeContent}
-        color="default"
-        className={clsx(`${classes[variant]}`, {
-          [classes.badge]: !indicator,
-          [classes.badge_indicator]: indicator,
-          [classes.badge_childNode]: !children && !container,
-          [classes.badge_container]: container,
-        })}
-      >
-        {children}
-      </Badge>
-    );
-  }
+  ({ color, variant, size, circular, indicator, border, container, children, ...rest }, ref) => (
+    <SuiBadgeRoot
+      {...rest}
+      ownerState={{ color, variant, size, circular, indicator, border, container, children }}
+      ref={ref}
+      color="default"
+    >
+      {children}
+    </SuiBadgeRoot>
+  )
 );
 
 // Setting default values for the props of SuiBadge
 SuiBadge.defaultProps = {
   color: "info",
   variant: "gradient",
-  size: "small",
+  size: "sm",
   circular: false,
   indicator: false,
   border: false,
@@ -89,8 +59,7 @@ SuiBadge.propTypes = {
     "dark",
   ]),
   variant: PropTypes.oneOf(["gradient", "contained"]),
-  size: PropTypes.oneOf(["extra-small", "small", "medium", "large"]),
-  badgeContent: PropTypes.node.isRequired,
+  size: PropTypes.oneOf(["xs", "sm", "md", "lg"]),
   circular: PropTypes.bool,
   indicator: PropTypes.bool,
   border: PropTypes.bool,

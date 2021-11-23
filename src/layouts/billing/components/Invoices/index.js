@@ -26,12 +26,12 @@ import Invoice from "layouts/billing/components/Invoice";
 
 function Invoices() {
   return (
-    <Card id="delete-account">
+    <Card id="delete-account" sx={{ height: "100%" }}>
       <SuiBox pt={2} px={2} display="flex" justifyContent="space-between" alignItems="center">
         <SuiTypography variant="h6" fontWeight="medium">
           Invoices
         </SuiTypography>
-        <SuiButton variant="outlined" buttonColor="info" size="small">
+        <SuiButton variant="outlined" color="info" size="small">
           view all
         </SuiButton>
       </SuiBox>

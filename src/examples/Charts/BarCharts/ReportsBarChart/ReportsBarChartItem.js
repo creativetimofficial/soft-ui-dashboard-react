@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -19,10 +19,10 @@ import PropTypes from "prop-types";
 // @mui material components
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React base styles
+// Soft UI Dashboard PRO React base styles
 import typography from "assets/theme/base/typography";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiProgress from "components/SuiProgress";
@@ -34,7 +34,7 @@ function ReportsBarChartItem({ color, icon, label, progress }) {
     <SuiBox width="100%">
       <SuiBox display="flex" alignItems="center" mb={2}>
         <SuiBox
-          backgroundColor={icon.color}
+          bgColor={icon.color}
           width="1.25rem"
           height="1.25rem"
           borderRadius="sm"
@@ -43,9 +43,9 @@ function ReportsBarChartItem({ color, icon, label, progress }) {
           display="flex"
           justifyContent="center"
           alignItems="center"
-          boxShadow="md"
+          shadow="md"
           mr={1}
-          backgroundGradient
+          variant="gradient"
         >
           <Icon>{icon.component}</Icon>
         </SuiBox>
@@ -53,17 +53,17 @@ function ReportsBarChartItem({ color, icon, label, progress }) {
           variant="caption"
           textTransform="capitalize"
           fontWeight="medium"
-          textColor="text"
+          color="text"
         >
           {label}
         </SuiTypography>
       </SuiBox>
       <SuiBox mt={1}>
-        <SuiTypography variant="h4" fontWeight="bold" textColor={color}>
+        <SuiTypography variant="h4" fontWeight="bold" color={color}>
           {progress.content}
         </SuiTypography>
         <SuiBox width="75%" mt={0.5}>
-          <SuiProgress value={progress.percentage} color={color} noLabel />
+          <SuiProgress value={progress.percentage} color={color} />
         </SuiBox>
       </SuiBox>
     </SuiBox>

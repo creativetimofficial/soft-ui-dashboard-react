@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -23,7 +23,7 @@ import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 import MuiLink from "@mui/material/Link";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiAvatar from "components/SuiAvatar";
@@ -46,7 +46,7 @@ function DefaultBlogCard({ image, category, title, description, author, action }
         {category && (
           <SuiTypography
             variant="caption"
-            textColor={category.color}
+            color={category.color}
             textTransform="uppercase"
             fontWeight="medium"
             textGradient
@@ -61,7 +61,7 @@ function DefaultBlogCard({ image, category, title, description, author, action }
                 display="inline"
                 variant="h5"
                 textTransform="capitalize"
-                customClass="link"
+                className="color-background"
               >
                 {title}
               </SuiTypography>
@@ -72,24 +72,24 @@ function DefaultBlogCard({ image, category, title, description, author, action }
                 display="inline"
                 variant="h5"
                 textTransform="capitalize"
-                customClass="link"
+                className="color-background"
               >
                 {title}
               </SuiTypography>
             </MuiLink>
           )}
         </SuiBox>
-        <SuiTypography variant="body2" component="p" textColor="text">
+        <SuiTypography variant="body2" component="p" color="text">
           {description}
         </SuiTypography>
         {author && (
           <SuiBox display="flex" alignItems="center" mt={3}>
-            <SuiAvatar variant="rounded" src={author.image} alt={author.name} boxShadow="regular" />
+            <SuiAvatar variant="rounded" src={author.image} alt={author.name} shadow="md" />
             <SuiBox pl={2} lineHeight={0}>
               <SuiTypography component="h6" variant="button" fontWeight="medium" gutterBottom>
                 {author.name}
               </SuiTypography>
-              <SuiTypography variant="caption" textColor="text">
+              <SuiTypography variant="caption" color="text">
                 {author.date}
               </SuiTypography>
             </SuiBox>

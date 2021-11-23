@@ -38,21 +38,15 @@ function Invoice({ date, id, price, noGutter }) {
         <SuiTypography display="block" variant="button" fontWeight="medium">
           {date}
         </SuiTypography>
-        <SuiTypography variant="caption" fontWeight="regular" textColor="text">
+        <SuiTypography variant="caption" fontWeight="regular" color="text">
           {id}
         </SuiTypography>
       </SuiBox>
       <SuiBox display="flex" alignItems="center">
-        <SuiTypography variant="button" fontWeight="regular" textColor="text">
+        <SuiTypography variant="button" fontWeight="regular" color="text">
           {price}
         </SuiTypography>
-        <SuiBox
-          display="flex"
-          alignItems="center"
-          lineHeight={0}
-          ml={3}
-          customClass="cursor-pointer"
-        >
+        <SuiBox display="flex" alignItems="center" lineHeight={0} ml={3} sx={{ cursor: "poiner" }}>
           <Icon fontSize="small">picture_as_pdf</Icon>
           <SuiTypography variant="button" fontWeight="bold">
             &nbsp;PDF

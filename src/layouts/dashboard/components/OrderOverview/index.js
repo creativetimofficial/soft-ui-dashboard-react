@@ -32,12 +32,14 @@ function OrdersOverview() {
           Orders overview
         </SuiTypography>
         <SuiBox mt={1} mb={2}>
-          <SuiTypography variant="button" textColor="text" fontWeight="regular">
+          <SuiTypography variant="button" color="text" fontWeight="regular">
             <SuiTypography display="inline" variant="body2" verticalAlign="middle">
-              <Icon className="font-bold text-success">arrow_upward</Icon>
+              <Icon sx={{ fontWeight: "bold", color: ({ palette: { success } }) => success.main }}>
+                arrow_upward
+              </Icon>
             </SuiTypography>
             &nbsp;
-            <SuiTypography variant="button" textColor="text" fontWeight="medium">
+            <SuiTypography variant="button" color="text" fontWeight="medium">
               24%
             </SuiTypography>{" "}
             this month

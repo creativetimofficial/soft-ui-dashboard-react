@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -20,18 +20,15 @@ import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard React components
+// Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 
-// Custom styles for the MasterCard
-import styles from "examples/Cards/MasterCard/styles";
-
 // Images
+import curved14 from "assets/images/curved-images/curved14.jpg";
 import masterCardLogo from "assets/images/logos/mastercard.png";
 
 function MasterCard({ color, number, holder, expires }) {
-  const classes = styles({ color });
   const numbers = [...`${number}`];
 
   if (numbers.length < 16 || numbers.length > 16) {
@@ -46,41 +43,51 @@ function MasterCard({ color, number, holder, expires }) {
   const num4 = numbers.slice(12, 16).join("");
 
   return (
-    <Card className={classes.masterCard}>
+    <Card
+      sx={({
+        palette: { gradients },
+        functions: { linearGradient, rgba },
+        boxShadows: { xl },
+      }) => ({
+        background: gradients[color]
+          ? `${linearGradient(
+              rgba(gradients[color].main, 0.8),
+              rgba(gradients[color].state, 0.8)
+            )}, url(${curved14})`
+          : `${linearGradient(
+              rgba(gradients.dark.main, 0.8),
+              rgba(gradients.dark.state, 0.8)
+            )}, url(${curved14})`,
+        boxShadow: xl,
+      })}
+    >
       <SuiBox p={2}>
         <SuiBox color="white" p={1} lineHeight={0} display="inline-block">
-          <Icon className={classes.masterCard_icon} fontSize="medium">
-            wifi
-          </Icon>
+          <Icon fontSize="default">wifi</Icon>
         </SuiBox>
-        <SuiTypography
-          variant="h5"
-          textColor="white"
-          fontWeight="medium"
-          customClass={classes.masterCard_number}
-        >
+        <SuiTypography variant="h5" color="white" fontWeight="medium" sx={{ mt: 3, mb: 5, pb: 1 }}>
           {num1}&nbsp;&nbsp;&nbsp;{num2}&nbsp;&nbsp;&nbsp;{num3}&nbsp;&nbsp;&nbsp;{num4}
         </SuiTypography>
         <SuiBox display="flex" justifyContent="space-between" alignItems="center">
           <SuiBox display="flex" alignItems="center">
-            <SuiBox mr={3}>
-              <SuiTypography variant="button" textColor="white" fontWeight="regular" opacity={0.8}>
+            <SuiBox mr={3} lineHeight={1}>
+              <SuiTypography variant="button" color="white" fontWeight="regular" opacity={0.8}>
                 Card Holder
               </SuiTypography>
               <SuiTypography
                 variant="h6"
-                textColor="white"
+                color="white"
                 fontWeight="medium"
                 textTransform="capitalize"
               >
                 {holder}
               </SuiTypography>
             </SuiBox>
-            <SuiBox>
-              <SuiTypography variant="button" textColor="white" fontWeight="regular" opacity={0.8}>
+            <SuiBox lineHeight={1}>
+              <SuiTypography variant="button" color="white" fontWeight="regular" opacity={0.8}>
                 Expires
               </SuiTypography>
-              <SuiTypography variant="h6" textColor="white" fontWeight="medium">
+              <SuiTypography variant="h6" color="white" fontWeight="medium">
                 {expires}
               </SuiTypography>
             </SuiBox>

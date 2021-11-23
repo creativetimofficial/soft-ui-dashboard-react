@@ -49,7 +49,7 @@ import divider from "assets/theme/components/divider";
 import tableContainer from "assets/theme/components/table/tableContainer";
 import tableHead from "assets/theme/components/table/tableHead";
 import tableCell from "assets/theme/components/table/tableCell";
-import linearProgress from "assets/theme/components/linearProgess";
+import linearProgress from "assets/theme/components/linearProgress";
 import breadcrumbs from "assets/theme/components/breadcrumbs";
 import slider from "assets/theme/components/slider";
 import avatar from "assets/theme/components/avatar";

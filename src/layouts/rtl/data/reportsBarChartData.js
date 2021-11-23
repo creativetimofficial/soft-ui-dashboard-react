@@ -21,22 +21,22 @@ export default {
   items: [
     {
       icon: { color: "primary", component: "library_books" },
-      label: "المستخدمون",
+      label: "users",
       progress: { content: "36K", percentage: 60 },
     },
     {
       icon: { color: "info", component: "touch_app" },
-      label: "نقرات",
+      label: "clicks",
       progress: { content: "2M", percentage: 90 },
     },
     {
       icon: { color: "warning", component: "payment" },
-      label: "مبيعات",
+      label: "sales",
       progress: { content: "$435", percentage: 30 },
     },
     {
       icon: { color: "error", component: "extension" },
-      label: "العناصر",
+      label: "items",
       progress: { content: "43", percentage: 50 },
     },
   ],

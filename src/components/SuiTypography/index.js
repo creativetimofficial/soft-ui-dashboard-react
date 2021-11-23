@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -18,63 +18,37 @@ import { forwardRef } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// clsx is a utility for constructing className strings conditionally
-import clsx from "clsx";
-
-// @mui material components
-import Typography from "@mui/material/Typography";
-
 // Custom styles for SuiTypography
-import styles from "components/SuiTypography/styles";
+import SuiTypographyRoot from "components/SuiTypography/SuiTypographyRoot";
 
 const SuiTypography = forwardRef(
   (
-    {
-      textColor,
-      fontWeight,
-      textTransform,
-      verticalAlign,
-      textGradient,
-      opacity,
-      customClass,
-      children,
-      ...rest
-    },
+    { color, fontWeight, textTransform, verticalAlign, textGradient, opacity, children, ...rest },
     ref
-  ) => {
-    const classes = styles({ textColor, textTransform, verticalAlign, opacity });
-
-    return (
-      <Typography
-        {...rest}
-        ref={ref}
-        className={clsx(classes.suiTypography, customClass, {
-          [classes[`suiTypography_${fontWeight}`]]: fontWeight,
-          [classes.suiTypography_textTransform]: textTransform,
-          [classes.suiTypography_verticalAlign]: verticalAlign,
-          [classes.suiTypography_textGradient]: textGradient,
-        })}
-      >
-        {children}
-      </Typography>
-    );
-  }
+  ) => (
+    <SuiTypographyRoot
+      {...rest}
+      ref={ref}
+      ownerState={{ color, textTransform, verticalAlign, fontWeight, opacity, textGradient }}
+    >
+      {children}
+    </SuiTypographyRoot>
+  )
 );
 
 // Setting default values for the props of SuiTypography
 SuiTypography.defaultProps = {
-  textColor: "dark",
+  color: "dark",
   fontWeight: false,
   textTransform: "none",
   verticalAlign: "unset",
   textGradient: false,
   opacity: 1,
-  customClass: "",
 };
 
 // Typechecking props for the SuiTypography
 SuiTypography.propTypes = {
-  textColor: PropTypes.oneOf([
+  color: PropTypes.oneOf([
     "inherit",
     "primary",
     "secondary",
@@ -103,7 +77,6 @@ SuiTypography.propTypes = {
   textGradient: PropTypes.bool,
   children: PropTypes.node.isRequired,
   opacity: PropTypes.number,
-  customClass: PropTypes.string,
 };
 
 export default SuiTypography;

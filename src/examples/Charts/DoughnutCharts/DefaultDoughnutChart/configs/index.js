@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard PRO React - v3.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
 * Copyright 2021 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -14,21 +14,29 @@ Coded by www.creative-tim.com
 */
 
 /* eslint-disable no-dupe-keys */
-// Soft UI Dashboard React base styles
+// Soft UI Dashboard PRO React base styles
 import colors from "assets/theme/base/colors";
 
-const { gradients } = colors;
+const { gradients, dark } = colors;
 
 function configs(labels, datasets, cutout = 60) {
   const backgroundColors = [];
 
-  datasets.backgroundColors.forEach((color) => {
-    if (color === "info") {
-      backgroundColors.push(gradients.info.main);
-    } else {
-      backgroundColors.push(gradients[color].state);
-    }
-  });
+  if (datasets.backgroundColors) {
+    datasets.backgroundColors.forEach((color) => {
+      if (gradients[color]) {
+        if (color === "info") {
+          backgroundColors.push(gradients.info.main);
+        } else {
+          backgroundColors.push(gradients[color].state);
+        }
+      } else {
+        backgroundColors.push(dark.main);
+      }
+    });
+  } else {
+    backgroundColors.push(dark.main);
+  }
 
   return {
     data: {

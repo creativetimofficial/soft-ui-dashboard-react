@@ -67,24 +67,24 @@ function SignIn() {
             variant="button"
             fontWeight="regular"
             onClick={handleSetRememberMe}
-            customClass="cursor-pointer user-select-none"
+            sx={{ cursor: "pointer", userSelect: "none" }}
           >
             &nbsp;&nbsp;Remember me
           </SuiTypography>
         </SuiBox>
         <SuiBox mt={4} mb={1}>
-          <SuiButton variant="gradient" buttonColor="info" fullWidth>
+          <SuiButton variant="gradient" color="info" fullWidth>
             sign in
           </SuiButton>
         </SuiBox>
         <SuiBox mt={3} textAlign="center">
-          <SuiTypography variant="button" textColor="text" fontWeight="regular">
+          <SuiTypography variant="button" color="text" fontWeight="regular">
             Don&apos;t have an account?{" "}
             <SuiTypography
               component={Link}
               to="/authentication/sign-up"
               variant="button"
-              textColor="info"
+              color="info"
               fontWeight="medium"
               textGradient
             >

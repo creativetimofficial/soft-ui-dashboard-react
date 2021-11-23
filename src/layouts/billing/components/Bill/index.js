@@ -31,7 +31,7 @@ function Bill({ name, company, email, vat, noGutter }) {
       display="flex"
       justifyContent="space-between"
       alignItems="flex-start"
-      backgroundColor="grey-100"
+      bgColor="grey-100"
       borderRadius="lg"
       p={3}
       mb={noGutter ? 0 : 1}
@@ -51,17 +51,17 @@ function Bill({ name, company, email, vat, noGutter }) {
 
           <SuiBox display="flex" alignItems="center" mt={{ xs: 2, sm: 0 }} ml={{ xs: -1.5, sm: 0 }}>
             <SuiBox mr={1}>
-              <SuiButton variant="text" buttonColor="error">
-                <Icon className="material-icons-round">delete</Icon>&nbsp;delete
+              <SuiButton variant="text" color="error">
+                <Icon>delete</Icon>&nbsp;delete
               </SuiButton>
             </SuiBox>
-            <SuiButton variant="text" buttonColor="dark">
-              <Icon className="material-icons-round">edit</Icon>&nbsp;edit
+            <SuiButton variant="text" color="dark">
+              <Icon>edit</Icon>&nbsp;edit
             </SuiButton>
           </SuiBox>
         </SuiBox>
         <SuiBox mb={1} lineHeight={0}>
-          <SuiTypography variant="caption" textColor="text">
+          <SuiTypography variant="caption" color="text">
             Company Name:&nbsp;&nbsp;&nbsp;
             <SuiTypography variant="caption" fontWeight="medium" textTransform="capitalize">
               {company}
@@ -69,14 +69,14 @@ function Bill({ name, company, email, vat, noGutter }) {
           </SuiTypography>
         </SuiBox>
         <SuiBox mb={1} lineHeight={0}>
-          <SuiTypography variant="caption" textColor="text">
+          <SuiTypography variant="caption" color="text">
             Email Address:&nbsp;&nbsp;&nbsp;
             <SuiTypography variant="caption" fontWeight="medium">
               {email}
             </SuiTypography>
           </SuiTypography>
         </SuiBox>
-        <SuiTypography variant="caption" textColor="text">
+        <SuiTypography variant="caption" color="text">
           VAT Number:&nbsp;&nbsp;&nbsp;
           <SuiTypography variant="caption" fontWeight="medium">
             {vat}
