@@ -47,7 +47,7 @@ function TimelineItem({ color, icon, title, dateTime, description, badges, lastI
       : null;
 
   return (
-    <SuiBox position="relative" sx={(theme) => timelineItem(theme, { color })}>
+    <SuiBox position="relative" sx={(theme) => timelineItem(theme, { lastItem })}>
       <SuiBox
         bgColor={isDark ? "dark" : "white"}
         width="1.625rem"
