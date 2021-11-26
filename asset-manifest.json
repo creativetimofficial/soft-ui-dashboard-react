@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/soft-ui-dashboard-react/static/js/main.3ebe61ce.chunk.js",
-    "main.js.map": "/soft-ui-dashboard-react/static/js/main.3ebe61ce.chunk.js.map",
+    "main.js": "/soft-ui-dashboard-react/static/js/main.a330bd82.chunk.js",
+    "main.js.map": "/soft-ui-dashboard-react/static/js/main.a330bd82.chunk.js.map",
     "runtime-main.js": "/soft-ui-dashboard-react/static/js/runtime-main.5e9e0e16.js",
     "runtime-main.js.map": "/soft-ui-dashboard-react/static/js/runtime-main.5e9e0e16.js.map",
     "static/js/2.48bf393d.chunk.js": "/soft-ui-dashboard-react/static/js/2.48bf393d.chunk.js",
@@ -42,6 +42,6 @@
   "entrypoints": [
     "static/js/runtime-main.5e9e0e16.js",
     "static/js/2.48bf393d.chunk.js",
-    "static/js/main.3ebe61ce.chunk.js"
+    "static/js/main.a330bd82.chunk.js"
   ]
 }
