@@ -41,7 +41,7 @@ function Function({ job, org }) {
   );
 }
 
-export default {
+const authorsTableData = {
   columns: [
     { name: "author", align: "left" },
     { name: "function", align: "left" },
@@ -191,3 +191,5 @@ export default {
     },
   ],
 };
+
+export default authorsTableData;

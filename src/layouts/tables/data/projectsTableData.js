@@ -34,7 +34,7 @@ const action = (
   </Icon>
 );
 
-export default {
+const projectsTableData = {
   columns: [
     { name: "project", align: "left" },
     { name: "budget", align: "left" },
@@ -136,3 +136,5 @@ export default {
     },
   ],
 };
+
+export default projectsTableData;
