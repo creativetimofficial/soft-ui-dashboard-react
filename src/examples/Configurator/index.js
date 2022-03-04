@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -29,7 +29,7 @@ import Icon from "@mui/material/Icon";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-// Soft UI Dashboard PRO React components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiButton from "components/SuiButton";
@@ -37,7 +37,7 @@ import SuiButton from "components/SuiButton";
 // Custom styles for the Configurator
 import ConfiguratorRoot from "examples/Configurator/ConfiguratorRoot";
 
-// Soft UI Dashboard PRO React context
+// Soft UI Dashboard React context
 import {
   useSoftUIController,
   setOpenConfigurator,

@@ -2,7 +2,7 @@
 
 ![version](https://img.shields.io/badge/version-3.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/soft-ui-dashboard-react.svg)](https://github.com/creativetimofficial/soft-ui-dashboard-react/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/soft-ui-dashboard-react.svg)](https://github.com/creativetimofficial/soft-ui-dashboard-react/issues?q=is%3Aissue+is%3Aclosed)
 
-![Image](https://s3.amazonaws.com/creativetim_bucket/products/500/original/soft-ui-dashboard-material-ui.jpg?1632195046)
+![Image](https://s3.amazonaws.com/creativetim_bucket/products/500/original/soft-ui-dashboard-material-ui.jpg)
 
 Start your Development with an Innovative Admin Template for MUI and React. If you like the look & feel of the hottest design trend right now, Soft UI, you will fall in love with this dashboard! It features a huge number of components built to fit together and look amazing.
 

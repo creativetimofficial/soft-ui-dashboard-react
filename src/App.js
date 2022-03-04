@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -16,21 +16,21 @@ Coded by www.creative-tim.com
 import { useState, useEffect, useMemo } from "react";
 
 // react-router components
-import { Route, Switch, Redirect, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 // @mui material components
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard PRO React components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 
-// Soft UI Dashboard PRO React example components
+// Soft UI Dashboard React examples
 import Sidenav from "examples/Sidenav";
 import Configurator from "examples/Configurator";
 
-// Soft UI Dashboard PRO React themes
+// Soft UI Dashboard React themes
 import theme from "assets/theme";
 import themeRTL from "assets/theme/theme-rtl";
 
@@ -39,10 +39,10 @@ import rtlPlugin from "stylis-plugin-rtl";
 import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 
-// Soft UI Dashboard PRO React routes
+// Soft UI Dashboard React routes
 import routes from "routes";
 
-// Soft UI Dashboard PRO React contexts
+// Soft UI Dashboard React contexts
 import { useSoftUIController, setMiniSidenav, setOpenConfigurator } from "context";
 
 // Images
@@ -102,7 +102,7 @@ export default function App() {
       }
 
       if (route.route) {
-        return <Route exact path={route.route} component={route.component} key={route.key} />;
+        return <Route exact path={route.route} element={route.component} key={route.key} />;
       }
 
       return null;
@@ -151,10 +151,10 @@ export default function App() {
           </>
         )}
         {layout === "vr" && <Configurator />}
-        <Switch>
+        <Routes>
           {getRoutes(routes)}
-          <Redirect from="*" to="/dashboard" />
-        </Switch>
+          <Route path="*" element={<Navigate to="/dashboard" />} />
+        </Routes>
       </ThemeProvider>
     </CacheProvider>
   ) : (
@@ -175,10 +175,10 @@ export default function App() {
         </>
       )}
       {layout === "vr" && <Configurator />}
-      <Switch>
+      <Routes>
         {getRoutes(routes)}
-        <Redirect from="*" to="/dashboard" />
-      </Switch>
+        <Route path="*" element={<Navigate to="/dashboard" />} />
+      </Routes>
     </ThemeProvider>
   );
 }

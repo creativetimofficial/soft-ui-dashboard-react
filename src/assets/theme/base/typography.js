@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -14,15 +14,15 @@ Coded by www.creative-tim.com
 */
 
 /**
- * The base typography styles for the Soft UI Dashboard PRO Material.
+ * The base typography styles for the Soft UI Dashboard React.
  * You can add new typography style using this file.
- * You can customized the typography styles for the entire Soft UI Dashboard PRO Material using thie file.
+ * You can customized the typography styles for the entire Soft UI Dashboard React using thie file.
  */
 
-// Soft UI Dashboard PRO React Base Styles
+// Soft UI Dashboard React Base Styles
 import colors from "assets/theme/base/colors";
 
-// Soft UI Dashboard PRO React Helper Functions
+// Soft UI Dashboard React Helper Functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { dark } = colors;
@@ -36,7 +36,7 @@ const baseProperties = {
   fontSizeXXS: pxToRem(10.4),
   fontSizeXS: pxToRem(12),
   fontSizeSM: pxToRem(14),
-  fontSizeRegular: pxToRem(16),
+  fontSizeMD: pxToRem(16),
   fontSizeLG: pxToRem(18),
   fontSizeXL: pxToRem(20),
 };
@@ -106,7 +106,7 @@ const typography = {
 
   subtitle2: {
     fontFamily: baseProperties.fontFamily,
-    fontSize: baseProperties.fontSizeRegular,
+    fontSize: baseProperties.fontSizeMD,
     fontWeight: baseProperties.fontWeightMedium,
     lineHeight: 1.6,
   },
@@ -120,7 +120,7 @@ const typography = {
 
   body2: {
     fontFamily: baseProperties.fontFamily,
-    fontSize: baseProperties.fontSizeRegular,
+    fontSize: baseProperties.fontSizeMD,
     fontWeight: baseProperties.fontWeightRegular,
     lineHeight: 1.6,
   },
@@ -178,14 +178,14 @@ const typography = {
     xxs: baseProperties.fontSizeXXS,
     xs: baseProperties.fontSizeXS,
     sm: baseProperties.fontSizeSM,
-    regular: baseProperties.fontSizeRegular,
+    md: baseProperties.fontSizeMD,
     lg: baseProperties.fontSizeLG,
     xl: baseProperties.fontSizeXL,
   },
 
   lineHeight: {
     sm: 1.25,
-    regular: 1.5,
+    md: 1.5,
     lg: 2,
   },
 };

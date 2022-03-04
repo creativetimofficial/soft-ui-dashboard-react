@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -28,12 +28,12 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard PRO React components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiInput from "components/SuiInput";
 
-// Soft UI Dashboard PRO React example components
+// Soft UI Dashboard React examples
 import Breadcrumbs from "examples/Breadcrumbs";
 import NotificationItem from "examples/Items/NotificationItem";
 
@@ -46,7 +46,7 @@ import {
   navbarMobileMenu,
 } from "examples/Navbars/DashboardNavbar/styles";
 
-// Soft UI Dashboard PRO React context
+// Soft UI Dashboard React context
 import {
   useSoftUIController,
   setTransparentNavbar,

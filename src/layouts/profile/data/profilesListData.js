@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -20,7 +20,7 @@ import ivana from "assets/images/ivana-square.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
 
-export default [
+const profilesListData = [
   {
     image: kal,
     name: "Sophie B.",
@@ -77,3 +77,5 @@ export default [
     },
   },
 ];
+
+export default profilesListData;

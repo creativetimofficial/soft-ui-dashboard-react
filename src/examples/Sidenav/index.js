@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -27,12 +27,12 @@ import Divider from "@mui/material/Divider";
 import Link from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard PRO React components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiButton from "components/SuiButton";
 
-// Soft UI Dashboard PRO React example components
+// Soft UI Dashboard React examples
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
 import SidenavCard from "examples/Sidenav/SidenavCard";
 
@@ -40,7 +40,7 @@ import SidenavCard from "examples/Sidenav/SidenavCard";
 import SidenavRoot from "examples/Sidenav/SidenavRoot";
 import sidenavLogoLabel from "examples/Sidenav/styles/sidenav";
 
-// Soft UI Dashboard PRO React context
+// Soft UI Dashboard React context
 import { useSoftUIController, setMiniSidenav } from "context";
 
 function Sidenav({ color, brand, brandName, routes, ...rest }) {

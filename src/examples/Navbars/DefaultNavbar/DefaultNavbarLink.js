@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -28,35 +28,33 @@ import SuiTypography from "components/SuiTypography";
 
 function DefaultNavbarLink({ icon, name, route, light }) {
   return (
-    <>
-      <SuiBox
-        component={Link}
-        to={route}
-        mx={1}
-        p={1}
-        display="flex"
-        alignItems="center"
-        sx={{ cursor: "pointer", userSelect: "none" }}
+    <SuiBox
+      component={Link}
+      to={route}
+      mx={1}
+      p={1}
+      display="flex"
+      alignItems="center"
+      sx={{ cursor: "pointer", userSelect: "none" }}
+    >
+      <Icon
+        sx={{
+          color: ({ palette: { white, secondary } }) => (light ? white.main : secondary.main),
+          verticalAlign: "middle",
+        }}
       >
-        <Icon
-          sx={{
-            color: ({ palette: { white, secondary } }) => (light ? white.main : secondary.main),
-            verticalAlign: "middle",
-          }}
-        >
-          {icon}
-        </Icon>
-        <SuiTypography
-          variant="button"
-          fontWeight="regular"
-          color={light ? "white" : "dark"}
-          textTransform="capitalize"
-          sx={{ width: "100%", lineHeight: 0 }}
-        >
-          &nbsp;{name}
-        </SuiTypography>
-      </SuiBox>
-    </>
+        {icon}
+      </Icon>
+      <SuiTypography
+        variant="button"
+        fontWeight="regular"
+        color={light ? "white" : "dark"}
+        textTransform="capitalize"
+        sx={{ width: "100%", lineHeight: 0 }}
+      >
+        &nbsp;{name}
+      </SuiTypography>
+    </SuiBox>
   );
 }
 

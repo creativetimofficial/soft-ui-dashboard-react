@@ -1,11 +1,10 @@
 {
   "name": "soft-ui-dashboard-react",
-  "version": "3.0.0",
-  "private": true,
+  "version": "3.1.0",
   "author": "Creative Tim",
-  "license": "See license in https://www.creative-tim.com/license",
-  "description": "Material UI version of Soft UI Dashboard by Creative Tim",
-  "homepage": "https://demos.creative-tim.com/soft-ui-dashboard-react/#/dashboard",
+  "license": "SEE LICENSE IN <https://www.creative-tim.com/license>",
+  "description": "ReactJS version of Soft UI Dashboard by Creative Tim",
+  "homepage": "https://demos.creative-tim.com/soft-ui-dashboard-react/#/",
   "bugs": {
     "url": "https://github.com/creativetimofficial/soft-ui-dashboard-react/issues"
   },
@@ -13,38 +12,43 @@
     "type": "git",
     "url": "git+https://github.com/creativetimofficial/soft-ui-dashboard-react.git"
   },
+  "engines": {
+    "node": "14 || 15 || 16",
+    "npm": ">=6"
+  },
   "dependencies": {
-    "@emotion/cache": "11.4.0",
-    "@emotion/react": "11.4.1",
-    "@emotion/styled": "11.3.0",
-    "@mui/icons-material": "5.1.1",
-    "@mui/material": "5.1.1",
-    "@mui/styled-engine": "5.1.1",
-    "@testing-library/jest-dom": "5.11.4",
-    "@testing-library/react": "11.1.0",
-    "@testing-library/user-event": "12.1.10",
+    "@emotion/cache": "11.7.1",
+    "@emotion/react": "11.8.1",
+    "@emotion/styled": "11.8.1",
+    "@mui/icons-material": "5.4.2",
+    "@mui/material": "5.4.3",
+    "@mui/styled-engine": "5.4.2",
+    "@testing-library/jest-dom": "5.16.2",
+    "@testing-library/react": "12.1.3",
+    "@testing-library/user-event": "13.5.0",
     "chart.js": "3.4.1",
-    "chroma-js": "2.1.2",
-    "prop-types": "15.7.2",
+    "chroma-js": "2.4.2",
+    "prop-types": "15.8.1",
     "react": "17.0.2",
     "react-chartjs-2": "3.0.4",
-    "react-countup": "5.2.0",
+    "react-countup": "6.1.1",
     "react-dom": "17.0.2",
     "react-flatpickr": "3.10.7",
     "react-github-btn": "1.2.1",
-    "react-router-dom": "5.2.0",
-    "react-scripts": "4.0.3",
-    "stylis": "4.0.10",
-    "stylis-plugin-rtl": "2.1.0",
+    "react-router-dom": "6.2.1",
+    "react-scripts": "5.0.0",
+    "stylis": "4.0.13",
+    "stylis-plugin-rtl": "2.1.1",
     "uuid": "8.3.2",
-    "web-vitals": "1.0.1"
+    "web-vitals": "2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "install:peer-deps": "npm install --legacy-peer-deps"
   },
   "eslintConfig": {
     "extends": [
@@ -65,14 +69,14 @@
     ]
   },
   "devDependencies": {
-    "eslint": "7.30.0",
-    "eslint-config-airbnb": "18.2.1",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-import": "2.23.4",
-    "eslint-plugin-jsx-a11y": "6.4.1",
-    "eslint-plugin-prettier": "3.4.0",
-    "eslint-plugin-react": "7.24.0",
-    "eslint-plugin-react-hooks": "4.2.0",
-    "prettier": "2.3.2"
+    "eslint": "8.10.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.4.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "prettier": "2.5.1"
   }
 }

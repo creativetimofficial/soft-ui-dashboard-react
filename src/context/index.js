@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -18,18 +18,18 @@ Coded by www.creative-tim.com
   you can customize the states for the different components here.
 */
 
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useMemo } from "react";
 
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
 // The Soft UI Dashboard PRO Material main context
-const SoftUI = createContext();
+const SoftUI = createContext(null);
 
 // Setting custom name for the context which is visible on react dev tools
 SoftUI.displayName = "SoftUIContext";
 
-// Soft UI Dashboard PRO React reducer
+// Soft UI Dashboard React reducer
 function reducer(state, action) {
   switch (action.type) {
     case "MINI_SIDENAV": {
@@ -62,7 +62,7 @@ function reducer(state, action) {
   }
 }
 
-// Soft UI Dashboard PRO React context provider
+// Soft UI Dashboard React context provider
 function SoftUIControllerProvider({ children }) {
   const initialState = {
     miniSidenav: false,
@@ -77,10 +77,12 @@ function SoftUIControllerProvider({ children }) {
 
   const [controller, dispatch] = useReducer(reducer, initialState);
 
-  return <SoftUI.Provider value={[controller, dispatch]}>{children}</SoftUI.Provider>;
+  const value = useMemo(() => [controller, dispatch], [controller, dispatch]);
+
+  return <SoftUI.Provider value={value}>{children}</SoftUI.Provider>;
 }
 
-// Soft UI Dashboard PRO React custom hook for using context
+// Soft UI Dashboard React custom hook for using context
 function useSoftUIController() {
   const context = useContext(SoftUI);
 

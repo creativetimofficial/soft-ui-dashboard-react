@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -18,13 +18,13 @@ import Grid from "@mui/material/Grid";
 import Tooltip from "@mui/material/Tooltip";
 import Icon from "@mui/material/Icon";
 
-// Soft UI Dashboard PRO React components
+// Soft UI Dashboard React components
 import SuiBox from "components/SuiBox";
 import SuiAvatar from "components/SuiAvatar";
 import SuiTypography from "components/SuiTypography";
 import SuiButton from "components/SuiButton";
 
-// Soft UI Dashboard PRO React base styles
+// Soft UI Dashboard React base styles
 import typography from "assets/theme/base/typography";
 
 // VR dashboards components

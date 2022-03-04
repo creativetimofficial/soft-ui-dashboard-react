@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -62,7 +62,7 @@ const routes = [
     key: "dashboard",
     route: "/dashboard",
     icon: <Shop size="12px" />,
-    component: Dashboard,
+    component: <Dashboard />,
     noCollapse: true,
   },
   {
@@ -71,7 +71,7 @@ const routes = [
     key: "tables",
     route: "/tables",
     icon: <Office size="12px" />,
-    component: Tables,
+    component: <Tables />,
     noCollapse: true,
   },
   {
@@ -80,7 +80,7 @@ const routes = [
     key: "billing",
     route: "/billing",
     icon: <CreditCard size="12px" />,
-    component: Billing,
+    component: <Billing />,
     noCollapse: true,
   },
   {
@@ -89,7 +89,7 @@ const routes = [
     key: "virtual-reality",
     route: "/virtual-reality",
     icon: <Cube size="12px" />,
-    component: VirtualReality,
+    component: <VirtualReality />,
     noCollapse: true,
   },
   {
@@ -98,7 +98,7 @@ const routes = [
     key: "rtl",
     route: "/rtl",
     icon: <Settings size="12px" />,
-    component: RTL,
+    component: <RTL />,
     noCollapse: true,
   },
   { type: "title", title: "Account Pages", key: "account-pages" },
@@ -108,7 +108,7 @@ const routes = [
     key: "profile",
     route: "/profile",
     icon: <CustomerSupport size="12px" />,
-    component: Profile,
+    component: <Profile />,
     noCollapse: true,
   },
   {
@@ -117,7 +117,7 @@ const routes = [
     key: "sign-in",
     route: "/authentication/sign-in",
     icon: <Document size="12px" />,
-    component: SignIn,
+    component: <SignIn />,
     noCollapse: true,
   },
   {
@@ -126,7 +126,7 @@ const routes = [
     key: "sign-up",
     route: "/authentication/sign-up",
     icon: <SpaceShip size="12px" />,
-    component: SignUp,
+    component: <SignUp />,
     noCollapse: true,
   },
 ];

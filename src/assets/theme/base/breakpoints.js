@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -14,12 +14,12 @@ Coded by www.creative-tim.com
 */
 
 /**
- * The base breakpoints for the Soft UI Dashboard PRO Material.
+ * The base breakpoints for the Soft UI Dashboard React.
  * You can add new breakpoints using this file.
- * You can customized the breakpoints for the entire Soft UI Dashboard PRO Material using thie file.
+ * You can customized the breakpoints for the entire Soft UI Dashboard React using thie file.
  */
 
-export default {
+const breakpoints = {
   values: {
     xs: 0,
     sm: 576,
@@ -29,3 +29,5 @@ export default {
     xxl: 1400,
   },
 };
+
+export default breakpoints;

@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -24,7 +24,7 @@ import SuiInputWithIconRoot from "components/SuiInput/SuiInputWithIconRoot";
 import SuiInputIconBoxRoot from "components/SuiInput/SuiInputIconBoxRoot";
 import SuiInputIconRoot from "components/SuiInput/SuiInputIconRoot";
 
-// Soft UI Dashboard PRO React contexts
+// Soft UI Dashboard React contexts
 import { useSoftUIController } from "context";
 
 const SuiInput = forwardRef(({ size, icon, error, success, disabled, ...rest }, ref) => {

@@ -6,11 +6,11 @@ function timelineItem(theme, ownerState) {
 
   return {
     "&:after": {
-      content: "''",
+      content: !lastItem && "''",
       position: "absolute",
       top: "10%",
       left: "14px",
-      height: lastItem ? "90%" : "100%",
+      height: "100%",
       borderRight: `${borderWidth[2]} solid ${borderColor}`,
     },
   };

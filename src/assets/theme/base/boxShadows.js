@@ -1,10 +1,10 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v2.0.0
+* Soft UI Dashboard React - v3.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-material-ui
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -14,20 +14,20 @@ Coded by www.creative-tim.com
 */
 
 /**
- * The base box-shadow styles for the Soft UI Dashboard PRO Material.
+ * The base box-shadow styles for the Soft UI Dashboard React.
  * You can add new box-shadow using this file.
- * You can customized the box-shadow for the entire Soft UI Dashboard PRO Material using thie file.
+ * You can customized the box-shadow for the entire Soft UI Dashboard React using thie file.
  */
 
-// Soft UI Dashboard PRO React Base Styles
+// Soft UI Dashboard React Base Styles
 import colors from "assets/theme/base/colors";
 
-// Soft UI Dashboard PRO React Helper Functions
+// Soft UI Dashboard React Helper Functions
 import boxShadow from "assets/theme/functions/boxShadow";
 
 const { black, white, info, inputColors, tabs } = colors;
 
-export default {
+const boxShadows = {
   xs: boxShadow([0, 2], [9, -5], black.main, 0.15),
   sm: boxShadow([0, 5], [10, 0], black.main, 0.12),
   md: `${boxShadow([0, 4], [6, -1], black.light, 0.12)}, ${boxShadow(
@@ -78,3 +78,5 @@ export default {
     indicator: boxShadow([0, 1], [5, 1], tabs.indicator.boxShadow, 1),
   },
 };
+
+export default boxShadows;
