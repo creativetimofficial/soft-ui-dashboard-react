@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/soft-ui-dashboard-react/static/js/main.d866cb2a.js",
+    "main.js": "/soft-ui-dashboard-react/static/js/main.2378db14.js",
     "static/media/home-decor-3.jpg": "/soft-ui-dashboard-react/static/media/home-decor-3.74d13fcbd3c631fc7908.jpg",
     "static/media/home-decor-2.jpg": "/soft-ui-dashboard-react/static/media/home-decor-2.b4e5397c9846645ba275.jpg",
     "static/media/home-decor-1.jpg": "/soft-ui-dashboard-react/static/media/home-decor-1.05e218fd495ccc65c99d.jpg",
@@ -32,9 +32,9 @@
     "static/media/logo-jira.svg": "/soft-ui-dashboard-react/static/media/logo-jira.c19fd4e416babfbd0fdb0a794188c601.svg",
     "static/media/logo-atlassian.svg": "/soft-ui-dashboard-react/static/media/logo-atlassian.f2b0e8570a4b4ce768854ff3dad1a6e1.svg",
     "static/media/logo-webdev.svg": "/soft-ui-dashboard-react/static/media/logo-webdev.25d88bfc768c8439fdb33efc0d8e6015.svg",
-    "main.d866cb2a.js.map": "/soft-ui-dashboard-react/static/js/main.d866cb2a.js.map"
+    "main.2378db14.js.map": "/soft-ui-dashboard-react/static/js/main.2378db14.js.map"
   },
   "entrypoints": [
-    "static/js/main.d866cb2a.js"
+    "static/js/main.2378db14.js"
   ]
 }
