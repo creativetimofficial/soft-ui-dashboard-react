@@ -1,9 +1,8 @@
 {
   "name": "soft-ui-dashboard-react",
   "version": "3.1.0",
-  "private": true,
   "author": "Creative Tim",
-  "license": "See license in https://www.creative-tim.com/license",
+  "license": "SEE LICENSE IN <https://www.creative-tim.com/license>",
   "description": "ReactJS version of Soft UI Dashboard by Creative Tim",
   "homepage": "https://demos.creative-tim.com/soft-ui-dashboard-react/#/",
   "bugs": {
@@ -48,7 +47,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "install:peer-deps": "npm install --legacy-peer-deps"
   },
   "eslintConfig": {
     "extends": [
@@ -69,7 +69,7 @@
     ]
   },
   "devDependencies": {
-    "eslint": "8.9.0",
+    "eslint": "8.10.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.4.0",
     "eslint-plugin-import": "2.25.4",
