@@ -2,10 +2,10 @@
 import Tooltip from "@mui/material/Tooltip";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiAvatar from "components/SuiAvatar";
-import SuiProgress from "components/SuiProgress";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftAvatar from "components/SoftAvatar";
+import SoftProgress from "components/SoftProgress";
 
 // Images
 import logoXD from "assets/images/small-logos/logo-xd.svg";
@@ -23,7 +23,7 @@ export default function data() {
   const avatars = (members) =>
     members.map(([image, name]) => (
       <Tooltip key={name} title={name} placeholder="bottom">
-        <SuiAvatar
+        <SoftAvatar
           src={image}
           alt="name"
           size="xs"
@@ -57,128 +57,128 @@ export default function data() {
       {
         companies: [logoXD, "Soft UI XD Version"],
         members: (
-          <SuiBox display="flex" py={1}>
+          <SoftBox display="flex" py={1}>
             {avatars([
               [team1, "Ryan Tompson"],
               [team2, "Romina Hadid"],
               [team3, "Alexander Smith"],
               [team4, "Jessica Doe"],
             ])}
-          </SuiBox>
+          </SoftBox>
         ),
         budget: (
-          <SuiTypography variant="caption" color="text" fontWeight="medium">
+          <SoftTypography variant="caption" color="text" fontWeight="medium">
             $14,000
-          </SuiTypography>
+          </SoftTypography>
         ),
         completion: (
-          <SuiBox width="8rem" textAlign="left">
-            <SuiProgress value={60} color="info" variant="gradient" label={false} />
-          </SuiBox>
+          <SoftBox width="8rem" textAlign="left">
+            <SoftProgress value={60} color="info" variant="gradient" label={false} />
+          </SoftBox>
         ),
       },
       {
         companies: [logoAtlassian, "Add Progress Track"],
         members: (
-          <SuiBox display="flex" py={1}>
+          <SoftBox display="flex" py={1}>
             {avatars([
               [team2, "Romina Hadid"],
               [team4, "Jessica Doe"],
             ])}
-          </SuiBox>
+          </SoftBox>
         ),
         budget: (
-          <SuiTypography variant="caption" color="text" fontWeight="medium">
+          <SoftTypography variant="caption" color="text" fontWeight="medium">
             $3,000
-          </SuiTypography>
+          </SoftTypography>
         ),
         completion: (
-          <SuiBox width="8rem" textAlign="left">
-            <SuiProgress value={10} color="info" variant="gradient" label={false} />
-          </SuiBox>
+          <SoftBox width="8rem" textAlign="left">
+            <SoftProgress value={10} color="info" variant="gradient" label={false} />
+          </SoftBox>
         ),
       },
       {
         companies: [logoSlack, "Fix Platform Errors"],
         members: (
-          <SuiBox display="flex" py={1}>
+          <SoftBox display="flex" py={1}>
             {avatars([
               [team1, "Ryan Tompson"],
               [team3, "Alexander Smith"],
             ])}
-          </SuiBox>
+          </SoftBox>
         ),
         budget: (
-          <SuiTypography variant="caption" color="text" fontWeight="medium">
+          <SoftTypography variant="caption" color="text" fontWeight="medium">
             Not set
-          </SuiTypography>
+          </SoftTypography>
         ),
         completion: (
-          <SuiBox width="8rem" textAlign="left">
-            <SuiProgress value={100} color="success" variant="gradient" label={false} />
-          </SuiBox>
+          <SoftBox width="8rem" textAlign="left">
+            <SoftProgress value={100} color="success" variant="gradient" label={false} />
+          </SoftBox>
         ),
       },
       {
         companies: [logoSpotify, "Launch our Mobile App"],
         members: (
-          <SuiBox display="flex" py={1}>
+          <SoftBox display="flex" py={1}>
             {avatars([
               [team4, "Jessica Doe"],
               [team3, "Alexander Smith"],
               [team2, "Romina Hadid"],
               [team1, "Ryan Tompson"],
             ])}
-          </SuiBox>
+          </SoftBox>
         ),
         budget: (
-          <SuiTypography variant="caption" color="text" fontWeight="medium">
+          <SoftTypography variant="caption" color="text" fontWeight="medium">
             $20,500
-          </SuiTypography>
+          </SoftTypography>
         ),
         completion: (
-          <SuiBox width="8rem" textAlign="left">
-            <SuiProgress value={100} color="success" variant="gradient" label={false} />
-          </SuiBox>
+          <SoftBox width="8rem" textAlign="left">
+            <SoftProgress value={100} color="success" variant="gradient" label={false} />
+          </SoftBox>
         ),
       },
       {
         companies: [logoJira, "Add the New Pricing Page"],
         members: (
-          <SuiBox display="flex" py={1}>
+          <SoftBox display="flex" py={1}>
             {avatars([[team4, "Jessica Doe"]])}
-          </SuiBox>
+          </SoftBox>
         ),
         budget: (
-          <SuiTypography variant="caption" color="text" fontWeight="medium">
+          <SoftTypography variant="caption" color="text" fontWeight="medium">
             $500
-          </SuiTypography>
+          </SoftTypography>
         ),
         completion: (
-          <SuiBox width="8rem" textAlign="left">
-            <SuiProgress value={25} color="info" variant="gradient" label={false} />
-          </SuiBox>
+          <SoftBox width="8rem" textAlign="left">
+            <SoftProgress value={25} color="info" variant="gradient" label={false} />
+          </SoftBox>
         ),
       },
       {
         companies: [logoInvesion, "Redesign New Online Shop"],
         members: (
-          <SuiBox display="flex" py={1}>
+          <SoftBox display="flex" py={1}>
             {avatars([
               [team1, "Ryan Tompson"],
               [team4, "Jessica Doe"],
             ])}
-          </SuiBox>
+          </SoftBox>
         ),
         budget: (
-          <SuiTypography variant="caption" color="text" fontWeight="medium">
+          <SoftTypography variant="caption" color="text" fontWeight="medium">
             $2,000
-          </SuiTypography>
+          </SoftTypography>
         ),
         completion: (
-          <SuiBox width="8rem" textAlign="left">
-            <SuiProgress value={40} color="info" variant="gradient" label={false} />
-          </SuiBox>
+          <SoftBox width="8rem" textAlign="left">
+            <SoftProgress value={40} color="info" variant="gradient" label={false} />
+          </SoftBox>
         ),
       },
     ],

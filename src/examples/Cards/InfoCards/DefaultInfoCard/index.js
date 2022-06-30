@@ -22,14 +22,14 @@ import Divider from "@mui/material/Divider";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 function DefaultInfoCard({ color, icon, title, description, value }) {
   return (
     <Card>
-      <SuiBox p={2} mx={3} display="flex" justifyContent="center">
-        <SuiBox
+      <SoftBox p={2} mx={3} display="flex" justifyContent="center">
+        <SoftBox
           display="grid"
           justifyContent="center"
           alignItems="center"
@@ -42,24 +42,24 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
           variant="gradient"
         >
           <Icon fontSize="default">{icon}</Icon>
-        </SuiBox>
-      </SuiBox>
-      <SuiBox pb={2} px={2} textAlign="center" lineHeight={1.25}>
-        <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+        </SoftBox>
+      </SoftBox>
+      <SoftBox pb={2} px={2} textAlign="center" lineHeight={1.25}>
+        <SoftTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}
-        </SuiTypography>
+        </SoftTypography>
         {description && (
-          <SuiTypography variant="caption" color="text" fontWeight="regular">
+          <SoftTypography variant="caption" color="text" fontWeight="regular">
             {description}
-          </SuiTypography>
+          </SoftTypography>
         )}
         {description && !value ? null : <Divider />}
         {value && (
-          <SuiTypography variant="h5" fontWeight="medium">
+          <SoftTypography variant="h5" fontWeight="medium">
             {value}
-          </SuiTypography>
+          </SoftTypography>
         )}
-      </SuiBox>
+      </SoftBox>
     </Card>
   );
 }

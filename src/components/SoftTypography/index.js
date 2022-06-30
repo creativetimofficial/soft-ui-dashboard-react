@@ -18,26 +18,26 @@ import { forwardRef } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Custom styles for SuiTypography
-import SuiTypographyRoot from "components/SuiTypography/SuiTypographyRoot";
+// Custom styles for SoftTypography
+import SoftTypographyRoot from "components/SoftTypography/SoftTypographyRoot";
 
-const SuiTypography = forwardRef(
+const SoftTypography = forwardRef(
   (
     { color, fontWeight, textTransform, verticalAlign, textGradient, opacity, children, ...rest },
     ref
   ) => (
-    <SuiTypographyRoot
+    <SoftTypographyRoot
       {...rest}
       ref={ref}
       ownerState={{ color, textTransform, verticalAlign, fontWeight, opacity, textGradient }}
     >
       {children}
-    </SuiTypographyRoot>
+    </SoftTypographyRoot>
   )
 );
 
-// Setting default values for the props of SuiTypography
-SuiTypography.defaultProps = {
+// Setting default values for the props of SoftTypography
+SoftTypography.defaultProps = {
   color: "dark",
   fontWeight: false,
   textTransform: "none",
@@ -46,8 +46,8 @@ SuiTypography.defaultProps = {
   opacity: 1,
 };
 
-// Typechecking props for the SuiTypography
-SuiTypography.propTypes = {
+// Typechecking props for the SoftTypography
+SoftTypography.propTypes = {
   color: PropTypes.oneOf([
     "inherit",
     "primary",
@@ -79,4 +79,4 @@ SuiTypography.propTypes = {
   opacity: PropTypes.number,
 };
 
-export default SuiTypography;
+export default SoftTypography;

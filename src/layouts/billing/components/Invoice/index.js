@@ -20,12 +20,12 @@ import PropTypes from "prop-types";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 function Invoice({ date, id, price, noGutter }) {
   return (
-    <SuiBox
+    <SoftBox
       component="li"
       display="flex"
       justifyContent="space-between"
@@ -34,26 +34,26 @@ function Invoice({ date, id, price, noGutter }) {
       pr={1}
       mb={noGutter ? 0 : 1}
     >
-      <SuiBox lineHeight={1}>
-        <SuiTypography display="block" variant="button" fontWeight="medium">
+      <SoftBox lineHeight={1}>
+        <SoftTypography display="block" variant="button" fontWeight="medium">
           {date}
-        </SuiTypography>
-        <SuiTypography variant="caption" fontWeight="regular" color="text">
+        </SoftTypography>
+        <SoftTypography variant="caption" fontWeight="regular" color="text">
           {id}
-        </SuiTypography>
-      </SuiBox>
-      <SuiBox display="flex" alignItems="center">
-        <SuiTypography variant="button" fontWeight="regular" color="text">
+        </SoftTypography>
+      </SoftBox>
+      <SoftBox display="flex" alignItems="center">
+        <SoftTypography variant="button" fontWeight="regular" color="text">
           {price}
-        </SuiTypography>
-        <SuiBox display="flex" alignItems="center" lineHeight={0} ml={3} sx={{ cursor: "poiner" }}>
+        </SoftTypography>
+        <SoftBox display="flex" alignItems="center" lineHeight={0} ml={3} sx={{ cursor: "poiner" }}>
           <Icon fontSize="small">picture_as_pdf</Icon>
-          <SuiTypography variant="button" fontWeight="bold">
+          <SoftTypography variant="button" fontWeight="bold">
             &nbsp;PDF
-          </SuiTypography>
-        </SuiBox>
-      </SuiBox>
-    </SuiBox>
+          </SoftTypography>
+        </SoftBox>
+      </SoftBox>
+    </SoftBox>
   );
 }
 

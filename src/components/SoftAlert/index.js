@@ -22,13 +22,13 @@ import PropTypes from "prop-types";
 import Fade from "@mui/material/Fade";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
+import SoftBox from "components/SoftBox";
 
-// Custom styles for the SuiAlert
-import SuiAlertRoot from "components/SuiAlert/SuiAlertRoot";
-import SuiAlertCloseIcon from "components/SuiAlert/SuiAlertCloseIcon";
+// Custom styles for the SoftAlert
+import SoftAlertRoot from "components/SoftAlert/SoftAlertRoot";
+import SoftAlertCloseIcon from "components/SoftAlert/SoftAlertCloseIcon";
 
-function SuiAlert({ color, dismissible, children, ...rest }) {
+function SoftAlert({ color, dismissible, children, ...rest }) {
   const [alertStatus, setAlertStatus] = useState("mount");
 
   const handleAlertStatus = () => setAlertStatus("fadeOut");
@@ -36,14 +36,14 @@ function SuiAlert({ color, dismissible, children, ...rest }) {
   // The base template for the alert
   const alertTemplate = (mount = true) => (
     <Fade in={mount} timeout={300}>
-      <SuiAlertRoot ownerState={{ color }} {...rest}>
-        <SuiBox display="flex" alignItems="center" color="white">
+      <SoftAlertRoot ownerState={{ color }} {...rest}>
+        <SoftBox display="flex" alignItems="center" color="white">
           {children}
-        </SuiBox>
+        </SoftBox>
         {dismissible ? (
-          <SuiAlertCloseIcon onClick={mount ? handleAlertStatus : null}>&times;</SuiAlertCloseIcon>
+          <SoftAlertCloseIcon onClick={mount ? handleAlertStatus : null}>&times;</SoftAlertCloseIcon>
         ) : null}
-      </SuiAlertRoot>
+      </SoftAlertRoot>
     </Fade>
   );
 
@@ -61,14 +61,14 @@ function SuiAlert({ color, dismissible, children, ...rest }) {
   return null;
 }
 
-// Setting default values for the props of SuiAlert
-SuiAlert.defaultProps = {
+// Setting default values for the props of SoftAlert
+SoftAlert.defaultProps = {
   color: "info",
   dismissible: false,
 };
 
-// Typechecking props of the SuiAlert
-SuiAlert.propTypes = {
+// Typechecking props of the SoftAlert
+SoftAlert.propTypes = {
   color: PropTypes.oneOf([
     "primary",
     "secondary",
@@ -83,4 +83,4 @@ SuiAlert.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default SuiAlert;
+export default SoftAlert;

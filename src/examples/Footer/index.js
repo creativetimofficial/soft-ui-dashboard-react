@@ -21,8 +21,8 @@ import Link from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React base styles
 import typography from "assets/theme/base/typography";
@@ -33,17 +33,17 @@ function Footer({ company, links }) {
 
   const renderLinks = () =>
     links.map((link) => (
-      <SuiBox key={link.name} component="li" px={2} lineHeight={1}>
+      <SoftBox key={link.name} component="li" px={2} lineHeight={1}>
         <Link href={link.href} target="_blank">
-          <SuiTypography variant="button" fontWeight="regular" color="text">
+          <SoftTypography variant="button" fontWeight="regular" color="text">
             {link.name}
-          </SuiTypography>
+          </SoftTypography>
         </Link>
-      </SuiBox>
+      </SoftBox>
     ));
 
   return (
-    <SuiBox
+    <SoftBox
       width="100%"
       display="flex"
       flexDirection={{ xs: "column", lg: "row" }}
@@ -51,7 +51,7 @@ function Footer({ company, links }) {
       alignItems="center"
       px={1.5}
     >
-      <SuiBox
+      <SoftBox
         display="flex"
         justifyContent="center"
         alignItems="center"
@@ -61,20 +61,20 @@ function Footer({ company, links }) {
         px={1.5}
       >
         &copy; {new Date().getFullYear()}, made with
-        <SuiBox fontSize={size.md} color="text" mb={-0.5} mx={0.25}>
+        <SoftBox fontSize={size.md} color="text" mb={-0.5} mx={0.25}>
           <Icon color="inherit" fontSize="inherit">
             favorite
           </Icon>
-        </SuiBox>
+        </SoftBox>
         by
         <Link href={href} target="_blank">
-          <SuiTypography variant="button" fontWeight="medium">
+          <SoftTypography variant="button" fontWeight="medium">
             &nbsp;{name}&nbsp;
-          </SuiTypography>
+          </SoftTypography>
         </Link>
         for a better web.
-      </SuiBox>
-      <SuiBox
+      </SoftBox>
+      <SoftBox
         component="ul"
         sx={({ breakpoints }) => ({
           display: "flex",
@@ -92,8 +92,8 @@ function Footer({ company, links }) {
         })}
       >
         {renderLinks()}
-      </SuiBox>
-    </SuiBox>
+      </SoftBox>
+    </SoftBox>
   );
 }
 

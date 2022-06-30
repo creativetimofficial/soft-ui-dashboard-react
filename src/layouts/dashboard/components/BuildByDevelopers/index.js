@@ -19,8 +19,8 @@ import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Images
 import wavesWhite from "assets/images/shapes/waves-white.svg";
@@ -29,25 +29,25 @@ import rocketWhite from "assets/images/illustrations/rocket-white.png";
 function BuildByDevelopers() {
   return (
     <Card>
-      <SuiBox p={2}>
+      <SoftBox p={2}>
         <Grid container spacing={3}>
           <Grid item xs={12} lg={6}>
-            <SuiBox display="flex" flexDirection="column" height="100%">
-              <SuiBox pt={1} mb={0.5}>
-                <SuiTypography variant="body2" color="text" fontWeight="medium">
+            <SoftBox display="flex" flexDirection="column" height="100%">
+              <SoftBox pt={1} mb={0.5}>
+                <SoftTypography variant="body2" color="text" fontWeight="medium">
                   Build by developers
-                </SuiTypography>
-              </SuiBox>
-              <SuiTypography variant="h5" fontWeight="bold" gutterBottom>
+                </SoftTypography>
+              </SoftBox>
+              <SoftTypography variant="h5" fontWeight="bold" gutterBottom>
                 Soft UI Dashboard
-              </SuiTypography>
-              <SuiBox mb={6}>
-                <SuiTypography variant="body2" color="text">
+              </SoftTypography>
+              <SoftBox mb={6}>
+                <SoftTypography variant="body2" color="text">
                   From colors, cards, typography to complex elements, you will find the full
                   documentation.
-                </SuiTypography>
-              </SuiBox>
-              <SuiTypography
+                </SoftTypography>
+              </SoftBox>
+              <SoftTypography
                 component="a"
                 href="#"
                 variant="button"
@@ -73,11 +73,11 @@ function BuildByDevelopers() {
               >
                 Read More
                 <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-              </SuiTypography>
-            </SuiBox>
+              </SoftTypography>
+            </SoftBox>
           </Grid>
           <Grid item xs={12} lg={5} sx={{ position: "relative", ml: "auto" }}>
-            <SuiBox
+            <SoftBox
               height="100%"
               display="grid"
               justifyContent="center"
@@ -86,7 +86,7 @@ function BuildByDevelopers() {
               borderRadius="lg"
               variant="gradient"
             >
-              <SuiBox
+              <SoftBox
                 component="img"
                 src={wavesWhite}
                 alt="waves"
@@ -96,11 +96,11 @@ function BuildByDevelopers() {
                 width="100%"
                 height="100%"
               />
-              <SuiBox component="img" src={rocketWhite} alt="rocket" width="100%" pt={3} />
-            </SuiBox>
+              <SoftBox component="img" src={rocketWhite} alt="rocket" width="100%" pt={3} />
+            </SoftBox>
           </Grid>
         </Grid>
-      </SuiBox>
+      </SoftBox>
     </Card>
   );
 }

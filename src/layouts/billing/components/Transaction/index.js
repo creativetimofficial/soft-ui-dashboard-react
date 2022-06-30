@@ -20,34 +20,34 @@ import PropTypes from "prop-types";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftButton from "components/SoftButton";
 
 function Transaction({ color, icon, name, description, value }) {
   return (
-    <SuiBox key={name} component="li" py={1} pr={2} mb={1}>
-      <SuiBox display="flex" justifyContent="space-between" alignItems="center">
-        <SuiBox display="flex" alignItems="center">
-          <SuiBox mr={2}>
-            <SuiButton variant="outlined" color={color} size="small" iconOnly circular>
+    <SoftBox key={name} component="li" py={1} pr={2} mb={1}>
+      <SoftBox display="flex" justifyContent="space-between" alignItems="center">
+        <SoftBox display="flex" alignItems="center">
+          <SoftBox mr={2}>
+            <SoftButton variant="outlined" color={color} size="small" iconOnly circular>
               <Icon sx={{ fontWeight: "bold" }}>{icon}</Icon>
-            </SuiButton>
-          </SuiBox>
-          <SuiBox display="flex" flexDirection="column">
-            <SuiTypography variant="button" fontWeight="medium" gutterBottom>
+            </SoftButton>
+          </SoftBox>
+          <SoftBox display="flex" flexDirection="column">
+            <SoftTypography variant="button" fontWeight="medium" gutterBottom>
               {name}
-            </SuiTypography>
-            <SuiTypography variant="caption" color="text">
+            </SoftTypography>
+            <SoftTypography variant="caption" color="text">
               {description}
-            </SuiTypography>
-          </SuiBox>
-        </SuiBox>
-        <SuiTypography variant="button" color={color} fontWeight="medium" textGradient>
+            </SoftTypography>
+          </SoftBox>
+        </SoftBox>
+        <SoftTypography variant="button" color={color} fontWeight="medium" textGradient>
           {value}
-        </SuiTypography>
-      </SuiBox>
-    </SuiBox>
+        </SoftTypography>
+      </SoftBox>
+    </SoftBox>
   );
 }
 

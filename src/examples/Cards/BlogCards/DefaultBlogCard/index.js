@@ -24,27 +24,27 @@ import Card from "@mui/material/Card";
 import MuiLink from "@mui/material/Link";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiAvatar from "components/SuiAvatar";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftAvatar from "components/SoftAvatar";
 
 function DefaultBlogCard({ image, category, title, description, author, action }) {
   return (
     <Card>
-      <SuiBox mt={2} mx={2}>
+      <SoftBox mt={2} mx={2}>
         {action.type === "internal" ? (
           <Link to={action.route}>
-            <SuiBox component="img" src={image} alt={title} width="100%" borderRadius="lg" />
+            <SoftBox component="img" src={image} alt={title} width="100%" borderRadius="lg" />
           </Link>
         ) : (
           <MuiLink href={action.route} target="_blank" rel="noreferrer">
-            <SuiBox component="img" src={image} alt={title} width="100%" borderRadius="lg" />
+            <SoftBox component="img" src={image} alt={title} width="100%" borderRadius="lg" />
           </MuiLink>
         )}
-      </SuiBox>
-      <SuiBox pb={3} px={3}>
+      </SoftBox>
+      <SoftBox pb={3} px={3}>
         {category && (
-          <SuiTypography
+          <SoftTypography
             variant="caption"
             color={category.color}
             textTransform="uppercase"
@@ -52,50 +52,50 @@ function DefaultBlogCard({ image, category, title, description, author, action }
             textGradient
           >
             {category.label}
-          </SuiTypography>
+          </SoftTypography>
         )}
-        <SuiBox display="block" mt={0.5} mb={1}>
+        <SoftBox display="block" mt={0.5} mb={1}>
           {action.type === "internal" ? (
             <Link to={action.route}>
-              <SuiTypography
+              <SoftTypography
                 display="inline"
                 variant="h5"
                 textTransform="capitalize"
                 className="color-background"
               >
                 {title}
-              </SuiTypography>
+              </SoftTypography>
             </Link>
           ) : (
             <MuiLink href={action.route} target="_blank" rel="noreferrer">
-              <SuiTypography
+              <SoftTypography
                 display="inline"
                 variant="h5"
                 textTransform="capitalize"
                 className="color-background"
               >
                 {title}
-              </SuiTypography>
+              </SoftTypography>
             </MuiLink>
           )}
-        </SuiBox>
-        <SuiTypography variant="body2" component="p" color="text">
+        </SoftBox>
+        <SoftTypography variant="body2" component="p" color="text">
           {description}
-        </SuiTypography>
+        </SoftTypography>
         {author && (
-          <SuiBox display="flex" alignItems="center" mt={3}>
-            <SuiAvatar variant="rounded" src={author.image} alt={author.name} shadow="md" />
-            <SuiBox pl={2} lineHeight={0}>
-              <SuiTypography component="h6" variant="button" fontWeight="medium" gutterBottom>
+          <SoftBox display="flex" alignItems="center" mt={3}>
+            <SoftAvatar variant="rounded" src={author.image} alt={author.name} shadow="md" />
+            <SoftBox pl={2} lineHeight={0}>
+              <SoftTypography component="h6" variant="button" fontWeight="medium" gutterBottom>
                 {author.name}
-              </SuiTypography>
-              <SuiTypography variant="caption" color="text">
+              </SoftTypography>
+              <SoftTypography variant="caption" color="text">
                 {author.date}
-              </SuiTypography>
-            </SuiBox>
-          </SuiBox>
+              </SoftTypography>
+            </SoftBox>
+          </SoftBox>
         )}
-      </SuiBox>
+      </SoftBox>
     </Card>
   );
 }

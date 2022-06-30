@@ -110,15 +110,15 @@ soft-ui-dashboard-react
     │   │       ├── index.js
     │   │       └── theme-rtl.js
     │   ├── components
-    │   │   ├── SuiAlert
-    │   │   ├── SuiAvatar
-    │   │   ├── SuiBadge
-    │   │   ├── SuiBox
-    │   │   ├── SuiButton
-    │   │   ├── SuiInput
-    │   │   ├── SuiPagination
-    │   │   ├── SuiProgress
-    │   │   └── SuiTypography
+    │   │   ├── SoftAlert
+    │   │   ├── SoftAvatar
+    │   │   ├── SoftBadge
+    │   │   ├── SoftBox
+    │   │   ├── SoftButton
+    │   │   ├── SoftInput
+    │   │   ├── SoftPagination
+    │   │   ├── SoftProgress
+    │   │   └── SoftTypography
     │   ├── context
     │   ├── examples
     │   │   ├── Breadcrumbs

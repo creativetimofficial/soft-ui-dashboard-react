@@ -22,8 +22,8 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard Materail-UI example components
 import Table from "examples/Tables/Table";
@@ -61,12 +61,12 @@ function Projects() {
 
   return (
     <Card>
-      <SuiBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
-        <SuiBox>
-          <SuiTypography variant="h6" gutterBottom>
+      <SoftBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
+        <SoftBox>
+          <SoftTypography variant="h6" gutterBottom>
             المشاريع
-          </SuiTypography>
-          <SuiBox display="flex" alignItems="center" lineHeight={0}>
+          </SoftTypography>
+          <SoftBox display="flex" alignItems="center" lineHeight={0}>
             <Icon
               sx={{
                 fontWeight: "bold",
@@ -76,19 +76,19 @@ function Projects() {
             >
               done
             </Icon>
-            <SuiTypography variant="button" fontWeight="regular" color="text">
+            <SoftTypography variant="button" fontWeight="regular" color="text">
               &nbsp;<strong>30 انتهى</strong> هذا الشهر
-            </SuiTypography>
-          </SuiBox>
-        </SuiBox>
-        <SuiBox color="text" px={2}>
+            </SoftTypography>
+          </SoftBox>
+        </SoftBox>
+        <SoftBox color="text" px={2}>
           <Icon sx={{ cursor: "pointer", fontWeight: "bold" }} fontSize="small" onClick={openMenu}>
             more_vert
           </Icon>
-        </SuiBox>
+        </SoftBox>
         {renderMenu}
-      </SuiBox>
-      <SuiBox
+      </SoftBox>
+      <SoftBox
         sx={{
           "& .MuiTableRow-root:not(:last-child)": {
             "& td": {
@@ -99,7 +99,7 @@ function Projects() {
         }}
       >
         <Table columns={columns} rows={rows} />
-      </SuiBox>
+      </SoftBox>
     </Card>
   );
 }

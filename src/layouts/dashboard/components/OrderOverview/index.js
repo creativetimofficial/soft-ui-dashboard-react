@@ -18,8 +18,8 @@ import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React examples
 import TimelineItem from "examples/Timeline/TimelineItem";
@@ -27,26 +27,26 @@ import TimelineItem from "examples/Timeline/TimelineItem";
 function OrdersOverview() {
   return (
     <Card className="h-100">
-      <SuiBox pt={3} px={3}>
-        <SuiTypography variant="h6" fontWeight="medium">
+      <SoftBox pt={3} px={3}>
+        <SoftTypography variant="h6" fontWeight="medium">
           Orders overview
-        </SuiTypography>
-        <SuiBox mt={1} mb={2}>
-          <SuiTypography variant="button" color="text" fontWeight="regular">
-            <SuiTypography display="inline" variant="body2" verticalAlign="middle">
+        </SoftTypography>
+        <SoftBox mt={1} mb={2}>
+          <SoftTypography variant="button" color="text" fontWeight="regular">
+            <SoftTypography display="inline" variant="body2" verticalAlign="middle">
               <Icon sx={{ fontWeight: "bold", color: ({ palette: { success } }) => success.main }}>
                 arrow_upward
               </Icon>
-            </SuiTypography>
+            </SoftTypography>
             &nbsp;
-            <SuiTypography variant="button" color="text" fontWeight="medium">
+            <SoftTypography variant="button" color="text" fontWeight="medium">
               24%
-            </SuiTypography>{" "}
+            </SoftTypography>{" "}
             this month
-          </SuiTypography>
-        </SuiBox>
-      </SuiBox>
-      <SuiBox p={2}>
+          </SoftTypography>
+        </SoftBox>
+      </SoftBox>
+      <SoftBox p={2}>
         <TimelineItem
           color="success"
           icon="notifications"
@@ -78,7 +78,7 @@ function OrdersOverview() {
           dateTime="18 DEC 4:54 AM"
         />
         <TimelineItem color="dark" icon="paid" title="New order #9583120" dateTime="17 DEC" />
-      </SuiBox>
+      </SoftBox>
     </Card>
   );
 }

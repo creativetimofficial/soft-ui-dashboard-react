@@ -20,8 +20,8 @@ import PropTypes from "prop-types";
 import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
@@ -50,28 +50,28 @@ function CoverLayout({ color, header, title, description, image, top, children }
         }}
       >
         <Grid item xs={11} sm={8} md={5} xl={3}>
-          <SuiBox mt={top}>
-            <SuiBox pt={3} px={3}>
+          <SoftBox mt={top}>
+            <SoftBox pt={3} px={3}>
               {!header ? (
                 <>
-                  <SuiBox mb={1}>
-                    <SuiTypography variant="h3" fontWeight="bold" color={color} textGradient>
+                  <SoftBox mb={1}>
+                    <SoftTypography variant="h3" fontWeight="bold" color={color} textGradient>
                       {title}
-                    </SuiTypography>
-                  </SuiBox>
-                  <SuiTypography variant="body2" fontWeight="regular" color="text">
+                    </SoftTypography>
+                  </SoftBox>
+                  <SoftTypography variant="body2" fontWeight="regular" color="text">
                     {description}
-                  </SuiTypography>
+                  </SoftTypography>
                 </>
               ) : (
                 header
               )}
-            </SuiBox>
-            <SuiBox p={3}>{children}</SuiBox>
-          </SuiBox>
+            </SoftBox>
+            <SoftBox p={3}>{children}</SoftBox>
+          </SoftBox>
         </Grid>
         <Grid item xs={12} md={5}>
-          <SuiBox
+          <SoftBox
             height="100%"
             display={{ xs: "none", md: "block" }}
             position="relative"
@@ -83,7 +83,7 @@ function CoverLayout({ color, header, title, description, image, top, children }
               borderBottomLeftRadius: ({ borders: { borderRadius } }) => borderRadius.lg,
             }}
           >
-            <SuiBox
+            <SoftBox
               ml={-8}
               height="100%"
               sx={{
@@ -92,7 +92,7 @@ function CoverLayout({ color, header, title, description, image, top, children }
                 transform: "skewX(10deg)",
               }}
             />
-          </SuiBox>
+          </SoftBox>
         </Grid>
       </Grid>
       <Footer />

@@ -17,7 +17,7 @@ Coded by www.creative-tim.com
 import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
+import SoftBox from "components/SoftBox";
 
 // Soft UI Dashboard React components
 import MasterCard from "examples/Cards/MasterCard";
@@ -38,8 +38,8 @@ function Billing() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <SuiBox mt={4}>
-        <SuiBox mb={1.5}>
+      <SoftBox mt={4}>
+        <SoftBox mb={1.5}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={8}>
               <Grid container spacing={3}>
@@ -71,8 +71,8 @@ function Billing() {
               <Invoices />
             </Grid>
           </Grid>
-        </SuiBox>
-        <SuiBox my={3}>
+        </SoftBox>
+        <SoftBox my={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} md={7}>
               <BillingInformation />
@@ -81,8 +81,8 @@ function Billing() {
               <Transactions />
             </Grid>
           </Grid>
-        </SuiBox>
-      </SuiBox>
+        </SoftBox>
+      </SoftBox>
       <Footer />
     </DashboardLayout>
   );

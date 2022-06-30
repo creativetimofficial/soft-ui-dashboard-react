@@ -21,8 +21,8 @@ import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Images
 import curved14 from "assets/images/curved-images/curved14.jpg";
@@ -61,42 +61,42 @@ function MasterCard({ color, number, holder, expires }) {
         boxShadow: xl,
       })}
     >
-      <SuiBox p={2}>
-        <SuiBox color="white" p={1} lineHeight={0} display="inline-block">
+      <SoftBox p={2}>
+        <SoftBox color="white" p={1} lineHeight={0} display="inline-block">
           <Icon fontSize="default">wifi</Icon>
-        </SuiBox>
-        <SuiTypography variant="h5" color="white" fontWeight="medium" sx={{ mt: 3, mb: 5, pb: 1 }}>
+        </SoftBox>
+        <SoftTypography variant="h5" color="white" fontWeight="medium" sx={{ mt: 3, mb: 5, pb: 1 }}>
           {num1}&nbsp;&nbsp;&nbsp;{num2}&nbsp;&nbsp;&nbsp;{num3}&nbsp;&nbsp;&nbsp;{num4}
-        </SuiTypography>
-        <SuiBox display="flex" justifyContent="space-between" alignItems="center">
-          <SuiBox display="flex" alignItems="center">
-            <SuiBox mr={3} lineHeight={1}>
-              <SuiTypography variant="button" color="white" fontWeight="regular" opacity={0.8}>
+        </SoftTypography>
+        <SoftBox display="flex" justifyContent="space-between" alignItems="center">
+          <SoftBox display="flex" alignItems="center">
+            <SoftBox mr={3} lineHeight={1}>
+              <SoftTypography variant="button" color="white" fontWeight="regular" opacity={0.8}>
                 Card Holder
-              </SuiTypography>
-              <SuiTypography
+              </SoftTypography>
+              <SoftTypography
                 variant="h6"
                 color="white"
                 fontWeight="medium"
                 textTransform="capitalize"
               >
                 {holder}
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox lineHeight={1}>
-              <SuiTypography variant="button" color="white" fontWeight="regular" opacity={0.8}>
+              </SoftTypography>
+            </SoftBox>
+            <SoftBox lineHeight={1}>
+              <SoftTypography variant="button" color="white" fontWeight="regular" opacity={0.8}>
                 Expires
-              </SuiTypography>
-              <SuiTypography variant="h6" color="white" fontWeight="medium">
+              </SoftTypography>
+              <SoftTypography variant="h6" color="white" fontWeight="medium">
                 {expires}
-              </SuiTypography>
-            </SuiBox>
-          </SuiBox>
-          <SuiBox display="flex" justifyContent="flex-end" width="20%">
-            <SuiBox component="img" src={masterCardLogo} alt="master card" width="60%" mt={1} />
-          </SuiBox>
-        </SuiBox>
-      </SuiBox>
+              </SoftTypography>
+            </SoftBox>
+          </SoftBox>
+          <SoftBox display="flex" justifyContent="flex-end" width="20%">
+            <SoftBox component="img" src={masterCardLogo} alt="master card" width="60%" mt={1} />
+          </SoftBox>
+        </SoftBox>
+      </SoftBox>
     </Card>
   );
 }

@@ -19,9 +19,9 @@ import Icon from "@mui/material/Icon";
 import Tooltip from "@mui/material/Tooltip";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftButton from "components/SoftButton";
 
 // Images
 import curved1 from "assets/images/curved-images/curved1.jpg";
@@ -46,17 +46,17 @@ function MediaPlayer() {
         backgroundPosition: "center",
       })}
     >
-      <SuiBox p={3} position="relative" lineHeight={0}>
-        <SuiTypography variant="h5" color="white" fontWeight="medium">
+      <SoftBox p={3} position="relative" lineHeight={0}>
+        <SoftTypography variant="h5" color="white" fontWeight="medium">
           Some Kind Of Blues
-        </SuiTypography>
-        <SuiTypography variant="button" color="white" fontWeight="regular">
+        </SoftTypography>
+        <SoftTypography variant="button" color="white" fontWeight="regular">
           Deftones
-        </SuiTypography>
-        <SuiBox display="flex" mt={6} pt={1}>
-          <SuiBox display="flex" alignItems="center" justifyContent="center">
+        </SoftTypography>
+        <SoftBox display="flex" mt={6} pt={1}>
+          <SoftBox display="flex" alignItems="center" justifyContent="center">
             <Tooltip title="Prev" placement="top">
-              <SuiButton
+              <SoftButton
                 variant="outlined"
                 size="large"
                 circular
@@ -64,10 +64,10 @@ function MediaPlayer() {
                 sx={mediaPlayerButtonStyles}
               >
                 <Icon>skip_previous</Icon>
-              </SuiButton>
+              </SoftButton>
             </Tooltip>
             <Tooltip title="Pause" placement="top">
-              <SuiButton
+              <SoftButton
                 variant="outlined"
                 size="large"
                 circular
@@ -75,10 +75,10 @@ function MediaPlayer() {
                 sx={mediaPlayerButtonStyles}
               >
                 <Icon>play_arrow</Icon>
-              </SuiButton>
+              </SoftButton>
             </Tooltip>
             <Tooltip title="Next" placement="top">
-              <SuiButton
+              <SoftButton
                 variant="outlined"
                 size="large"
                 circular
@@ -86,11 +86,11 @@ function MediaPlayer() {
                 sx={mediaPlayerButtonStyles}
               >
                 <Icon>skip_next</Icon>
-              </SuiButton>
+              </SoftButton>
             </Tooltip>
-          </SuiBox>
-        </SuiBox>
-      </SuiBox>
+          </SoftBox>
+        </SoftBox>
+      </SoftBox>
     </Card>
   );
 }

@@ -22,7 +22,7 @@ import { useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
+import SoftBox from "components/SoftBox";
 
 // Soft UI Dashboard React examples
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
@@ -75,12 +75,12 @@ function BaseLayout({ children }) {
   }, [pathname]);
 
   return (
-    <SuiBox sx={baseLayout}>
-      <SuiBox mt={3} mx={3}>
+    <SoftBox sx={baseLayout}>
+      <SoftBox mt={3} mx={3}>
         <DashboardNavbar />
-      </SuiBox>
-      <SuiBox sx={baseLayoutBackground}>
-        <SuiBox display={{ xs: "block", lg: "none" }}>
+      </SoftBox>
+      <SoftBox sx={baseLayoutBackground}>
+        <SoftBox display={{ xs: "block", lg: "none" }}>
           <Sidenav
             brand={brand}
             brandName="Soft UI Dashboard PRO"
@@ -88,9 +88,9 @@ function BaseLayout({ children }) {
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
           />
-        </SuiBox>
-        <SuiBox sx={baseLayoutContent}>
-          <SuiBox display={{ xs: "none", lg: "block" }}>
+        </SoftBox>
+        <SoftBox sx={baseLayoutContent}>
+          <SoftBox display={{ xs: "none", lg: "block" }}>
             <Sidenav
               color={sidenavColor}
               brand={brand}
@@ -99,14 +99,14 @@ function BaseLayout({ children }) {
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}
             />
-          </SuiBox>
+          </SoftBox>
           <DashboardLayout>{children}</DashboardLayout>
-        </SuiBox>
-      </SuiBox>
-      <SuiBox pb={2} pt={0.25}>
+        </SoftBox>
+      </SoftBox>
+      <SoftBox pb={2} pt={0.25}>
         <Footer />
-      </SuiBox>
-    </SuiBox>
+      </SoftBox>
+    </SoftBox>
   );
 }
 

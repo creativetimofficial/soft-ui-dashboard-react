@@ -28,9 +28,9 @@ import Link from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftButton from "components/SoftButton";
 
 // Soft UI Dashboard React examples
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
@@ -105,7 +105,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
       );
     } else if (type === "title") {
       returnValue = (
-        <SuiTypography
+        <SoftTypography
           key={key}
           display="block"
           variant="caption"
@@ -118,7 +118,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
           ml={1}
         >
           {title}
-        </SuiTypography>
+        </SoftTypography>
       );
     } else if (type === "divider") {
       returnValue = <Divider key={key} />;
@@ -129,8 +129,8 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
 
   return (
     <SidenavRoot {...rest} variant="permanent" ownerState={{ transparentSidenav, miniSidenav }}>
-      <SuiBox pt={3} pb={1} px={4} textAlign="center">
-        <SuiBox
+      <SoftBox pt={3} pb={1} px={4} textAlign="center">
+        <SoftBox
           display={{ xs: "block", xl: "none" }}
           position="absolute"
           top={0}
@@ -139,28 +139,28 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
           onClick={closeSidenav}
           sx={{ cursor: "pointer" }}
         >
-          <SuiTypography variant="h6" color="secondary">
+          <SoftTypography variant="h6" color="secondary">
             <Icon sx={{ fontWeight: "bold" }}>close</Icon>
-          </SuiTypography>
-        </SuiBox>
-        <SuiBox component={NavLink} to="/" display="flex" alignItems="center">
-          {brand && <SuiBox component="img" src={brand} alt="Soft UI Logo" width="2rem" />}
-          <SuiBox
+          </SoftTypography>
+        </SoftBox>
+        <SoftBox component={NavLink} to="/" display="flex" alignItems="center">
+          {brand && <SoftBox component="img" src={brand} alt="Soft UI Logo" width="2rem" />}
+          <SoftBox
             width={!brandName && "100%"}
             sx={(theme) => sidenavLogoLabel(theme, { miniSidenav })}
           >
-            <SuiTypography component="h6" variant="button" fontWeight="medium">
+            <SoftTypography component="h6" variant="button" fontWeight="medium">
               {brandName}
-            </SuiTypography>
-          </SuiBox>
-        </SuiBox>
-      </SuiBox>
+            </SoftTypography>
+          </SoftBox>
+        </SoftBox>
+      </SoftBox>
       <Divider />
       <List>{renderRoutes}</List>
-      <SuiBox pt={2} my={2} mx={2} mt="auto">
+      <SoftBox pt={2} my={2} mx={2} mt="auto">
         <SidenavCard />
-        <SuiBox mt={2}>
-          <SuiButton
+        <SoftBox mt={2}>
+          <SoftButton
             component="a"
             href="https://creative-tim.com/product/soft-ui-dashboard-pro-react"
             target="_blank"
@@ -170,9 +170,9 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
             fullWidth
           >
             upgrade to pro
-          </SuiButton>
-        </SuiBox>
-      </SuiBox>
+          </SoftButton>
+        </SoftBox>
+      </SoftBox>
     </SidenavRoot>
   );
 }

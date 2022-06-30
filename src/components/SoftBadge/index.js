@@ -18,24 +18,24 @@ import { forwardRef } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Custom styles for the SuiBadge
-import SuiBadgeRoot from "components/SuiBadge/SuiBadgeRoot";
+// Custom styles for the SoftBadge
+import SoftBadgeRoot from "components/SoftBadge/SoftBadgeRoot";
 
-const SuiBadge = forwardRef(
+const SoftBadge = forwardRef(
   ({ color, variant, size, circular, indicator, border, container, children, ...rest }, ref) => (
-    <SuiBadgeRoot
+    <SoftBadgeRoot
       {...rest}
       ownerState={{ color, variant, size, circular, indicator, border, container, children }}
       ref={ref}
       color="default"
     >
       {children}
-    </SuiBadgeRoot>
+    </SoftBadgeRoot>
   )
 );
 
-// Setting default values for the props of SuiBadge
-SuiBadge.defaultProps = {
+// Setting default values for the props of SoftBadge
+SoftBadge.defaultProps = {
   color: "info",
   variant: "gradient",
   size: "sm",
@@ -46,8 +46,8 @@ SuiBadge.defaultProps = {
   container: false,
 };
 
-// Typechecking props of the SuiBadge
-SuiBadge.propTypes = {
+// Typechecking props of the SoftBadge
+SoftBadge.propTypes = {
   color: PropTypes.oneOf([
     "primary",
     "secondary",
@@ -67,4 +67,4 @@ SuiBadge.propTypes = {
   container: PropTypes.bool,
 };
 
-export default SuiBadge;
+export default SoftBadge;

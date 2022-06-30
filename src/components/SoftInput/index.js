@@ -18,16 +18,16 @@ import { forwardRef } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Custom styles for SuiInput
-import SuiInputRoot from "components/SuiInput/SuiInputRoot";
-import SuiInputWithIconRoot from "components/SuiInput/SuiInputWithIconRoot";
-import SuiInputIconBoxRoot from "components/SuiInput/SuiInputIconBoxRoot";
-import SuiInputIconRoot from "components/SuiInput/SuiInputIconRoot";
+// Custom styles for SoftInput
+import SoftInputRoot from "components/SoftInput/SoftInputRoot";
+import SoftInputWithIconRoot from "components/SoftInput/SoftInputWithIconRoot";
+import SoftInputIconBoxRoot from "components/SoftInput/SoftInputIconBoxRoot";
+import SoftInputIconRoot from "components/SoftInput/SoftInputIconRoot";
 
 // Soft UI Dashboard React contexts
 import { useSoftUIController } from "context";
 
-const SuiInput = forwardRef(({ size, icon, error, success, disabled, ...rest }, ref) => {
+const SoftInput = forwardRef(({ size, icon, error, success, disabled, ...rest }, ref) => {
   let template;
   const [controller] = useSoftUIController();
   const { direction } = controller;
@@ -35,41 +35,41 @@ const SuiInput = forwardRef(({ size, icon, error, success, disabled, ...rest }, 
 
   if (icon.component && icon.direction === "left") {
     template = (
-      <SuiInputWithIconRoot ref={ref} ownerState={{ error, success, disabled }}>
-        <SuiInputIconBoxRoot ownerState={{ size }}>
-          <SuiInputIconRoot fontSize="small" ownerState={{ size }}>
+      <SoftInputWithIconRoot ref={ref} ownerState={{ error, success, disabled }}>
+        <SoftInputIconBoxRoot ownerState={{ size }}>
+          <SoftInputIconRoot fontSize="small" ownerState={{ size }}>
             {icon.component}
-          </SuiInputIconRoot>
-        </SuiInputIconBoxRoot>
-        <SuiInputRoot
+          </SoftInputIconRoot>
+        </SoftInputIconBoxRoot>
+        <SoftInputRoot
           {...rest}
           ownerState={{ size, error, success, iconDirection, direction, disabled }}
         />
-      </SuiInputWithIconRoot>
+      </SoftInputWithIconRoot>
     );
   } else if (icon.component && icon.direction === "right") {
     template = (
-      <SuiInputWithIconRoot ref={ref} ownerState={{ error, success, disabled }}>
-        <SuiInputRoot
+      <SoftInputWithIconRoot ref={ref} ownerState={{ error, success, disabled }}>
+        <SoftInputRoot
           {...rest}
           ownerState={{ size, error, success, iconDirection, direction, disabled }}
         />
-        <SuiInputIconBoxRoot ownerState={{ size }}>
-          <SuiInputIconRoot fontSize="small" ownerState={{ size }}>
+        <SoftInputIconBoxRoot ownerState={{ size }}>
+          <SoftInputIconRoot fontSize="small" ownerState={{ size }}>
             {icon.component}
-          </SuiInputIconRoot>
-        </SuiInputIconBoxRoot>
-      </SuiInputWithIconRoot>
+          </SoftInputIconRoot>
+        </SoftInputIconBoxRoot>
+      </SoftInputWithIconRoot>
     );
   } else {
-    template = <SuiInputRoot {...rest} ref={ref} ownerState={{ size, error, success, disabled }} />;
+    template = <SoftInputRoot {...rest} ref={ref} ownerState={{ size, error, success, disabled }} />;
   }
 
   return template;
 });
 
-// Setting default values for the props of SuiInput
-SuiInput.defaultProps = {
+// Setting default values for the props of SoftInput
+SoftInput.defaultProps = {
   size: "medium",
   icon: {
     component: false,
@@ -80,8 +80,8 @@ SuiInput.defaultProps = {
   disabled: false,
 };
 
-// Typechecking props for the SuiInput
-SuiInput.propTypes = {
+// Typechecking props for the SoftInput
+SoftInput.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
   icon: PropTypes.shape({
     component: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
@@ -92,4 +92,4 @@ SuiInput.propTypes = {
   disabled: PropTypes.bool,
 };
 
-export default SuiInput;
+export default SoftInput;

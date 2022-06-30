@@ -18,9 +18,9 @@ import Card from "@mui/material/Card";
 import Tooltip from "@mui/material/Tooltip";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiAvatar from "components/SuiAvatar";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftAvatar from "components/SoftAvatar";
 
 // Images
 import team1 from "assets/images/team-1.jpg";
@@ -43,25 +43,25 @@ function Messages() {
 
   return (
     <Card>
-      <SuiBox display="flex" alignItems="center" justifyContent="space-between" p={3}>
-        <SuiTypography variant="body2" color="text">
+      <SoftBox display="flex" alignItems="center" justifyContent="space-between" p={3}>
+        <SoftTypography variant="body2" color="text">
           Messages
-        </SuiTypography>
-        <SuiBox display="flex">
+        </SoftTypography>
+        <SoftBox display="flex">
           <Tooltip title="2 New Messages" placement="top">
-            <SuiAvatar src={team1} alt="team-1" size="sm" sx={messagesAvatarStyles} />
+            <SoftAvatar src={team1} alt="team-1" size="sm" sx={messagesAvatarStyles} />
           </Tooltip>
           <Tooltip title="1 New Messages" placement="top">
-            <SuiAvatar src={team2} alt="team-2" size="sm" sx={messagesAvatarStyles} />
+            <SoftAvatar src={team2} alt="team-2" size="sm" sx={messagesAvatarStyles} />
           </Tooltip>
           <Tooltip title="13 New Messages" placement="top">
-            <SuiAvatar src={team3} alt="team-3" size="sm" sx={messagesAvatarStyles} />
+            <SoftAvatar src={team3} alt="team-3" size="sm" sx={messagesAvatarStyles} />
           </Tooltip>
           <Tooltip title="7 New Messages" placement="top">
-            <SuiAvatar src={team4} alt="team-4" size="sm" sx={messagesAvatarStyles} />
+            <SoftAvatar src={team4} alt="team-4" size="sm" sx={messagesAvatarStyles} />
           </Tooltip>
-        </SuiBox>
-      </SuiBox>
+        </SoftBox>
+      </SoftBox>
     </Card>
   );
 }

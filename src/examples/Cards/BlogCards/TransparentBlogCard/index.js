@@ -26,8 +26,8 @@ import Icon from "@mui/material/Icon";
 import MuiLink from "@mui/material/Link";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 function TransparentBlogCard({ image, title, description, action }) {
   const cardImageStyles = {
@@ -90,28 +90,28 @@ function TransparentBlogCard({ image, title, description, action }) {
           <CardMedia src={image} component="img" title={title} sx={cardImageStyles} />
         </MuiLink>
       )}
-      <SuiBox py={3}>
+      <SoftBox py={3}>
         {action.type === "internal" ? (
           <Link to={action.route} sx={cardActionStyles}>
-            <SuiTypography variant="h5" gutterBottom>
+            <SoftTypography variant="h5" gutterBottom>
               {title}
-            </SuiTypography>
+            </SoftTypography>
           </Link>
         ) : (
           <MuiLink href={action.route} target="_blank" rel="noreferrer" sx={cardActionStyles}>
-            <SuiTypography variant="h5" gutterBottom>
+            <SoftTypography variant="h5" gutterBottom>
               {title}
-            </SuiTypography>
+            </SoftTypography>
           </MuiLink>
         )}
-        <SuiBox mb={2}>
-          <SuiTypography variant="body2" component="p" color="text">
+        <SoftBox mb={2}>
+          <SoftTypography variant="body2" component="p" color="text">
             {description}
-          </SuiTypography>
-        </SuiBox>
+          </SoftTypography>
+        </SoftBox>
         {action.type === "internal" ? (
           <Link to={action.route} sx={cardActionStyles}>
-            <SuiTypography
+            <SoftTypography
               variant="body2"
               color={action.color}
               textTransform="capitalize"
@@ -119,11 +119,11 @@ function TransparentBlogCard({ image, title, description, action }) {
             >
               {action.label}
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </SuiTypography>
+            </SoftTypography>
           </Link>
         ) : (
           <MuiLink href={action.route} target="_blank" rel="noreferrer" sx={cardActionStyles}>
-            <SuiTypography
+            <SoftTypography
               variant="body2"
               color={action.color}
               textTransform="capitalize"
@@ -131,10 +131,10 @@ function TransparentBlogCard({ image, title, description, action }) {
             >
               {action.label}
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </SuiTypography>
+            </SoftTypography>
           </MuiLink>
         )}
-      </SuiBox>
+      </SoftBox>
     </Card>
   );
 }

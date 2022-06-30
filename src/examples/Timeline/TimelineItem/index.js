@@ -20,9 +20,9 @@ import PropTypes from "prop-types";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiBadge from "components/SuiBadge";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftBadge from "components/SoftBadge";
 
 // Timeline context
 import { useTimeline } from "examples/Timeline/context";
@@ -39,16 +39,16 @@ function TimelineItem({ color, icon, title, dateTime, description, badges, lastI
           const badgeKey = `badge-${key}`;
 
           return (
-            <SuiBox key={badgeKey} mr={key === badges.length - 1 ? 0 : 0.5}>
-              <SuiBadge color={color} size="xs" badgeContent={badge} container />
-            </SuiBox>
+            <SoftBox key={badgeKey} mr={key === badges.length - 1 ? 0 : 0.5}>
+              <SoftBadge color={color} size="xs" badgeContent={badge} container />
+            </SoftBox>
           );
         })
       : null;
 
   return (
-    <SuiBox position="relative" sx={(theme) => timelineItem(theme, { lastItem })}>
-      <SuiBox
+    <SoftBox position="relative" sx={(theme) => timelineItem(theme, { lastItem })}>
+      <SoftBox
         bgColor={isDark ? "dark" : "white"}
         width="1.625rem"
         height="1.625rem"
@@ -59,34 +59,34 @@ function TimelineItem({ color, icon, title, dateTime, description, badges, lastI
         zIndex={2}
       >
         <Icon sx={(theme) => timelineItemIcon(theme, { color })}>{icon}</Icon>
-      </SuiBox>
-      <SuiBox ml={5.75} pt={description ? 0.7 : 0.5} lineHeight={0} maxWidth="30rem">
-        <SuiTypography variant="button" fontWeight="medium" color={isDark ? "white" : "dark"}>
+      </SoftBox>
+      <SoftBox ml={5.75} pt={description ? 0.7 : 0.5} lineHeight={0} maxWidth="30rem">
+        <SoftTypography variant="button" fontWeight="medium" color={isDark ? "white" : "dark"}>
           {title}
-        </SuiTypography>
-        <SuiBox mt={0.5}>
-          <SuiTypography
+        </SoftTypography>
+        <SoftBox mt={0.5}>
+          <SoftTypography
             variant="caption"
             fontWeight="medium"
             color={isDark ? "secondary" : "text"}
           >
             {dateTime}
-          </SuiTypography>
-        </SuiBox>
-        <SuiBox mt={2} mb={1.5}>
+          </SoftTypography>
+        </SoftBox>
+        <SoftBox mt={2} mb={1.5}>
           {description ? (
-            <SuiTypography variant="button" fontWeight="regular" color="text">
+            <SoftTypography variant="button" fontWeight="regular" color="text">
               {description}
-            </SuiTypography>
+            </SoftTypography>
           ) : null}
-        </SuiBox>
+        </SoftBox>
         {badges.length > 0 ? (
-          <SuiBox display="flex" pb={lastItem ? 1 : 2}>
+          <SoftBox display="flex" pb={lastItem ? 1 : 2}>
             {renderBadges}
-          </SuiBox>
+          </SoftBox>
         ) : null}
-      </SuiBox>
-    </SuiBox>
+      </SoftBox>
+    </SoftBox>
   );
 }
 

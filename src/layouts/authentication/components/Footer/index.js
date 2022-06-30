@@ -24,73 +24,73 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 function Footer() {
   return (
-    <SuiBox component="footer" py={6}>
+    <SoftBox component="footer" py={6}>
       <Grid container justifyContent="center">
         <Grid item xs={10} lg={8}>
-          <SuiBox display="flex" justifyContent="center" flexWrap="wrap" mb={3}>
-            <SuiBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SuiTypography component="a" href="#" variant="body2" color="secondary">
+          <SoftBox display="flex" justifyContent="center" flexWrap="wrap" mb={3}>
+            <SoftBox mr={{ xs: 2, lg: 3, xl: 6 }}>
+              <SoftTypography component="a" href="#" variant="body2" color="secondary">
                 Company
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SuiTypography component="a" href="#" variant="body2" color="secondary">
+              </SoftTypography>
+            </SoftBox>
+            <SoftBox mr={{ xs: 2, lg: 3, xl: 6 }}>
+              <SoftTypography component="a" href="#" variant="body2" color="secondary">
                 About Us
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox mr={{ xs: 0, lg: 3, xl: 6 }}>
-              <SuiTypography component="a" href="#" variant="body2" color="secondary">
+              </SoftTypography>
+            </SoftBox>
+            <SoftBox mr={{ xs: 0, lg: 3, xl: 6 }}>
+              <SoftTypography component="a" href="#" variant="body2" color="secondary">
                 Team
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SuiTypography component="a" href="#" variant="body2" color="secondary">
+              </SoftTypography>
+            </SoftBox>
+            <SoftBox mr={{ xs: 2, lg: 3, xl: 6 }}>
+              <SoftTypography component="a" href="#" variant="body2" color="secondary">
                 Product
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox mr={{ xs: 2, lg: 3, xl: 6 }}>
-              <SuiTypography component="a" href="#" variant="body2" color="secondary">
+              </SoftTypography>
+            </SoftBox>
+            <SoftBox mr={{ xs: 2, lg: 3, xl: 6 }}>
+              <SoftTypography component="a" href="#" variant="body2" color="secondary">
                 Blog
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox>
-              <SuiTypography component="a" href="#" variant="body2" color="secondary">
+              </SoftTypography>
+            </SoftBox>
+            <SoftBox>
+              <SoftTypography component="a" href="#" variant="body2" color="secondary">
                 Pricing
-              </SuiTypography>
-            </SuiBox>
-          </SuiBox>
+              </SoftTypography>
+            </SoftBox>
+          </SoftBox>
         </Grid>
         <Grid item xs={12} lg={8}>
-          <SuiBox display="flex" justifyContent="center" mt={1} mb={3}>
-            <SuiBox mr={3} color="secondary">
+          <SoftBox display="flex" justifyContent="center" mt={1} mb={3}>
+            <SoftBox mr={3} color="secondary">
               <FacebookIcon fontSize="small" />
-            </SuiBox>
-            <SuiBox mr={3} color="secondary">
+            </SoftBox>
+            <SoftBox mr={3} color="secondary">
               <TwitterIcon fontSize="small" />
-            </SuiBox>
-            <SuiBox mr={3} color="secondary">
+            </SoftBox>
+            <SoftBox mr={3} color="secondary">
               <InstagramIcon fontSize="small" />
-            </SuiBox>
-            <SuiBox mr={3} color="secondary">
+            </SoftBox>
+            <SoftBox mr={3} color="secondary">
               <PinterestIcon fontSize="small" />
-            </SuiBox>
-            <SuiBox color="secondary">
+            </SoftBox>
+            <SoftBox color="secondary">
               <LinkedInIcon fontSize="small" />
-            </SuiBox>
-          </SuiBox>
+            </SoftBox>
+          </SoftBox>
         </Grid>
         <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
-          <SuiTypography variant="body2" color="secondary">
+          <SoftTypography variant="body2" color="secondary">
             Copyright &copy; 2021 Soft by Creative Tim.
-          </SuiTypography>
+          </SoftTypography>
         </Grid>
       </Grid>
-    </SuiBox>
+    </SoftBox>
   );
 }
 

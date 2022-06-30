@@ -18,22 +18,22 @@ import Card from "@mui/material/Card";
 import Tooltip from "@mui/material/Tooltip";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 function Emails() {
   return (
     <Card>
-      <SuiBox display="flex" justifyContent="space-between" p={3} lineHeight={1}>
-        <SuiTypography variant="body2" color="text">
+      <SoftBox display="flex" justifyContent="space-between" p={3} lineHeight={1}>
+        <SoftTypography variant="body2" color="text">
           Emails (21)
-        </SuiTypography>
+        </SoftTypography>
         <Tooltip title="Check your emails" placement="top">
-          <SuiBox component="a" href="#">
-            <SuiTypography variant="body2">Check</SuiTypography>
-          </SuiBox>
+          <SoftBox component="a" href="#">
+            <SoftTypography variant="body2">Check</SoftTypography>
+          </SoftBox>
         </Tooltip>
-      </SuiBox>
+      </SoftBox>
     </Card>
   );
 }

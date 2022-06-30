@@ -18,12 +18,12 @@ import { forwardRef } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Custom styles for SuiButton
-import SuiButtonRoot from "components/SuiButton/SuiButtonRoot";
+// Custom styles for SoftButton
+import SoftButtonRoot from "components/SoftButton/SoftButtonRoot";
 
-const SuiButton = forwardRef(
+const SoftButton = forwardRef(
   ({ color, variant, size, circular, iconOnly, children, ...rest }, ref) => (
-    <SuiButtonRoot
+    <SoftButtonRoot
       {...rest}
       ref={ref}
       color="primary"
@@ -32,12 +32,12 @@ const SuiButton = forwardRef(
       ownerState={{ color, variant, size, circular, iconOnly }}
     >
       {children}
-    </SuiButtonRoot>
+    </SoftButtonRoot>
   )
 );
 
-// Setting default values for the props of SuiButton
-SuiButton.defaultProps = {
+// Setting default values for the props of SoftButton
+SoftButton.defaultProps = {
   size: "medium",
   variant: "contained",
   color: "white",
@@ -45,8 +45,8 @@ SuiButton.defaultProps = {
   iconOnly: false,
 };
 
-// Typechecking props for the SuiButton
-SuiButton.propTypes = {
+// Typechecking props for the SoftButton
+SoftButton.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
   variant: PropTypes.oneOf(["text", "contained", "outlined", "gradient"]),
   color: PropTypes.oneOf([
@@ -65,4 +65,4 @@ SuiButton.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default SuiButton;
+export default SoftButton;

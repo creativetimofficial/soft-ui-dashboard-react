@@ -19,15 +19,15 @@ import { forwardRef, createContext, useContext, useMemo } from "react";
 import PropTypes from "prop-types";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
+import SoftBox from "components/SoftBox";
 
-// Custom styles for SuiPagination
-import SuiPaginationItemRoot from "components/SuiPagination/SuiPaginationItemRoot";
+// Custom styles for SoftPagination
+import SoftPaginationItemRoot from "components/SoftPagination/SoftPaginationItemRoot";
 
 // The Pagination main context
 const Context = createContext(null);
 
-const SuiPagination = forwardRef(
+const SoftPagination = forwardRef(
   ({ item, variant, color, size, active, children, ...rest }, ref) => {
     const context = item ? useContext(Context) : null;
     const paginationSize = context ? context.size : null;
@@ -36,7 +36,7 @@ const SuiPagination = forwardRef(
     return (
       <Context.Provider value={value}>
         {item ? (
-          <SuiPaginationItemRoot
+          <SoftPaginationItemRoot
             {...rest}
             ref={ref}
             variant={active ? context.variant : "outlined"}
@@ -46,24 +46,24 @@ const SuiPagination = forwardRef(
             ownerState={{ variant, active, paginationSize }}
           >
             {children}
-          </SuiPaginationItemRoot>
+          </SoftPaginationItemRoot>
         ) : (
-          <SuiBox
+          <SoftBox
             display="flex"
             justifyContent="flex-end"
             alignItems="center"
             sx={{ listStyle: "none" }}
           >
             {children}
-          </SuiBox>
+          </SoftBox>
         )}
       </Context.Provider>
     );
   }
 );
 
-// Setting default values for the props of SuiPagination
-SuiPagination.defaultProps = {
+// Setting default values for the props of SoftPagination
+SoftPagination.defaultProps = {
   item: false,
   variant: "gradient",
   color: "info",
@@ -71,8 +71,8 @@ SuiPagination.defaultProps = {
   active: false,
 };
 
-// Typechecking props for the SuiPagination
-SuiPagination.propTypes = {
+// Typechecking props for the SoftPagination
+SoftPagination.propTypes = {
   item: PropTypes.bool,
   variant: PropTypes.oneOf(["gradient", "contained"]),
   color: PropTypes.oneOf([
@@ -91,4 +91,4 @@ SuiPagination.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default SuiPagination;
+export default SoftPagination;

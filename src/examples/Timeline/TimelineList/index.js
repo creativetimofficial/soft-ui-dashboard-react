@@ -20,8 +20,8 @@ import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Timeline context
 import { TimelineProvider } from "examples/Timeline/context";
@@ -30,14 +30,14 @@ function TimelineList({ title, dark, children }) {
   return (
     <TimelineProvider value={dark}>
       <Card>
-        <SuiBox bgColor={dark ? "dark" : "white"} variant="gradient">
-          <SuiBox pt={3} px={3}>
-            <SuiTypography variant="h6" fontWeight="medium" color={dark ? "white" : "dark"}>
+        <SoftBox bgColor={dark ? "dark" : "white"} variant="gradient">
+          <SoftBox pt={3} px={3}>
+            <SoftTypography variant="h6" fontWeight="medium" color={dark ? "white" : "dark"}>
               {title}
-            </SuiTypography>
-          </SuiBox>
-          <SuiBox p={2}>{children}</SuiBox>
-        </SuiBox>
+            </SoftTypography>
+          </SoftBox>
+          <SoftBox p={2}>{children}</SoftBox>
+        </SoftBox>
       </Card>
     </TimelineProvider>
   );

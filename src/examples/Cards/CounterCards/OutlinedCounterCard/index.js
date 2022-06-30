@@ -20,8 +20,8 @@ import CountUp from "react-countup";
 import PropTypes from "prop-types";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React base styles
 import colors from "assets/theme/base/colors";
@@ -32,31 +32,31 @@ function OutlinedCounterCard({ color, count, title, prefix, suffix }) {
   const { borderWidth } = borders;
 
   return (
-    <SuiBox
+    <SoftBox
       borderRadius="md"
       border={`${borderWidth[1]} dashed ${secondary.main}`}
       textAlign="center"
       py={2}
     >
-      <SuiTypography variant="h6" color={color} fontWeight="medium" textTransform="capitalize">
+      <SoftTypography variant="h6" color={color} fontWeight="medium" textTransform="capitalize">
         {title}
-      </SuiTypography>
-      <SuiTypography variant="h4" fontWeight="bold">
+      </SoftTypography>
+      <SoftTypography variant="h4" fontWeight="bold">
         {prefix && (
-          <SuiTypography component="span" variant="h5" fontWeight="bold">
+          <SoftTypography component="span" variant="h5" fontWeight="bold">
             {prefix}
-          </SuiTypography>
+          </SoftTypography>
         )}
-        <SuiBox display="inline-block" mx={0.5}>
+        <SoftBox display="inline-block" mx={0.5}>
           <CountUp end={count} duration={1} separator="," />
-        </SuiBox>
+        </SoftBox>
         {suffix && (
-          <SuiTypography component="span" variant="h5" fontWeight="bold">
+          <SoftTypography component="span" variant="h5" fontWeight="bold">
             {suffix}
-          </SuiTypography>
+          </SoftTypography>
         )}
-      </SuiTypography>
-    </SuiBox>
+      </SoftTypography>
+    </SoftBox>
   );
 }
 

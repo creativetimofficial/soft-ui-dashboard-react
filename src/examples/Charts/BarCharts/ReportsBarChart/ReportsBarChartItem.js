@@ -23,17 +23,17 @@ import Icon from "@mui/material/Icon";
 import typography from "assets/theme/base/typography";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiProgress from "components/SuiProgress";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftProgress from "components/SoftProgress";
 
 function ReportsBarChartItem({ color, icon, label, progress }) {
   const { size } = typography;
 
   return (
-    <SuiBox width="100%">
-      <SuiBox display="flex" alignItems="center" mb={2}>
-        <SuiBox
+    <SoftBox width="100%">
+      <SoftBox display="flex" alignItems="center" mb={2}>
+        <SoftBox
           bgColor={icon.color}
           width="1.25rem"
           height="1.25rem"
@@ -48,25 +48,25 @@ function ReportsBarChartItem({ color, icon, label, progress }) {
           variant="gradient"
         >
           <Icon>{icon.component}</Icon>
-        </SuiBox>
-        <SuiTypography
+        </SoftBox>
+        <SoftTypography
           variant="caption"
           textTransform="capitalize"
           fontWeight="medium"
           color="text"
         >
           {label}
-        </SuiTypography>
-      </SuiBox>
-      <SuiBox mt={1}>
-        <SuiTypography variant="h4" fontWeight="bold" color={color}>
+        </SoftTypography>
+      </SoftBox>
+      <SoftBox mt={1}>
+        <SoftTypography variant="h4" fontWeight="bold" color={color}>
           {progress.content}
-        </SuiTypography>
-        <SuiBox width="75%" mt={0.5}>
-          <SuiProgress value={progress.percentage} color={color} />
-        </SuiBox>
-      </SuiBox>
-    </SuiBox>
+        </SoftTypography>
+        <SoftBox width="75%" mt={0.5}>
+          <SoftProgress value={progress.percentage} color={color} />
+        </SoftBox>
+      </SoftBox>
+    </SoftBox>
   );
 }
 

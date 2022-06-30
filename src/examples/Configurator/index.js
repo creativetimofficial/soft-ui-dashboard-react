@@ -30,9 +30,9 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftButton from "components/SoftButton";
 
 // Custom styles for the Configurator
 import ConfiguratorRoot from "examples/Configurator/ConfiguratorRoot";
@@ -89,7 +89,7 @@ function Configurator() {
 
   return (
     <ConfiguratorRoot variant="permanent" ownerState={{ openConfigurator }}>
-      <SuiBox
+      <SoftBox
         display="flex"
         justifyContent="space-between"
         alignItems="baseline"
@@ -97,12 +97,12 @@ function Configurator() {
         pb={0.8}
         px={3}
       >
-        <SuiBox>
-          <SuiTypography variant="h5">Soft UI Configurator</SuiTypography>
-          <SuiTypography variant="body2" color="text">
+        <SoftBox>
+          <SoftTypography variant="h5">Soft UI Configurator</SoftTypography>
+          <SoftTypography variant="body2" color="text">
             See our dashboard options.
-          </SuiTypography>
-        </SuiBox>
+          </SoftTypography>
+        </SoftBox>
 
         <Icon
           sx={({ typography: { size, fontWeightBold }, palette: { dark } }) => ({
@@ -117,15 +117,15 @@ function Configurator() {
         >
           close
         </Icon>
-      </SuiBox>
+      </SoftBox>
 
       <Divider />
 
-      <SuiBox pt={1.25} pb={3} px={3}>
-        <SuiBox>
-          <SuiTypography variant="h6">Sidenav Colors</SuiTypography>
+      <SoftBox pt={1.25} pb={3} px={3}>
+        <SoftBox>
+          <SoftTypography variant="h6">Sidenav Colors</SoftTypography>
 
-          <SuiBox mb={0.5}>
+          <SoftBox mb={0.5}>
             {sidenavColors.map((color) => (
               <IconButton
                 key={color}
@@ -153,22 +153,22 @@ function Configurator() {
                 onClick={() => setSidenavColor(dispatch, color)}
               />
             ))}
-          </SuiBox>
-        </SuiBox>
+          </SoftBox>
+        </SoftBox>
 
-        <SuiBox mt={3} lineHeight={1}>
-          <SuiTypography variant="h6">Sidenav Type</SuiTypography>
-          <SuiTypography variant="button" color="text" fontWeight="regular">
+        <SoftBox mt={3} lineHeight={1}>
+          <SoftTypography variant="h6">Sidenav Type</SoftTypography>
+          <SoftTypography variant="button" color="text" fontWeight="regular">
             Choose between 2 different sidenav types.
-          </SuiTypography>
+          </SoftTypography>
 
-          <SuiBox
+          <SoftBox
             sx={{
               display: "flex",
               mt: 2,
             }}
           >
-            <SuiButton
+            <SoftButton
               color="info"
               variant={transparentSidenav ? "gradient" : "outlined"}
               onClick={handleTransparentSidenav}
@@ -180,8 +180,8 @@ function Configurator() {
               }}
             >
               Transparent
-            </SuiButton>
-            <SuiButton
+            </SoftButton>
+            <SoftButton
               color="info"
               variant={transparentSidenav ? "outlined" : "gradient"}
               onClick={handleWhiteSidenav}
@@ -190,20 +190,20 @@ function Configurator() {
               sx={sidenavTypeButtonsStyles}
             >
               White
-            </SuiButton>
-          </SuiBox>
-        </SuiBox>
-        <SuiBox mt={3} mb={2} lineHeight={1}>
-          <SuiTypography variant="h6">Navbar Fixed</SuiTypography>
+            </SoftButton>
+          </SoftBox>
+        </SoftBox>
+        <SoftBox mt={3} mb={2} lineHeight={1}>
+          <SoftTypography variant="h6">Navbar Fixed</SoftTypography>
 
           <Switch checked={fixedNavbar} onChange={handleFixedNavbar} />
-        </SuiBox>
+        </SoftBox>
 
         <Divider />
 
-        <SuiBox mt={3} mb={2}>
-          <SuiBox mb={2}>
-            <SuiButton
+        <SoftBox mt={3} mb={2}>
+          <SoftBox mb={2}>
+            <SoftButton
               component={Link}
               href="https://www.creative-tim.com/product/soft-ui-dashboard-react"
               target="_blank"
@@ -213,9 +213,9 @@ function Configurator() {
               fullWidth
             >
               free download
-            </SuiButton>
-          </SuiBox>
-          <SuiButton
+            </SoftButton>
+          </SoftBox>
+          <SoftButton
             component={Link}
             href="https://www.creative-tim.com/learning-lab/react/quick-start/soft-ui-dashboard/"
             target="_blank"
@@ -225,9 +225,9 @@ function Configurator() {
             fullWidth
           >
             view documentation
-          </SuiButton>
-        </SuiBox>
-        <SuiBox display="flex" justifyContent="center">
+          </SoftButton>
+        </SoftBox>
+        <SoftBox display="flex" justifyContent="center">
           <GitHubButton
             href="https://github.com/creativetimofficial/soft-ui-dashboard-react"
             data-icon="octicon-star"
@@ -237,15 +237,15 @@ function Configurator() {
           >
             Star
           </GitHubButton>
-        </SuiBox>
-        <SuiBox mt={3} textAlign="center">
-          <SuiBox mb={0.5}>
-            <SuiTypography variant="h6">Thank you for sharing!</SuiTypography>
-          </SuiBox>
+        </SoftBox>
+        <SoftBox mt={3} textAlign="center">
+          <SoftBox mb={0.5}>
+            <SoftTypography variant="h6">Thank you for sharing!</SoftTypography>
+          </SoftBox>
 
-          <SuiBox display="flex" justifyContent="center">
-            <SuiBox mr={1.5}>
-              <SuiButton
+          <SoftBox display="flex" justifyContent="center">
+            <SoftBox mr={1.5}>
+              <SoftButton
                 component={Link}
                 href="//twitter.com/intent/tweet?text=Check%20Soft%20UI%20Dashboard%20React%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23react%23mui&url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard-react"
                 target="_blank"
@@ -254,9 +254,9 @@ function Configurator() {
               >
                 <TwitterIcon />
                 &nbsp; Tweet
-              </SuiButton>
-            </SuiBox>
-            <SuiButton
+              </SoftButton>
+            </SoftBox>
+            <SoftButton
               component={Link}
               href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/soft-ui-dashboard-react"
               target="_blank"
@@ -265,10 +265,10 @@ function Configurator() {
             >
               <FacebookIcon />
               &nbsp; Share
-            </SuiButton>
-          </SuiBox>
-        </SuiBox>
-      </SuiBox>
+            </SoftButton>
+          </SoftBox>
+        </SoftBox>
+      </SoftBox>
     </ConfiguratorRoot>
   );
 }

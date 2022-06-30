@@ -23,10 +23,10 @@ import Card from "@mui/material/Card";
 import Checkbox from "@mui/material/Checkbox";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiInput from "components/SuiInput";
-import SuiButton from "components/SuiButton";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftInput from "components/SoftInput";
+import SoftButton from "components/SoftButton";
 
 // Authentication layout components
 import BasicLayout from "layouts/authentication/components/BasicLayout";
@@ -48,49 +48,49 @@ function SignUp() {
       image={curved6}
     >
       <Card>
-        <SuiBox p={3} mb={1} textAlign="center">
-          <SuiTypography variant="h5" fontWeight="medium">
+        <SoftBox p={3} mb={1} textAlign="center">
+          <SoftTypography variant="h5" fontWeight="medium">
             Register with
-          </SuiTypography>
-        </SuiBox>
-        <SuiBox mb={2}>
+          </SoftTypography>
+        </SoftBox>
+        <SoftBox mb={2}>
           <Socials />
-        </SuiBox>
+        </SoftBox>
         <Separator />
-        <SuiBox pt={2} pb={3} px={3}>
-          <SuiBox component="form" role="form">
-            <SuiBox mb={2}>
-              <SuiInput placeholder="Name" />
-            </SuiBox>
-            <SuiBox mb={2}>
-              <SuiInput type="email" placeholder="Email" />
-            </SuiBox>
-            <SuiBox mb={2}>
-              <SuiInput type="password" placeholder="Password" />
-            </SuiBox>
-            <SuiBox display="flex" alignItems="center">
+        <SoftBox pt={2} pb={3} px={3}>
+          <SoftBox component="form" role="form">
+            <SoftBox mb={2}>
+              <SoftInput placeholder="Name" />
+            </SoftBox>
+            <SoftBox mb={2}>
+              <SoftInput type="email" placeholder="Email" />
+            </SoftBox>
+            <SoftBox mb={2}>
+              <SoftInput type="password" placeholder="Password" />
+            </SoftBox>
+            <SoftBox display="flex" alignItems="center">
               <Checkbox checked={agreement} onChange={handleSetAgremment} />
-              <SuiTypography
+              <SoftTypography
                 variant="button"
                 fontWeight="regular"
                 onClick={handleSetAgremment}
                 sx={{ cursor: "poiner", userSelect: "none" }}
               >
                 &nbsp;&nbsp;I agree the&nbsp;
-              </SuiTypography>
-              <SuiTypography component="a" href="#" variant="button" fontWeight="bold" textGradient>
+              </SoftTypography>
+              <SoftTypography component="a" href="#" variant="button" fontWeight="bold" textGradient>
                 Terms and Conditions
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox mt={4} mb={1}>
-              <SuiButton variant="gradient" color="dark" fullWidth>
+              </SoftTypography>
+            </SoftBox>
+            <SoftBox mt={4} mb={1}>
+              <SoftButton variant="gradient" color="dark" fullWidth>
                 sign up
-              </SuiButton>
-            </SuiBox>
-            <SuiBox mt={3} textAlign="center">
-              <SuiTypography variant="button" color="text" fontWeight="regular">
+              </SoftButton>
+            </SoftBox>
+            <SoftBox mt={3} textAlign="center">
+              <SoftTypography variant="button" color="text" fontWeight="regular">
                 Already have an account?&nbsp;
-                <SuiTypography
+                <SoftTypography
                   component={Link}
                   to="/authentication/sign-in"
                   variant="button"
@@ -99,11 +99,11 @@ function SignUp() {
                   textGradient
                 >
                   Sign in
-                </SuiTypography>
-              </SuiTypography>
-            </SuiBox>
-          </SuiBox>
-        </SuiBox>
+                </SoftTypography>
+              </SoftTypography>
+            </SoftBox>
+          </SoftBox>
+        </SoftBox>
       </Card>
     </BasicLayout>
   );

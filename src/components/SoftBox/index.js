@@ -18,12 +18,12 @@ import { forwardRef } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Custom styles for SuiBox
-import SuiBoxRoot from "components/SuiBox/SuiBoxRoot";
+// Custom styles for SoftBox
+import SoftBoxRoot from "components/SoftBox/SoftBoxRoot";
 
-const SuiBox = forwardRef(
+const SoftBox = forwardRef(
   ({ variant, bgColor, color, opacity, borderRadius, shadow, ...rest }, ref) => (
-    <SuiBoxRoot
+    <SoftBoxRoot
       {...rest}
       ref={ref}
       ownerState={{ variant, bgColor, color, opacity, borderRadius, shadow }}
@@ -31,8 +31,8 @@ const SuiBox = forwardRef(
   )
 );
 
-// Setting default values for the props of SuiBox
-SuiBox.defaultProps = {
+// Setting default values for the props of SoftBox
+SoftBox.defaultProps = {
   variant: "contained",
   bgColor: "transparent",
   color: "dark",
@@ -41,8 +41,8 @@ SuiBox.defaultProps = {
   shadow: "none",
 };
 
-// Typechecking props for the SuiBox
-SuiBox.propTypes = {
+// Typechecking props for the SoftBox
+SoftBox.propTypes = {
   variant: PropTypes.oneOf(["contained", "gradient"]),
   bgColor: PropTypes.string,
   color: PropTypes.string,
@@ -51,4 +51,4 @@ SuiBox.propTypes = {
   shadow: PropTypes.string,
 };
 
-export default SuiBox;
+export default SoftBox;

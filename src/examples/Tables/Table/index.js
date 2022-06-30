@@ -28,9 +28,9 @@ import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiAvatar from "components/SuiAvatar";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftAvatar from "components/SoftAvatar";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React base styles
 import colors from "assets/theme/base/colors";
@@ -58,7 +58,7 @@ function Table({ columns, rows }) {
     }
 
     return (
-      <SuiBox
+      <SoftBox
         key={name}
         component="th"
         width={width || "auto"}
@@ -74,7 +74,7 @@ function Table({ columns, rows }) {
         borderBottom={`${borderWidth[1]} solid ${light.main}`}
       >
         {name.toUpperCase()}
-      </SuiBox>
+      </SoftBox>
     );
   });
 
@@ -86,40 +86,40 @@ function Table({ columns, rows }) {
 
       if (Array.isArray(row[name])) {
         template = (
-          <SuiBox
+          <SoftBox
             key={uuidv4()}
             component="td"
             p={1}
             borderBottom={row.hasBorder ? `${borderWidth[1]} solid ${light.main}` : null}
           >
-            <SuiBox display="flex" alignItems="center" py={0.5} px={1}>
-              <SuiBox mr={2}>
-                <SuiAvatar src={row[name][0]} name={row[name][1]} variant="rounded" size="sm" />
-              </SuiBox>
-              <SuiTypography variant="button" fontWeight="medium" sx={{ width: "max-content" }}>
+            <SoftBox display="flex" alignItems="center" py={0.5} px={1}>
+              <SoftBox mr={2}>
+                <SoftAvatar src={row[name][0]} name={row[name][1]} variant="rounded" size="sm" />
+              </SoftBox>
+              <SoftTypography variant="button" fontWeight="medium" sx={{ width: "max-content" }}>
                 {row[name][1]}
-              </SuiTypography>
-            </SuiBox>
-          </SuiBox>
+              </SoftTypography>
+            </SoftBox>
+          </SoftBox>
         );
       } else {
         template = (
-          <SuiBox
+          <SoftBox
             key={uuidv4()}
             component="td"
             p={1}
             textAlign={align}
             borderBottom={row.hasBorder ? `${borderWidth[1]} solid ${light.main}` : null}
           >
-            <SuiTypography
+            <SoftTypography
               variant="button"
               fontWeight="regular"
               color="secondary"
               sx={{ display: "inline-block", width: "max-content" }}
             >
               {row[name]}
-            </SuiTypography>
-          </SuiBox>
+            </SoftTypography>
+          </SoftBox>
         );
       }
 
@@ -133,9 +133,9 @@ function Table({ columns, rows }) {
     () => (
       <TableContainer>
         <MuiTable>
-          <SuiBox component="thead">
+          <SoftBox component="thead">
             <TableRow>{renderColumns}</TableRow>
-          </SuiBox>
+          </SoftBox>
           <TableBody>{renderRows}</TableBody>
         </MuiTable>
       </TableContainer>

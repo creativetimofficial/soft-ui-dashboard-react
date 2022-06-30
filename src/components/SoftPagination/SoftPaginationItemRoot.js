@@ -17,9 +17,9 @@ Coded by www.creative-tim.com
 import { styled } from "@mui/material/styles";
 
 // Soft UI Dashboard React components
-import SuiButton from "components/SuiButton";
+import SoftButton from "components/SoftButton";
 
-export default styled(SuiButton)(({ theme, ownerState }) => {
+export default styled(SoftButton)(({ theme, ownerState }) => {
   const { borders, functions, typography, palette } = theme;
   const { variant, paginationSize, active } = ownerState;
 

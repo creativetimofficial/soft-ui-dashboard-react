@@ -19,19 +19,19 @@ import { forwardRef } from "react";
 import PropTypes from "prop-types";
 
 // Soft UI Dashboard React components
-import SuiTypography from "components/SuiTypography";
+import SoftTypography from "components/SoftTypography";
 
-// Custom styles for SuiProgress
-import SuiProgressRoot from "components/SuiProgress/SuiProgressRoot";
+// Custom styles for SoftProgress
+import SoftProgressRoot from "components/SoftProgress/SoftProgressRoot";
 
-const SuiProgress = forwardRef(({ variant, color, value, label, ...rest }, ref) => (
+const SoftProgress = forwardRef(({ variant, color, value, label, ...rest }, ref) => (
   <>
     {label && (
-      <SuiTypography variant="button" fontWeight="medium" color="text">
+      <SoftTypography variant="button" fontWeight="medium" color="text">
         {value}%
-      </SuiTypography>
+      </SoftTypography>
     )}
-    <SuiProgressRoot
+    <SoftProgressRoot
       {...rest}
       ref={ref}
       variant="determinate"
@@ -41,16 +41,16 @@ const SuiProgress = forwardRef(({ variant, color, value, label, ...rest }, ref) 
   </>
 ));
 
-// Setting default values for the props of SuiProgress
-SuiProgress.defaultProps = {
+// Setting default values for the props of SoftProgress
+SoftProgress.defaultProps = {
   variant: "contained",
   color: "info",
   value: 0,
   label: false,
 };
 
-// Typechecking props for the SuiProgress
-SuiProgress.propTypes = {
+// Typechecking props for the SoftProgress
+SoftProgress.propTypes = {
   variant: PropTypes.oneOf(["contained", "gradient"]),
   color: PropTypes.oneOf([
     "primary",
@@ -66,4 +66,4 @@ SuiProgress.propTypes = {
   label: PropTypes.bool,
 };
 
-export default SuiProgress;
+export default SoftProgress;
