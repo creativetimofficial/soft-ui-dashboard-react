@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -29,9 +29,9 @@ import Menu from "@mui/material/Menu";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiInput from "components/SuiInput";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftInput from "components/SoftInput";
 
 // Soft UI Dashboard React examples
 import Breadcrumbs from "examples/Breadcrumbs";
@@ -142,18 +142,18 @@ function DashboardNavbar({ absolute, light, isMini }) {
       sx={(theme) => navbar(theme, { transparentNavbar, absolute, light })}
     >
       <Toolbar sx={(theme) => navbarContainer(theme)}>
-        <SuiBox color="inherit" mb={{ xs: 1, md: 0 }} sx={(theme) => navbarRow(theme, { isMini })}>
+        <SoftBox color="inherit" mb={{ xs: 1, md: 0 }} sx={(theme) => navbarRow(theme, { isMini })}>
           <Breadcrumbs icon="home" title={route[route.length - 1]} route={route} light={light} />
-        </SuiBox>
+        </SoftBox>
         {isMini ? null : (
-          <SuiBox sx={(theme) => navbarRow(theme, { isMini })}>
-            <SuiBox pr={1}>
-              <SuiInput
+          <SoftBox sx={(theme) => navbarRow(theme, { isMini })}>
+            <SoftBox pr={1}>
+              <SoftInput
                 placeholder="Type here..."
                 icon={{ component: "search", direction: "left" }}
               />
-            </SuiBox>
-            <SuiBox color={light ? "white" : "inherit"}>
+            </SoftBox>
+            <SoftBox color={light ? "white" : "inherit"}>
               <Link to="/authentication/sign-in">
                 <IconButton sx={navbarIconButton} size="small">
                   <Icon
@@ -163,13 +163,13 @@ function DashboardNavbar({ absolute, light, isMini }) {
                   >
                     account_circle
                   </Icon>
-                  <SuiTypography
+                  <SoftTypography
                     variant="button"
                     fontWeight="medium"
                     color={light ? "white" : "dark"}
                   >
                     Sign in
-                  </SuiTypography>
+                  </SoftTypography>
                 </IconButton>
               </Link>
               <IconButton
@@ -202,8 +202,8 @@ function DashboardNavbar({ absolute, light, isMini }) {
                 <Icon className={light ? "text-white" : "text-dark"}>notifications</Icon>
               </IconButton>
               {renderMenu()}
-            </SuiBox>
-          </SuiBox>
+            </SoftBox>
+          </SoftBox>
         )}
       </Toolbar>
     </AppBar>

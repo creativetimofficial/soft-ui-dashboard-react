@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -23,15 +23,15 @@ import MenuItem from "@mui/material/MenuItem";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // custom styles for the NotificationItem
 import { menuItem, menuImage } from "examples/Items/NotificationItem/styles";
 
 const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref) => (
   <MenuItem {...rest} ref={ref} sx={(theme) => menuItem(theme)}>
-    <SuiBox
+    <SoftBox
       width="2.25rem"
       height="2.25rem"
       mt={0.25}
@@ -41,12 +41,12 @@ const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref
       sx={(theme) => menuImage(theme, { color })}
     >
       {image}
-    </SuiBox>
-    <SuiBox>
-      <SuiTypography variant="button" textTransform="capitalize" fontWeight="regular">
+    </SoftBox>
+    <SoftBox>
+      <SoftTypography variant="button" textTransform="capitalize" fontWeight="regular">
         <strong>{title[0]}</strong> {title[1]}
-      </SuiTypography>
-      <SuiTypography
+      </SoftTypography>
+      <SoftTypography
         variant="caption"
         color="secondary"
         sx={{
@@ -55,7 +55,7 @@ const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref
           mt: 0.5,
         }}
       >
-        <SuiTypography variant="button" color="secondary">
+        <SoftTypography variant="button" color="secondary">
           <Icon
             sx={{
               lineHeight: 1.2,
@@ -64,10 +64,10 @@ const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref
           >
             watch_later
           </Icon>
-        </SuiTypography>
+        </SoftTypography>
         {date}
-      </SuiTypography>
-    </SuiBox>
+      </SoftTypography>
+    </SoftBox>
   </MenuItem>
 ));
 

@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -20,13 +20,13 @@ import PropTypes from "prop-types";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftButton from "components/SoftButton";
 
 function Bill({ name, company, email, vat, noGutter }) {
   return (
-    <SuiBox
+    <SoftBox
       component="li"
       display="flex"
       justifyContent="space-between"
@@ -37,53 +37,58 @@ function Bill({ name, company, email, vat, noGutter }) {
       mb={noGutter ? 0 : 1}
       mt={2}
     >
-      <SuiBox width="100%" display="flex" flexDirection="column">
-        <SuiBox
+      <SoftBox width="100%" display="flex" flexDirection="column">
+        <SoftBox
           display="flex"
           justifyContent="space-between"
           alignItems={{ xs: "flex-start", sm: "center" }}
           flexDirection={{ xs: "column", sm: "row" }}
           mb={2}
         >
-          <SuiTypography variant="button" fontWeight="medium" textTransform="capitalize">
+          <SoftTypography variant="button" fontWeight="medium" textTransform="capitalize">
             {name}
-          </SuiTypography>
+          </SoftTypography>
 
-          <SuiBox display="flex" alignItems="center" mt={{ xs: 2, sm: 0 }} ml={{ xs: -1.5, sm: 0 }}>
-            <SuiBox mr={1}>
-              <SuiButton variant="text" color="error">
+          <SoftBox
+            display="flex"
+            alignItems="center"
+            mt={{ xs: 2, sm: 0 }}
+            ml={{ xs: -1.5, sm: 0 }}
+          >
+            <SoftBox mr={1}>
+              <SoftButton variant="text" color="error">
                 <Icon>delete</Icon>&nbsp;delete
-              </SuiButton>
-            </SuiBox>
-            <SuiButton variant="text" color="dark">
+              </SoftButton>
+            </SoftBox>
+            <SoftButton variant="text" color="dark">
               <Icon>edit</Icon>&nbsp;edit
-            </SuiButton>
-          </SuiBox>
-        </SuiBox>
-        <SuiBox mb={1} lineHeight={0}>
-          <SuiTypography variant="caption" color="text">
+            </SoftButton>
+          </SoftBox>
+        </SoftBox>
+        <SoftBox mb={1} lineHeight={0}>
+          <SoftTypography variant="caption" color="text">
             Company Name:&nbsp;&nbsp;&nbsp;
-            <SuiTypography variant="caption" fontWeight="medium" textTransform="capitalize">
+            <SoftTypography variant="caption" fontWeight="medium" textTransform="capitalize">
               {company}
-            </SuiTypography>
-          </SuiTypography>
-        </SuiBox>
-        <SuiBox mb={1} lineHeight={0}>
-          <SuiTypography variant="caption" color="text">
+            </SoftTypography>
+          </SoftTypography>
+        </SoftBox>
+        <SoftBox mb={1} lineHeight={0}>
+          <SoftTypography variant="caption" color="text">
             Email Address:&nbsp;&nbsp;&nbsp;
-            <SuiTypography variant="caption" fontWeight="medium">
+            <SoftTypography variant="caption" fontWeight="medium">
               {email}
-            </SuiTypography>
-          </SuiTypography>
-        </SuiBox>
-        <SuiTypography variant="caption" color="text">
+            </SoftTypography>
+          </SoftTypography>
+        </SoftBox>
+        <SoftTypography variant="caption" color="text">
           VAT Number:&nbsp;&nbsp;&nbsp;
-          <SuiTypography variant="caption" fontWeight="medium">
+          <SoftTypography variant="caption" fontWeight="medium">
             {vat}
-          </SuiTypography>
-        </SuiTypography>
-      </SuiBox>
-    </SuiBox>
+          </SoftTypography>
+        </SoftTypography>
+      </SoftBox>
+    </SoftBox>
   );
 }
 

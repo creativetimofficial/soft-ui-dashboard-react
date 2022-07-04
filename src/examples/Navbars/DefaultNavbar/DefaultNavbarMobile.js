@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -21,7 +21,7 @@ import Menu from "@mui/material/Menu";
 // import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
+import SoftBox from "components/SoftBox";
 
 // Soft UI Dashboard React examples
 import DefaultNavbarLink from "examples/Navbars/DefaultNavbar/DefaultNavbarLink";
@@ -45,12 +45,12 @@ function DefaultNavbarMobile({ open, close }) {
       onClose={close}
       MenuListProps={{ style: { width: `calc(${width}px - 4rem)` } }}
     >
-      <SuiBox px={0.5}>
+      <SoftBox px={0.5}>
         <DefaultNavbarLink icon="donut_large" name="dashboard" route="/dashboard" />
         <DefaultNavbarLink icon="person" name="profile" route="/profile" />
         <DefaultNavbarLink icon="account_circle" name="sign up" route="/authentication/sign-up" />
         <DefaultNavbarLink icon="key" name="sign in" route="/authentication/sign-in" />
-      </SuiBox>
+      </SoftBox>
     </Menu>
   );
 }

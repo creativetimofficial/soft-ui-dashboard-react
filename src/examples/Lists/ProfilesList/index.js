@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -23,32 +23,37 @@ import PropTypes from "prop-types";
 import Card from "@mui/material/Card";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiAvatar from "components/SuiAvatar";
-import SuiButton from "components/SuiButton";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftAvatar from "components/SoftAvatar";
+import SoftButton from "components/SoftButton";
 
 function ProfilesList({ title, profiles }) {
   const renderProfiles = profiles.map(({ image, name, description, action }) => (
-    <SuiBox key={name} component="li" display="flex" alignItems="center" py={1} mb={1}>
-      <SuiBox mr={2}>
-        <SuiAvatar src={image} alt="something here" variant="rounded" shadow="md" />
-      </SuiBox>
-      <SuiBox display="flex" flexDirection="column" alignItems="flex-start" justifyContent="center">
-        <SuiTypography variant="button" fontWeight="medium">
+    <SoftBox key={name} component="li" display="flex" alignItems="center" py={1} mb={1}>
+      <SoftBox mr={2}>
+        <SoftAvatar src={image} alt="something here" variant="rounded" shadow="md" />
+      </SoftBox>
+      <SoftBox
+        display="flex"
+        flexDirection="column"
+        alignItems="flex-start"
+        justifyContent="center"
+      >
+        <SoftTypography variant="button" fontWeight="medium">
           {name}
-        </SuiTypography>
-        <SuiTypography variant="caption" color="text">
+        </SoftTypography>
+        <SoftTypography variant="caption" color="text">
           {description}
-        </SuiTypography>
-      </SuiBox>
-      <SuiBox ml="auto">
+        </SoftTypography>
+      </SoftBox>
+      <SoftBox ml="auto">
         {action.type === "internal" ? (
-          <SuiButton component={Link} to={action.route} variant="text" color="info">
+          <SoftButton component={Link} to={action.route} variant="text" color="info">
             {action.label}
-          </SuiButton>
+          </SoftButton>
         ) : (
-          <SuiButton
+          <SoftButton
             component="a"
             href={action.route}
             target="_blank"
@@ -57,24 +62,24 @@ function ProfilesList({ title, profiles }) {
             color={action.color}
           >
             {action.label}
-          </SuiButton>
+          </SoftButton>
         )}
-      </SuiBox>
-    </SuiBox>
+      </SoftBox>
+    </SoftBox>
   ));
 
   return (
     <Card sx={{ height: "100%" }}>
-      <SuiBox pt={2} px={2}>
-        <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+      <SoftBox pt={2} px={2}>
+        <SoftTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}
-        </SuiTypography>
-      </SuiBox>
-      <SuiBox p={2}>
-        <SuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+        </SoftTypography>
+      </SoftBox>
+      <SoftBox p={2}>
+        <SoftBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
           {renderProfiles}
-        </SuiBox>
-      </SuiBox>
+        </SoftBox>
+      </SoftBox>
     </Card>
   );
 }

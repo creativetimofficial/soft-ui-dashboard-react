@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -17,8 +17,8 @@ Coded by www.creative-tim.com
 import Card from "@mui/material/Card";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React examples
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
@@ -37,13 +37,13 @@ function Tables() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <SuiBox py={3}>
-        <SuiBox mb={3}>
+      <SoftBox py={3}>
+        <SoftBox mb={3}>
           <Card>
-            <SuiBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
-              <SuiTypography variant="h6">Authors table</SuiTypography>
-            </SuiBox>
-            <SuiBox
+            <SoftBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
+              <SoftTypography variant="h6">Authors table</SoftTypography>
+            </SoftBox>
+            <SoftBox
               sx={{
                 "& .MuiTableRow-root:not(:last-child)": {
                   "& td": {
@@ -54,14 +54,14 @@ function Tables() {
               }}
             >
               <Table columns={columns} rows={rows} />
-            </SuiBox>
+            </SoftBox>
           </Card>
-        </SuiBox>
+        </SoftBox>
         <Card>
-          <SuiBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
-            <SuiTypography variant="h6">Projects table</SuiTypography>
-          </SuiBox>
-          <SuiBox
+          <SoftBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
+            <SoftTypography variant="h6">Projects table</SoftTypography>
+          </SoftBox>
+          <SoftBox
             sx={{
               "& .MuiTableRow-root:not(:last-child)": {
                 "& td": {
@@ -72,9 +72,9 @@ function Tables() {
             }}
           >
             <Table columns={prCols} rows={prRows} />
-          </SuiBox>
+          </SoftBox>
         </Card>
-      </SuiBox>
+      </SoftBox>
       <Footer />
     </DashboardLayout>
   );

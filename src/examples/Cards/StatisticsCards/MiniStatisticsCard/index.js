@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -22,18 +22,18 @@ import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction }) {
   return (
     <Card>
-      <SuiBox bgColor={bgColor} variant="gradient">
-        <SuiBox p={2}>
+      <SoftBox bgColor={bgColor} variant="gradient">
+        <SoftBox p={2}>
           <Grid container alignItems="center">
             {direction === "left" ? (
               <Grid item>
-                <SuiBox
+                <SoftBox
                   variant="gradient"
                   bgColor={bgColor === "white" ? icon.color : "white"}
                   color={bgColor === "white" ? "white" : "dark"}
@@ -48,12 +48,12 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
                   <Icon fontSize="small" color="inherit">
                     {icon.component}
                   </Icon>
-                </SuiBox>
+                </SoftBox>
               </Grid>
             ) : null}
             <Grid item xs={8}>
-              <SuiBox ml={direction === "left" ? 2 : 0} lineHeight={1}>
-                <SuiTypography
+              <SoftBox ml={direction === "left" ? 2 : 0} lineHeight={1}>
+                <SoftTypography
                   variant="button"
                   color={bgColor === "white" ? "text" : "white"}
                   opacity={bgColor === "white" ? 1 : 0.7}
@@ -61,22 +61,22 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
                   fontWeight={title.fontWeight}
                 >
                   {title.text}
-                </SuiTypography>
-                <SuiTypography
+                </SoftTypography>
+                <SoftTypography
                   variant="h5"
                   fontWeight="bold"
                   color={bgColor === "white" ? "dark" : "white"}
                 >
                   {count}{" "}
-                  <SuiTypography variant="button" color={percentage.color} fontWeight="bold">
+                  <SoftTypography variant="button" color={percentage.color} fontWeight="bold">
                     {percentage.text}
-                  </SuiTypography>
-                </SuiTypography>
-              </SuiBox>
+                  </SoftTypography>
+                </SoftTypography>
+              </SoftBox>
             </Grid>
             {direction === "right" ? (
               <Grid item xs={4}>
-                <SuiBox
+                <SoftBox
                   variant="gradient"
                   bgColor={bgColor === "white" ? icon.color : "white"}
                   color={bgColor === "white" ? "white" : "dark"}
@@ -92,12 +92,12 @@ function MiniStatisticsCard({ bgColor, title, count, percentage, icon, direction
                   <Icon fontSize="small" color="inherit">
                     {icon.component}
                   </Icon>
-                </SuiBox>
+                </SoftBox>
               </Grid>
             ) : null}
           </Grid>
-        </SuiBox>
-      </SuiBox>
+        </SoftBox>
+      </SoftBox>
     </Card>
   );
 }

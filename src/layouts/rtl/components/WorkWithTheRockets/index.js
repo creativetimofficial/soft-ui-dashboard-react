@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -18,8 +18,8 @@ import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Images
 import ivancik from "assets/images/ivancik.jpg";
@@ -27,8 +27,8 @@ import ivancik from "assets/images/ivancik.jpg";
 function WorkWithTheRockets() {
   return (
     <Card sx={{ height: "100%" }}>
-      <SuiBox position="relative" height="100%" p={2}>
-        <SuiBox
+      <SoftBox position="relative" height="100%" p={2}>
+        <SoftBox
           display="flex"
           flexDirection="column"
           height="100%"
@@ -44,18 +44,18 @@ function WorkWithTheRockets() {
             backgroundSize: "cover",
           }}
         >
-          <SuiBox mb={3} pt={1}>
-            <SuiTypography variant="h5" color="white" fontWeight="bold">
+          <SoftBox mb={3} pt={1}>
+            <SoftTypography variant="h5" color="white" fontWeight="bold">
               العمل مع الصواريخ
-            </SuiTypography>
-          </SuiBox>
-          <SuiBox mb={2}>
-            <SuiTypography variant="body2" color="white" fontWeight="bold">
+            </SoftTypography>
+          </SoftBox>
+          <SoftBox mb={2}>
+            <SoftTypography variant="body2" color="white" fontWeight="bold">
               تكوين الثروة هو لعبة تطوري حديثة ذات حصيلة إيجابية. الأمر كله يتعلق بمن يغتنم الفرصة
               أولاً هذه بطاقة بسيطة.
-            </SuiTypography>
-          </SuiBox>
-          <SuiTypography
+            </SoftTypography>
+          </SoftBox>
+          <SoftTypography
             component="a"
             href="#"
             variant="button"
@@ -81,9 +81,9 @@ function WorkWithTheRockets() {
           >
             اقرأ المستندات
             <Icon sx={{ fontWeight: "bold" }}>arrow_backward</Icon>
-          </SuiTypography>
-        </SuiBox>
-      </SuiBox>
+          </SoftTypography>
+        </SoftBox>
+      </SoftBox>
     </Card>
   );
 }

@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -23,8 +23,8 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React examples
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
@@ -54,7 +54,7 @@ function Overview() {
   return (
     <DashboardLayout>
       <Header />
-      <SuiBox mt={5} mb={3}>
+      <SoftBox mt={5} mb={3}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} xl={4}>
             <PlatformSettings />
@@ -93,22 +93,22 @@ function Overview() {
             <ProfilesList title="conversations" profiles={profilesListData} />
           </Grid>
         </Grid>
-      </SuiBox>
-      <SuiBox mb={3}>
+      </SoftBox>
+      <SoftBox mb={3}>
         <Card>
-          <SuiBox pt={2} px={2}>
-            <SuiBox mb={0.5}>
-              <SuiTypography variant="h6" fontWeight="medium">
+          <SoftBox pt={2} px={2}>
+            <SoftBox mb={0.5}>
+              <SoftTypography variant="h6" fontWeight="medium">
                 Projects
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox mb={1}>
-              <SuiTypography variant="button" fontWeight="regular" color="text">
+              </SoftTypography>
+            </SoftBox>
+            <SoftBox mb={1}>
+              <SoftTypography variant="button" fontWeight="regular" color="text">
                 Architects design houses
-              </SuiTypography>
-            </SuiBox>
-          </SuiBox>
-          <SuiBox p={2}>
+              </SoftTypography>
+            </SoftBox>
+          </SoftBox>
+          <SoftBox p={2}>
             <Grid container spacing={3}>
               <Grid item xs={12} md={6} xl={3}>
                 <DefaultProjectCard
@@ -174,9 +174,9 @@ function Overview() {
                 <PlaceholderCard title={{ variant: "h5", text: "New project" }} outlined />
               </Grid>
             </Grid>
-          </SuiBox>
+          </SoftBox>
         </Card>
-      </SuiBox>
+      </SoftBox>
 
       <Footer />
     </DashboardLayout>

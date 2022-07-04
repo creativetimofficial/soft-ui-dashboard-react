@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -22,7 +22,7 @@ import { useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
+import SoftBox from "components/SoftBox";
 
 // Soft UI Dashboard React context
 import { useSoftUIController, setLayout } from "context";
@@ -36,7 +36,7 @@ function PageLayout({ background, children }) {
   }, [pathname]);
 
   return (
-    <SuiBox
+    <SoftBox
       width="100vw"
       height="100%"
       minHeight="100vh"
@@ -44,7 +44,7 @@ function PageLayout({ background, children }) {
       sx={{ overflowX: "hidden" }}
     >
       {children}
-    </SuiBox>
+    </SoftBox>
   );
 }
 

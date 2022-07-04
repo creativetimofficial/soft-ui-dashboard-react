@@ -1,11 +1,19 @@
 # Change Log
 
+## [4.0.0] 2022-07-04
+
+- Rename components prefix from Sui to Soft.
+- Update dependencies.
+- Fix the peer dependencies issue.
+- Fix the eslint issue with react-app.
+- Migrate eslint config from airbnb to react-app.
+
 ## [3.1.0] 2022-03-04
 
 ### Bug fixing
 
 - Momoized the context provider values
-- Fix the conditionally used of useContext for SuiPagination component
+- Fix the conditionally used of useContext for SoftPagination component
 - Fix the import/no-anonymouse-default-export
 
 ### Major style changes
@@ -54,12 +62,12 @@ There is a warnings related to the stylis-plugin-rtl dependency that won't affec
 - The `box-shadow`, `border-radius` and `typography` `regular` size renamed to `md` for theme
 - The `backgroundColor` prop renamed to `bgColor` for components
 - The `boxShadow` prop renamed to `shadow` for components
-- SuiBox `backgroundGradient` prop replaced with `variant: ["contained", "gradient"]`
-- SuiButton `buttonColor` prop renamed to `color`
-- SuiBadge `size` prop updated to ["xs", "sm", "md", "lg"]
-- SuiInput `withIcon` prop renamed to `icon`
-- SuiProgress `gradient` prop replaced with `variant: ["contained", "gradient"]`
-- SuiTypography `textColor` prop renamed to `color`
+- SoftBox `backgroundGradient` prop replaced with `variant: ["contained", "gradient"]`
+- SoftButton `buttonColor` prop renamed to `color`
+- SoftBadge `size` prop updated to ["xs", "sm", "md", "lg"]
+- SoftInput `withIcon` prop renamed to `icon`
+- SoftProgress `gradient` prop replaced with `variant: ["contained", "gradient"]`
+- SoftTypography `textColor` prop renamed to `color`
 - Sidenav is more dynamic now, color, brand, brandName props are added
 
 ### Deleted components

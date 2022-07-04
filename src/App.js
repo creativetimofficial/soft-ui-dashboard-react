@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -24,7 +24,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
+import SoftBox from "components/SoftBox";
 
 // Soft UI Dashboard React examples
 import Sidenav from "examples/Sidenav";
@@ -109,7 +109,7 @@ export default function App() {
     });
 
   const configsButton = (
-    <SuiBox
+    <SoftBox
       display="flex"
       justifyContent="center"
       alignItems="center"
@@ -129,7 +129,7 @@ export default function App() {
       <Icon fontSize="default" color="inherit">
         settings
       </Icon>
-    </SuiBox>
+    </SoftBox>
   );
 
   return direction === "rtl" ? (

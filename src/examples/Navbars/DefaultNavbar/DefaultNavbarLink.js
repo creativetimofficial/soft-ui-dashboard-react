@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -23,12 +23,12 @@ import PropTypes from "prop-types";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 function DefaultNavbarLink({ icon, name, route, light }) {
   return (
-    <SuiBox
+    <SoftBox
       component={Link}
       to={route}
       mx={1}
@@ -45,7 +45,7 @@ function DefaultNavbarLink({ icon, name, route, light }) {
       >
         {icon}
       </Icon>
-      <SuiTypography
+      <SoftTypography
         variant="button"
         fontWeight="regular"
         color={light ? "white" : "dark"}
@@ -53,8 +53,8 @@ function DefaultNavbarLink({ icon, name, route, light }) {
         sx={{ width: "100%", lineHeight: 0 }}
       >
         &nbsp;{name}
-      </SuiTypography>
-    </SuiBox>
+      </SoftTypography>
+    </SoftBox>
   );
 }
 

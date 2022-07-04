@@ -1,6 +1,6 @@
 # [Soft UI Dashboard React](http://demos.creative-tim.com/soft-ui-dashboard-react/#/dashboard?ref=readme-sudr) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/soft-ui-dashboard-react&text=Check%20Soft%20UI%20Dashboard%20react%20made%20by%20@CreativeTim%20#webdesign%20#dashboard%20#softdesign%20#react%20https://www.creative-tim.com/product/soft-ui-dashboard-react)
 
-![version](https://img.shields.io/badge/version-3.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/soft-ui-dashboard-react.svg)](https://github.com/creativetimofficial/soft-ui-dashboard-react/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/soft-ui-dashboard-react.svg)](https://github.com/creativetimofficial/soft-ui-dashboard-react/issues?q=is%3Aissue+is%3Aclosed)
+![version](https://img.shields.io/badge/version-4.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/soft-ui-dashboard-react.svg)](https://github.com/creativetimofficial/soft-ui-dashboard-react/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/soft-ui-dashboard-react.svg)](https://github.com/creativetimofficial/soft-ui-dashboard-react/issues?q=is%3Aissue+is%3Aclosed)
 
 ![Image](https://s3.amazonaws.com/creativetim_bucket/products/500/original/soft-ui-dashboard-material-ui.jpg)
 
@@ -110,15 +110,15 @@ soft-ui-dashboard-react
     │   │       ├── index.js
     │   │       └── theme-rtl.js
     │   ├── components
-    │   │   ├── SuiAlert
-    │   │   ├── SuiAvatar
-    │   │   ├── SuiBadge
-    │   │   ├── SuiBox
-    │   │   ├── SuiButton
-    │   │   ├── SuiInput
-    │   │   ├── SuiPagination
-    │   │   ├── SuiProgress
-    │   │   └── SuiTypography
+    │   │   ├── SoftAlert
+    │   │   ├── SoftAvatar
+    │   │   ├── SoftBadge
+    │   │   ├── SoftBox
+    │   │   ├── SoftButton
+    │   │   ├── SoftInput
+    │   │   ├── SoftPagination
+    │   │   ├── SoftProgress
+    │   │   └── SoftTypography
     │   ├── context
     │   ├── examples
     │   │   ├── Breadcrumbs

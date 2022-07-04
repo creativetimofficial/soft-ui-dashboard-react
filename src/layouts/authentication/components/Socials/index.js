@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -14,13 +14,13 @@ Coded by www.creative-tim.com
 */
 
 // Soft UI Dashboard React components
-import SuiButton from "components/SuiButton";
-import SuiBox from "components/SuiBox";
+import SoftButton from "components/SoftButton";
+import SoftBox from "components/SoftBox";
 
 function Socials() {
   return (
-    <SuiBox display="flex" justifyContent="center">
-      <SuiButton variant="outlined" color="light">
+    <SoftBox display="flex" justifyContent="center">
+      <SoftButton variant="outlined" color="light">
         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g transform="translate(3.000000, 3.000000)" fillRule="nonzero">
@@ -32,9 +32,9 @@ function Socials() {
             </g>
           </g>
         </svg>
-      </SuiButton>
-      <SuiBox px={1}>
-        <SuiButton variant="outlined" color="light">
+      </SoftButton>
+      <SoftBox px={1}>
+        <SoftButton variant="outlined" color="light">
           <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g transform="translate(7.000000, 0.564551)" fill="#000000" fillRule="nonzero">
@@ -42,9 +42,9 @@ function Socials() {
               </g>
             </g>
           </svg>
-        </SuiButton>
-      </SuiBox>
-      <SuiButton variant="outlined" color="light">
+        </SoftButton>
+      </SoftBox>
+      <SoftButton variant="outlined" color="light">
         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g transform="translate(3.000000, 2.000000)" fillRule="nonzero">
@@ -67,8 +67,8 @@ function Socials() {
             </g>
           </g>
         </svg>
-      </SuiButton>
-    </SuiBox>
+      </SoftButton>
+    </SoftBox>
   );
 }
 

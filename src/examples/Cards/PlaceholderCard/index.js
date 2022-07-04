@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -21,8 +21,8 @@ import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 function PlaceholderCard({ icon, title, hasBorder, outlined }) {
   return (
@@ -35,7 +35,7 @@ function PlaceholderCard({ icon, title, hasBorder, outlined }) {
         border: hasBorder || outlined ? `${borderWidth[1]} solid ${borderColor}` : "none",
       })}
     >
-      <SuiBox
+      <SoftBox
         display="flex"
         flexDirection="column"
         justifyContent="center"
@@ -43,15 +43,15 @@ function PlaceholderCard({ icon, title, hasBorder, outlined }) {
         height="100%"
         p={3}
       >
-        <SuiBox color="secondary" mb={0.5}>
+        <SoftBox color="secondary" mb={0.5}>
           <Icon fontSize="default" sx={{ fontWeight: "bold" }}>
             {icon}
           </Icon>
-        </SuiBox>
-        <SuiTypography variant={title.variant} color="secondary">
+        </SoftBox>
+        <SoftTypography variant={title.variant} color="secondary">
           {title.text}
-        </SuiTypography>
-      </SuiBox>
+        </SoftTypography>
+      </SoftBox>
     </Card>
   );
 }

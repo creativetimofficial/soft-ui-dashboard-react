@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -26,8 +26,8 @@ import Tooltip from "@mui/material/Tooltip";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React base styles
 import colors from "assets/theme/base/colors";
@@ -56,19 +56,19 @@ function ProfileInfoCard({ title, description, info, social, action }) {
 
   // Render the card info items
   const renderItems = labels.map((label, key) => (
-    <SuiBox key={label} display="flex" py={1} pr={2}>
-      <SuiTypography variant="button" fontWeight="bold" textTransform="capitalize">
+    <SoftBox key={label} display="flex" py={1} pr={2}>
+      <SoftTypography variant="button" fontWeight="bold" textTransform="capitalize">
         {label}: &nbsp;
-      </SuiTypography>
-      <SuiTypography variant="button" fontWeight="regular" color="text">
+      </SoftTypography>
+      <SoftTypography variant="button" fontWeight="regular" color="text">
         &nbsp;{values[key]}
-      </SuiTypography>
-    </SuiBox>
+      </SoftTypography>
+    </SoftBox>
   ));
 
   // Render the card social media icons
   const renderSocial = social.map(({ link, icon, color }) => (
-    <SuiBox
+    <SoftBox
       key={color}
       component="a"
       href={link}
@@ -81,40 +81,40 @@ function ProfileInfoCard({ title, description, info, social, action }) {
       lineHeight={1}
     >
       {icon}
-    </SuiBox>
+    </SoftBox>
   ));
 
   return (
     <Card sx={{ height: "100%" }}>
-      <SuiBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
-        <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+      <SoftBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
+        <SoftTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}
-        </SuiTypography>
-        <SuiTypography component={Link} to={action.route} variant="body2" color="secondary">
+        </SoftTypography>
+        <SoftTypography component={Link} to={action.route} variant="body2" color="secondary">
           <Tooltip title={action.tooltip} placement="top">
             <Icon>edit</Icon>
           </Tooltip>
-        </SuiTypography>
-      </SuiBox>
-      <SuiBox p={2}>
-        <SuiBox mb={2} lineHeight={1}>
-          <SuiTypography variant="button" color="text" fontWeight="regular">
+        </SoftTypography>
+      </SoftBox>
+      <SoftBox p={2}>
+        <SoftBox mb={2} lineHeight={1}>
+          <SoftTypography variant="button" color="text" fontWeight="regular">
             {description}
-          </SuiTypography>
-        </SuiBox>
-        <SuiBox opacity={0.3}>
+          </SoftTypography>
+        </SoftBox>
+        <SoftBox opacity={0.3}>
           <Divider />
-        </SuiBox>
-        <SuiBox>
+        </SoftBox>
+        <SoftBox>
           {renderItems}
-          <SuiBox display="flex" py={1} pr={2}>
-            <SuiTypography variant="button" fontWeight="bold" textTransform="capitalize">
+          <SoftBox display="flex" py={1} pr={2}>
+            <SoftTypography variant="button" fontWeight="bold" textTransform="capitalize">
               social: &nbsp;
-            </SuiTypography>
+            </SoftTypography>
             {renderSocial}
-          </SuiBox>
-        </SuiBox>
-      </SuiBox>
+          </SoftBox>
+        </SoftBox>
+      </SoftBox>
     </Card>
   );
 }

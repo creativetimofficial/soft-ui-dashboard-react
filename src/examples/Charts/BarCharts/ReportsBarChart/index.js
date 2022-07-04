@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -26,8 +26,8 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React examples
 import BarReportsChartItem from "examples/Charts/BarCharts/ReportsBarChart/ReportsBarChartItem";
@@ -51,10 +51,10 @@ function ReportsBarChart({ color, title, description, chart, items }) {
 
   return (
     <Card sx={{ height: "100%" }}>
-      <SuiBox padding="1rem">
+      <SoftBox padding="1rem">
         {useMemo(
           () => (
-            <SuiBox
+            <SoftBox
               variant="gradient"
               bgColor={color}
               borderRadius="lg"
@@ -64,26 +64,26 @@ function ReportsBarChart({ color, title, description, chart, items }) {
               height="12.5rem"
             >
               <Bar data={data} options={options} />
-            </SuiBox>
+            </SoftBox>
           ),
           [chart, color]
         )}
-        <SuiBox px={1}>
-          <SuiBox mb={2}>
-            <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+        <SoftBox px={1}>
+          <SoftBox mb={2}>
+            <SoftTypography variant="h6" fontWeight="medium" textTransform="capitalize">
               {title}
-            </SuiTypography>
-            <SuiTypography component="div" variant="button" color="text" fontWeight="regular">
+            </SoftTypography>
+            <SoftTypography component="div" variant="button" color="text" fontWeight="regular">
               {description}
-            </SuiTypography>
-          </SuiBox>
-          <SuiBox py={1} px={0.5}>
+            </SoftTypography>
+          </SoftBox>
+          <SoftBox py={1} px={0.5}>
             <Grid container spacing={2}>
               {renderItems}
             </Grid>
-          </SuiBox>
-        </SuiBox>
-      </SuiBox>
+          </SoftBox>
+        </SoftBox>
+      </SoftBox>
     </Card>
   );
 }

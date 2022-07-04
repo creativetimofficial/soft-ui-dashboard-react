@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -24,14 +24,14 @@ import { Breadcrumbs as MuiBreadcrumbs } from "@mui/material";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 function Breadcrumbs({ icon, title, route, light }) {
   const routes = route.slice(0, -1);
 
   return (
-    <SuiBox mr={{ xs: 0, xl: 8 }}>
+    <SoftBox mr={{ xs: 0, xl: 8 }}>
       <MuiBreadcrumbs
         sx={{
           "& .MuiBreadcrumbs-separator": {
@@ -40,7 +40,7 @@ function Breadcrumbs({ icon, title, route, light }) {
         }}
       >
         <Link to="/">
-          <SuiTypography
+          <SoftTypography
             component="span"
             variant="body2"
             color={light ? "white" : "dark"}
@@ -48,11 +48,11 @@ function Breadcrumbs({ icon, title, route, light }) {
             sx={{ lineHeight: 0 }}
           >
             <Icon>{icon}</Icon>
-          </SuiTypography>
+          </SoftTypography>
         </Link>
         {routes.map((el) => (
           <Link to={`/${el}`} key={el}>
-            <SuiTypography
+            <SoftTypography
               component="span"
               variant="button"
               fontWeight="regular"
@@ -62,10 +62,10 @@ function Breadcrumbs({ icon, title, route, light }) {
               sx={{ lineHeight: 0 }}
             >
               {el}
-            </SuiTypography>
+            </SoftTypography>
           </Link>
         ))}
-        <SuiTypography
+        <SoftTypography
           variant="button"
           fontWeight="regular"
           textTransform="capitalize"
@@ -73,9 +73,9 @@ function Breadcrumbs({ icon, title, route, light }) {
           sx={{ lineHeight: 0 }}
         >
           {title.replace("-", " ")}
-        </SuiTypography>
+        </SoftTypography>
       </MuiBreadcrumbs>
-      <SuiTypography
+      <SoftTypography
         fontWeight="bold"
         textTransform="capitalize"
         variant="h6"
@@ -83,8 +83,8 @@ function Breadcrumbs({ icon, title, route, light }) {
         noWrap
       >
         {title.replace("-", " ")}
-      </SuiTypography>
-    </SuiBox>
+      </SoftTypography>
+    </SoftBox>
   );
 }
 

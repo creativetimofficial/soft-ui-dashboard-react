@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -19,10 +19,10 @@ import Tooltip from "@mui/material/Tooltip";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiAvatar from "components/SuiAvatar";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SoftBox from "components/SoftBox";
+import SoftAvatar from "components/SoftAvatar";
+import SoftTypography from "components/SoftTypography";
+import SoftButton from "components/SoftButton";
 
 // Soft UI Dashboard React base styles
 import typography from "assets/theme/base/typography";
@@ -46,7 +46,7 @@ function VRInfo() {
 
   return (
     <BaseLayout>
-      <SuiBox
+      <SoftBox
         minHeight="100vh"
         ml={{ xs: 0, md: 10 }}
         mt={{ xs: 0, md: 4 }}
@@ -56,7 +56,7 @@ function VRInfo() {
       >
         <Grid container>
           <Grid item xs={12} md={1}>
-            <SuiBox
+            <SoftBox
               display="flex"
               flexDirection={{ xs: "row", md: "column" }}
               justifyContent="center"
@@ -65,7 +65,7 @@ function VRInfo() {
               mb={{ xs: 8, md: 0 }}
             >
               <Tooltip title="My Profile" placement="right">
-                <SuiAvatar
+                <SoftAvatar
                   src={team1}
                   alt="Profile Picture"
                   size="lg"
@@ -74,9 +74,9 @@ function VRInfo() {
                 />
               </Tooltip>
 
-              <SuiBox my={{ xs: 0, md: 2 }} mx={{ xs: 2, md: 0 }}>
+              <SoftBox my={{ xs: 0, md: 2 }} mx={{ xs: 2, md: 0 }}>
                 <Tooltip title="Home" placement="right">
-                  <SuiButton
+                  <SoftButton
                     size="large"
                     iconOnly
                     sx={({ palette: { dark }, borders: { borderRadius } }) => ({
@@ -85,12 +85,12 @@ function VRInfo() {
                     })}
                   >
                     <Icon>home</Icon>
-                  </SuiButton>
+                  </SoftButton>
                 </Tooltip>
-              </SuiBox>
-              <SuiBox mb={{ xs: 0, md: 2 }} mr={{ xs: 2, md: 0 }}>
+              </SoftBox>
+              <SoftBox mb={{ xs: 0, md: 2 }} mr={{ xs: 2, md: 0 }}>
                 <Tooltip title="Search" placement="right">
-                  <SuiButton
+                  <SoftButton
                     size="large"
                     iconOnly
                     sx={({ palette: { dark }, borders: { borderRadius } }) => ({
@@ -99,11 +99,11 @@ function VRInfo() {
                     })}
                   >
                     <Icon>search</Icon>
-                  </SuiButton>
+                  </SoftButton>
                 </Tooltip>
-              </SuiBox>
+              </SoftBox>
               <Tooltip title="Minimize" placement="right">
-                <SuiButton
+                <SoftButton
                   size="large"
                   iconOnly
                   sx={({ palette: { dark }, borders: { borderRadius } }) => ({
@@ -112,54 +112,54 @@ function VRInfo() {
                   })}
                 >
                   <Icon>more_horiz</Icon>
-                </SuiButton>
+                </SoftButton>
               </Tooltip>
-            </SuiBox>
+            </SoftBox>
           </Grid>
           <Grid item xs={12} md={11} lg={10} xl={9}>
-            <SuiBox
+            <SoftBox
               display="flex"
               justifyContent="space-between"
               alignItems={{ xs: "center", md: "flex-start" }}
               ml={{ xs: 1, md: 4 }}
               mt={-1}
             >
-              <SuiBox>
-                <SuiBox
+              <SoftBox>
+                <SoftBox
                   fontSize={{ xs: h2.fontSize, lg: d1.fontSize }}
                   fontWeight={fontWeightMedium}
                   lineHeight={1}
                 >
                   28&deg;C
-                </SuiBox>
-                <SuiTypography variant="h6" fontWeight="medium" textTransform="uppercase">
+                </SoftBox>
+                <SoftTypography variant="h6" fontWeight="medium" textTransform="uppercase">
                   cloudy
-                </SuiTypography>
-              </SuiBox>
-              <SuiBox component="img" src={sunCloud} width="30%" />
-            </SuiBox>
-            <SuiBox mt={3} mb={8} ml={{ xs: 1, md: 4 }} mr={{ xs: 1, md: 0 }}>
+                </SoftTypography>
+              </SoftBox>
+              <SoftBox component="img" src={sunCloud} width="30%" />
+            </SoftBox>
+            <SoftBox mt={3} mb={8} ml={{ xs: 1, md: 4 }} mr={{ xs: 1, md: 0 }}>
               <Grid container spacing={3}>
                 <Grid item xs={12} md={4}>
                   <TodoList />
                 </Grid>
                 <Grid item xs={12} md={4}>
-                  <SuiBox mb={3}>
+                  <SoftBox mb={3}>
                     <TodoCard />
-                  </SuiBox>
+                  </SoftBox>
                   <Emails />
                 </Grid>
                 <Grid item xs={12} md={4}>
-                  <SuiBox mb={3}>
+                  <SoftBox mb={3}>
                     <MediaPlayer />
-                  </SuiBox>
+                  </SoftBox>
                   <Messages />
                 </Grid>
               </Grid>
-            </SuiBox>
+            </SoftBox>
           </Grid>
         </Grid>
-      </SuiBox>
+      </SoftBox>
     </BaseLayout>
   );
 }

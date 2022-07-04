@@ -3,9 +3,9 @@
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiProgress from "components/SuiProgress";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftProgress from "components/SoftProgress";
 
 // Images
 import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
@@ -17,14 +17,14 @@ import logoXD from "assets/images/small-logos/logo-xd.svg";
 
 function Completion({ value, color }) {
   return (
-    <SuiBox display="flex" alignItems="center">
-      <SuiTypography variant="caption" color="text" fontWeight="medium">
+    <SoftBox display="flex" alignItems="center">
+      <SoftTypography variant="caption" color="text" fontWeight="medium">
         {value}%&nbsp;
-      </SuiTypography>
-      <SuiBox width="8rem">
-        <SuiProgress value={value} color={color} variant="gradient" label={false} />
-      </SuiBox>
-    </SuiBox>
+      </SoftTypography>
+      <SoftBox width="8rem">
+        <SoftProgress value={value} color={color} variant="gradient" label={false} />
+      </SoftBox>
+    </SoftBox>
   );
 }
 
@@ -47,14 +47,14 @@ const projectsTableData = {
     {
       project: [logoSpotify, "Spotift"],
       budget: (
-        <SuiTypography variant="button" color="text" fontWeight="medium">
+        <SoftTypography variant="button" color="text" fontWeight="medium">
           $2,500
-        </SuiTypography>
+        </SoftTypography>
       ),
       status: (
-        <SuiTypography variant="caption" color="text" fontWeight="medium">
+        <SoftTypography variant="caption" color="text" fontWeight="medium">
           working
-        </SuiTypography>
+        </SoftTypography>
       ),
       completion: <Completion value={60} color="info" />,
       action,
@@ -62,14 +62,14 @@ const projectsTableData = {
     {
       project: [logoInvesion, "Invesion"],
       budget: (
-        <SuiTypography variant="button" color="text" fontWeight="medium">
+        <SoftTypography variant="button" color="text" fontWeight="medium">
           $5,000
-        </SuiTypography>
+        </SoftTypography>
       ),
       status: (
-        <SuiTypography variant="caption" color="text" fontWeight="medium">
+        <SoftTypography variant="caption" color="text" fontWeight="medium">
           done
-        </SuiTypography>
+        </SoftTypography>
       ),
       completion: <Completion value={100} color="success" />,
       action,
@@ -77,14 +77,14 @@ const projectsTableData = {
     {
       project: [logoJira, "Jira"],
       budget: (
-        <SuiTypography variant="button" color="text" fontWeight="medium">
+        <SoftTypography variant="button" color="text" fontWeight="medium">
           $3,400
-        </SuiTypography>
+        </SoftTypography>
       ),
       status: (
-        <SuiTypography variant="caption" color="text" fontWeight="medium">
+        <SoftTypography variant="caption" color="text" fontWeight="medium">
           canceled
-        </SuiTypography>
+        </SoftTypography>
       ),
       completion: <Completion value={30} color="error" />,
       action,
@@ -92,14 +92,14 @@ const projectsTableData = {
     {
       project: [logoSlack, "Slack"],
       budget: (
-        <SuiTypography variant="button" color="text" fontWeight="medium">
+        <SoftTypography variant="button" color="text" fontWeight="medium">
           $1,400
-        </SuiTypography>
+        </SoftTypography>
       ),
       status: (
-        <SuiTypography variant="caption" color="text" fontWeight="medium">
+        <SoftTypography variant="caption" color="text" fontWeight="medium">
           canceled
-        </SuiTypography>
+        </SoftTypography>
       ),
       completion: <Completion value={0} color="error" />,
       action,
@@ -107,14 +107,14 @@ const projectsTableData = {
     {
       project: [logoWebDev, "Webdev"],
       budget: (
-        <SuiTypography variant="button" color="text" fontWeight="medium">
+        <SoftTypography variant="button" color="text" fontWeight="medium">
           $14,000
-        </SuiTypography>
+        </SoftTypography>
       ),
       status: (
-        <SuiTypography variant="caption" color="text" fontWeight="medium">
+        <SoftTypography variant="caption" color="text" fontWeight="medium">
           working
-        </SuiTypography>
+        </SoftTypography>
       ),
       completion: <Completion value={80} color="info" />,
       action,
@@ -122,14 +122,14 @@ const projectsTableData = {
     {
       project: [logoXD, "Adobe XD"],
       budget: (
-        <SuiTypography variant="button" color="text" fontWeight="medium">
+        <SoftTypography variant="button" color="text" fontWeight="medium">
           $2,300
-        </SuiTypography>
+        </SoftTypography>
       ),
       status: (
-        <SuiTypography variant="caption" color="text" fontWeight="medium">
+        <SoftTypography variant="caption" color="text" fontWeight="medium">
           done
-        </SuiTypography>
+        </SoftTypography>
       ),
       completion: <Completion value={100} color="success" />,
       action,

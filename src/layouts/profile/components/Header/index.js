@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -23,9 +23,9 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiAvatar from "components/SuiAvatar";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftAvatar from "components/SoftAvatar";
 
 // Soft UI Dashboard React examples
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
@@ -69,9 +69,9 @@ function Header() {
   const handleSetTabValue = (event, newValue) => setTabValue(newValue);
 
   return (
-    <SuiBox position="relative">
+    <SoftBox position="relative">
       <DashboardNavbar absolute light />
-      <SuiBox
+      <SoftBox
         display="flex"
         alignItems="center"
         position="relative"
@@ -102,7 +102,7 @@ function Header() {
       >
         <Grid container spacing={3} alignItems="center">
           <Grid item>
-            <SuiAvatar
+            <SoftAvatar
               src={burceMars}
               alt="profile-image"
               variant="rounded"
@@ -111,14 +111,14 @@ function Header() {
             />
           </Grid>
           <Grid item>
-            <SuiBox height="100%" mt={0.5} lineHeight={1}>
-              <SuiTypography variant="h5" fontWeight="medium">
+            <SoftBox height="100%" mt={0.5} lineHeight={1}>
+              <SoftTypography variant="h5" fontWeight="medium">
                 Alex Thompson
-              </SuiTypography>
-              <SuiTypography variant="button" color="text" fontWeight="medium">
+              </SoftTypography>
+              <SoftTypography variant="button" color="text" fontWeight="medium">
                 CEO / Co-Founder
-              </SuiTypography>
-            </SuiBox>
+              </SoftTypography>
+            </SoftBox>
           </Grid>
           <Grid item xs={12} md={6} lg={4} sx={{ ml: "auto" }}>
             <AppBar position="static">
@@ -136,7 +136,7 @@ function Header() {
           </Grid>
         </Grid>
       </Card>
-    </SuiBox>
+    </SoftBox>
   );
 }
 

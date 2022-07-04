@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -20,8 +20,8 @@ import PropTypes from "prop-types";
 import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
@@ -46,28 +46,28 @@ function IllustrationLayout({ color, header, title, description, illustration, c
       />
       <Grid container>
         <Grid item xs={11} sm={8} md={6} lg={4} xl={3} sx={{ mx: "auto" }}>
-          <SuiBox display="flex" flexDirection="column" justifyContent="center" height="100vh">
-            <SuiBox pt={3} px={3}>
+          <SoftBox display="flex" flexDirection="column" justifyContent="center" height="100vh">
+            <SoftBox pt={3} px={3}>
               {!header ? (
                 <>
-                  <SuiBox mb={1}>
-                    <SuiTypography variant="h4" fontWeight="bold">
+                  <SoftBox mb={1}>
+                    <SoftTypography variant="h4" fontWeight="bold">
                       {title}
-                    </SuiTypography>
-                  </SuiBox>
-                  <SuiTypography variant="body2" fontWeight="regular" color="text">
+                    </SoftTypography>
+                  </SoftBox>
+                  <SoftTypography variant="body2" fontWeight="regular" color="text">
                     {description}
-                  </SuiTypography>
+                  </SoftTypography>
                 </>
               ) : (
                 header
               )}
-            </SuiBox>
-            <SuiBox p={3}>{children}</SuiBox>
-          </SuiBox>
+            </SoftBox>
+            <SoftBox p={3}>{children}</SoftBox>
+          </SoftBox>
         </Grid>
         <Grid item xs={12} lg={6}>
-          <SuiBox
+          <SoftBox
             display={{ xs: "none", lg: "flex" }}
             flexDirection="column"
             justifyContent="center"
@@ -83,7 +83,7 @@ function IllustrationLayout({ color, header, title, description, illustration, c
             px={13}
             sx={{ overflow: "hidden" }}
           >
-            <SuiBox
+            <SoftBox
               component="img"
               src={pattern}
               alt="pattern-lines"
@@ -94,7 +94,7 @@ function IllustrationLayout({ color, header, title, description, illustration, c
               opacity={0.4}
             />
             {illustration.image && (
-              <SuiBox
+              <SoftBox
                 component="img"
                 src={illustration.image}
                 alt="chat-illustration"
@@ -103,20 +103,20 @@ function IllustrationLayout({ color, header, title, description, illustration, c
               />
             )}
             {illustration.title && (
-              <SuiBox mt={6} mb={1}>
-                <SuiTypography variant="h4" color="white" fontWeight="bold">
+              <SoftBox mt={6} mb={1}>
+                <SoftTypography variant="h4" color="white" fontWeight="bold">
                   {illustration.title}
-                </SuiTypography>
-              </SuiBox>
+                </SoftTypography>
+              </SoftBox>
             )}
             {illustration.description && (
-              <SuiBox mb={1}>
-                <SuiTypography variant="body2" color="white">
+              <SoftBox mb={1}>
+                <SoftTypography variant="body2" color="white">
                   {illustration.description}
-                </SuiTypography>
-              </SuiBox>
+                </SoftTypography>
+              </SoftBox>
             )}
-          </SuiBox>
+          </SoftBox>
         </Grid>
       </Grid>
     </PageLayout>

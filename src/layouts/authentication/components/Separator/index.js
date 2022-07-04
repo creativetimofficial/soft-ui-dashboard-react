@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -17,14 +17,14 @@ Coded by www.creative-tim.com
 import Divider from "@mui/material/Divider";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 function Separator() {
   return (
-    <SuiBox position="relative" py={0.25}>
+    <SoftBox position="relative" py={0.25}>
       <Divider />
-      <SuiBox
+      <SoftBox
         bgColor="white"
         position="absolute"
         top="50%"
@@ -33,11 +33,11 @@ function Separator() {
         lineHeight={1}
         sx={{ transform: "translate(-50%, -60%)" }}
       >
-        <SuiTypography variant="button" fontWeight="medium" color="secondary">
+        <SoftTypography variant="button" fontWeight="medium" color="secondary">
           or
-        </SuiTypography>
-      </SuiBox>
-    </SuiBox>
+        </SoftTypography>
+      </SoftBox>
+    </SoftBox>
   );
 }
 

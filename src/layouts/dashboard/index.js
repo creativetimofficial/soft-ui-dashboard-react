@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -18,8 +18,8 @@ import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React examples
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
@@ -49,8 +49,8 @@ function Dashboard() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <SuiBox py={3}>
-        <SuiBox mb={3}>
+      <SoftBox py={3}>
+        <SoftBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6} xl={3}>
               <MiniStatisticsCard
@@ -88,8 +88,8 @@ function Dashboard() {
               />
             </Grid>
           </Grid>
-        </SuiBox>
-        <SuiBox mb={3}>
+        </SoftBox>
+        <SoftBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={7}>
               <BuildByDevelopers />
@@ -98,8 +98,8 @@ function Dashboard() {
               <WorkWithTheRockets />
             </Grid>
           </Grid>
-        </SuiBox>
-        <SuiBox mb={3}>
+        </SoftBox>
+        <SoftBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={5}>
               <ReportsBarChart
@@ -117,24 +117,24 @@ function Dashboard() {
               <GradientLineChart
                 title="Sales Overview"
                 description={
-                  <SuiBox display="flex" alignItems="center">
-                    <SuiBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
+                  <SoftBox display="flex" alignItems="center">
+                    <SoftBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
                       <Icon className="font-bold">arrow_upward</Icon>
-                    </SuiBox>
-                    <SuiTypography variant="button" color="text" fontWeight="medium">
+                    </SoftBox>
+                    <SoftTypography variant="button" color="text" fontWeight="medium">
                       4% more{" "}
-                      <SuiTypography variant="button" color="text" fontWeight="regular">
+                      <SoftTypography variant="button" color="text" fontWeight="regular">
                         in 2021
-                      </SuiTypography>
-                    </SuiTypography>
-                  </SuiBox>
+                      </SoftTypography>
+                    </SoftTypography>
+                  </SoftBox>
                 }
                 height="20.25rem"
                 chart={gradientLineChartData}
               />
             </Grid>
           </Grid>
-        </SuiBox>
+        </SoftBox>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={8}>
             <Projects />
@@ -143,7 +143,7 @@ function Dashboard() {
             <OrderOverview />
           </Grid>
         </Grid>
-      </SuiBox>
+      </SoftBox>
       <Footer />
     </DashboardLayout>
   );

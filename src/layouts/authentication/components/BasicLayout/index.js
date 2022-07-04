@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -20,8 +20,8 @@ import PropTypes from "prop-types";
 import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 // Soft UI Dashboard React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
@@ -42,7 +42,7 @@ function BasicLayout({ title, description, image, children }) {
         transparent
         light
       />
-      <SuiBox
+      <SoftBox
         width="calc(100% - 2rem)"
         minHeight="50vh"
         borderRadius="lg"
@@ -64,26 +64,26 @@ function BasicLayout({ title, description, image, children }) {
       >
         <Grid container spacing={3} justifyContent="center" sx={{ textAlign: "center" }}>
           <Grid item xs={10} lg={4}>
-            <SuiBox mt={6} mb={1}>
-              <SuiTypography variant="h1" color="white" fontWeight="bold">
+            <SoftBox mt={6} mb={1}>
+              <SoftTypography variant="h1" color="white" fontWeight="bold">
                 {title}
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox mb={2}>
-              <SuiTypography variant="body2" color="white" fontWeight="regular">
+              </SoftTypography>
+            </SoftBox>
+            <SoftBox mb={2}>
+              <SoftTypography variant="body2" color="white" fontWeight="regular">
                 {description}
-              </SuiTypography>
-            </SuiBox>
+              </SoftTypography>
+            </SoftBox>
           </Grid>
         </Grid>
-      </SuiBox>
-      <SuiBox mt={{ xs: -26, lg: -24 }} px={1} width="calc(100% - 2rem)" mx="auto">
+      </SoftBox>
+      <SoftBox mt={{ xs: -26, lg: -24 }} px={1} width="calc(100% - 2rem)" mx="auto">
         <Grid container spacing={1} justifyContent="center">
           <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>
             {children}
           </Grid>
         </Grid>
-      </SuiBox>
+      </SoftBox>
       <Footer />
     </PageLayout>
   );

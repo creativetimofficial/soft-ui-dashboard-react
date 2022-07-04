@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -20,70 +20,70 @@ import Icon from "@mui/material/Icon";
 import Tooltip from "@mui/material/Tooltip";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
 
 function TodoList() {
   return (
     <Card sx={{ height: "100%" }}>
-      <SuiBox p={3}>
-        <SuiBox display="flex" lineHeight={1}>
-          <SuiBox mr={2}>
-            <SuiTypography variant="h6" fontWeight="medium">
+      <SoftBox p={3}>
+        <SoftBox display="flex" lineHeight={1}>
+          <SoftBox mr={2}>
+            <SoftTypography variant="h6" fontWeight="medium">
               08:00
-            </SuiTypography>
-          </SuiBox>
-          <SuiBox>
-            <SuiTypography variant="h6" fontWeight="medium">
+            </SoftTypography>
+          </SoftBox>
+          <SoftBox>
+            <SoftTypography variant="h6" fontWeight="medium">
               Synk up with Mark
-            </SuiTypography>
-            <SuiTypography variant="button" fontWeight="regular" color="secondary">
+            </SoftTypography>
+            <SoftTypography variant="button" fontWeight="regular" color="secondary">
               Hangouts
-            </SuiTypography>
-          </SuiBox>
-        </SuiBox>
+            </SoftTypography>
+          </SoftBox>
+        </SoftBox>
         <Divider />
-        <SuiBox display="flex" lineHeight={0}>
-          <SuiBox mr={2}>
-            <SuiTypography variant="h6" fontWeight="medium">
+        <SoftBox display="flex" lineHeight={0}>
+          <SoftBox mr={2}>
+            <SoftTypography variant="h6" fontWeight="medium">
               09:30
-            </SuiTypography>
-          </SuiBox>
-          <SuiBox>
-            <SuiTypography variant="h6" fontWeight="medium">
+            </SoftTypography>
+          </SoftBox>
+          <SoftBox>
+            <SoftTypography variant="h6" fontWeight="medium">
               Gym
-            </SuiTypography>
-            <SuiTypography variant="button" fontWeight="regular" color="secondary">
+            </SoftTypography>
+            <SoftTypography variant="button" fontWeight="regular" color="secondary">
               World Class
-            </SuiTypography>
-          </SuiBox>
-        </SuiBox>
+            </SoftTypography>
+          </SoftBox>
+        </SoftBox>
         <Divider />
-        <SuiBox display="flex" lineHeight={1}>
-          <SuiBox mr={2}>
-            <SuiTypography variant="h6" fontWeight="medium">
+        <SoftBox display="flex" lineHeight={1}>
+          <SoftBox mr={2}>
+            <SoftTypography variant="h6" fontWeight="medium">
               11:00
-            </SuiTypography>
-          </SuiBox>
-          <SuiBox>
-            <SuiTypography variant="h6" fontWeight="medium">
+            </SoftTypography>
+          </SoftBox>
+          <SoftBox>
+            <SoftTypography variant="h6" fontWeight="medium">
               Design Review
-            </SuiTypography>
-            <SuiTypography variant="button" fontWeight="regular" color="secondary">
+            </SoftTypography>
+            <SoftTypography variant="button" fontWeight="regular" color="secondary">
               Zoom
-            </SuiTypography>
-          </SuiBox>
-        </SuiBox>
-      </SuiBox>
-      <SuiBox bgColor="grey-100" mt="auto">
+            </SoftTypography>
+          </SoftBox>
+        </SoftBox>
+      </SoftBox>
+      <SoftBox bgColor="grey-100" mt="auto">
         <Tooltip title="Show More" placement="top" sx={{ cursor: "pointer" }}>
-          <SuiBox textAlign="center" py={0.5} color="info" lineHeight={0}>
+          <SoftBox textAlign="center" py={0.5} color="info" lineHeight={0}>
             <Icon sx={{ fontWeight: "bold" }} color="inherit" fontSize="default">
               keyboard_arrow_down
             </Icon>
-          </SuiBox>
+          </SoftBox>
         </Tooltip>
-      </SuiBox>
+      </SoftBox>
     </Card>
   );
 }

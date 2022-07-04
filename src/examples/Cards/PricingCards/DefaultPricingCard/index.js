@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -24,15 +24,15 @@ import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiBadge from "components/SuiBadge";
-import SuiButton from "components/SuiButton";
+import SoftBox from "components/SoftBox";
+import SoftTypography from "components/SoftTypography";
+import SoftBadge from "components/SoftBadge";
+import SoftButton from "components/SoftButton";
 
 function DefaultPricingCard({ badge, price, specifications, action }) {
   const renderSpecifications = specifications.map(({ label, includes }) => (
-    <SuiBox key={label} display="flex" alignItems="center" p={1}>
-      <SuiBox
+    <SoftBox key={label} display="flex" alignItems="center" p={1}>
+      <SoftBox
         display="flex"
         justifyContent="center"
         alignItems="center"
@@ -44,20 +44,20 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
         variant="gradient"
         mr={2}
       >
-        <SuiTypography variant="button" color="white" sx={{ lineHeight: 0 }}>
+        <SoftTypography variant="button" color="white" sx={{ lineHeight: 0 }}>
           <Icon sx={{ fontWeight: "bold" }}>{includes ? "done" : "remove"}</Icon>
-        </SuiTypography>
-      </SuiBox>
-      <SuiTypography variant="body2" color="text">
+        </SoftTypography>
+      </SoftBox>
+      <SoftTypography variant="body2" color="text">
         {label}
-      </SuiTypography>
-    </SuiBox>
+      </SoftTypography>
+    </SoftBox>
   ));
 
   return (
     <Card>
-      <SuiBox pt={3} pb={2} px={2} textAlign="center">
-        <SuiBadge
+      <SoftBox pt={3} pb={2} px={2} textAlign="center">
+        <SoftBadge
           variant="contained"
           color={badge.color}
           size="sm"
@@ -65,20 +65,20 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
           circular
           container
         />
-        <SuiBox my={1}>
-          <SuiTypography variant="h1">
-            <SuiTypography display="inline" component="small" variant="h2">
+        <SoftBox my={1}>
+          <SoftTypography variant="h1">
+            <SoftTypography display="inline" component="small" variant="h2">
               {price.currency}
-            </SuiTypography>
+            </SoftTypography>
             {price.value}
-          </SuiTypography>
-        </SuiBox>
-      </SuiBox>
-      <SuiBox pb={3} px={3}>
+          </SoftTypography>
+        </SoftBox>
+      </SoftBox>
+      <SoftBox pb={3} px={3}>
         {renderSpecifications}
         {action.type === "internal" ? (
-          <SuiBox mt={3}>
-            <SuiButton
+          <SoftBox mt={3}>
+            <SoftButton
               component={Link}
               to={action.route}
               variant="gradient"
@@ -87,11 +87,11 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
             >
               {action.label}&nbsp;
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </SuiButton>
-          </SuiBox>
+            </SoftButton>
+          </SoftBox>
         ) : (
-          <SuiBox mt={3}>
-            <SuiButton
+          <SoftBox mt={3}>
+            <SoftButton
               component="a"
               href={action.route}
               target="_blank"
@@ -102,10 +102,10 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
             >
               {action.label}&nbsp;
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </SuiButton>
-          </SuiBox>
+            </SoftButton>
+          </SoftBox>
         )}
-      </SuiBox>
+      </SoftBox>
     </Card>
   );
 }
