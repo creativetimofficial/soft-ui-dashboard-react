@@ -66,6 +66,10 @@
       "last 1 safari version"
     ]
   },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
   "devDependencies": {
     "eslint": "8.18.0",
     "eslint-config-prettier": "8.5.0",
