@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -78,7 +78,13 @@ function SignUp() {
               >
                 &nbsp;&nbsp;I agree the&nbsp;
               </SoftTypography>
-              <SoftTypography component="a" href="#" variant="button" fontWeight="bold" textGradient>
+              <SoftTypography
+                component="a"
+                href="#"
+                variant="button"
+                fontWeight="bold"
+                textGradient
+              >
                 Terms and Conditions
               </SoftTypography>
             </SoftBox>

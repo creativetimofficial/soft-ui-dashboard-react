@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -49,7 +49,12 @@ function Bill({ name, company, email, vat, noGutter }) {
             {name}
           </SoftTypography>
 
-          <SoftBox display="flex" alignItems="center" mt={{ xs: 2, sm: 0 }} ml={{ xs: -1.5, sm: 0 }}>
+          <SoftBox
+            display="flex"
+            alignItems="center"
+            mt={{ xs: 2, sm: 0 }}
+            ml={{ xs: -1.5, sm: 0 }}
+          >
             <SoftBox mr={1}>
               <SoftButton variant="text" color="error">
                 <Icon>delete</Icon>&nbsp;delete

@@ -1,5 +1,13 @@
 # Change Log
 
+## [4.0.0] 2022-07-04
+
+- Rename components prefix from Sui to Soft.
+- Update dependencies.
+- Fix the peer dependencies issue.
+- Fix the eslint issue with react-app.
+- Migrate eslint config from airbnb to react-app.
+
 ## [3.1.0] 2022-03-04
 
 ### Bug fixing

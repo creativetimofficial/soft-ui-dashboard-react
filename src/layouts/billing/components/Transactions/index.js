@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -45,7 +45,12 @@ function Transactions() {
       </SoftBox>
       <SoftBox pt={3} pb={2} px={2}>
         <SoftBox mb={2}>
-          <SoftTypography variant="caption" color="text" fontWeight="bold" textTransform="uppercase">
+          <SoftTypography
+            variant="caption"
+            color="text"
+            fontWeight="bold"
+            textTransform="uppercase"
+          >
             newest
           </SoftTypography>
         </SoftBox>
@@ -73,7 +78,12 @@ function Transactions() {
           />
         </SoftBox>
         <SoftBox mt={1} mb={2}>
-          <SoftTypography variant="caption" color="text" fontWeight="bold" textTransform="uppercase">
+          <SoftTypography
+            variant="caption"
+            color="text"
+            fontWeight="bold"
+            textTransform="uppercase"
+          >
             yesterday
           </SoftTypography>
         </SoftBox>

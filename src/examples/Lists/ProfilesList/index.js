@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -34,7 +34,12 @@ function ProfilesList({ title, profiles }) {
       <SoftBox mr={2}>
         <SoftAvatar src={image} alt="something here" variant="rounded" shadow="md" />
       </SoftBox>
-      <SoftBox display="flex" flexDirection="column" alignItems="flex-start" justifyContent="center">
+      <SoftBox
+        display="flex"
+        flexDirection="column"
+        alignItems="flex-start"
+        justifyContent="center"
+      >
         <SoftTypography variant="button" fontWeight="medium">
           {name}
         </SoftTypography>

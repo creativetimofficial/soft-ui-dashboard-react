@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v3.1.0
+* Soft UI Dashboard React - v4.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
@@ -14,9 +14,6 @@ Coded by www.creative-tim.com
 */
 
 import { useState, useEffect } from "react";
-
-// react-github-btn
-import GitHubButton from "react-github-btn";
 
 // @mui material components
 import Divider from "@mui/material/Divider";
@@ -228,7 +225,8 @@ function Configurator() {
           </SoftButton>
         </SoftBox>
         <SoftBox display="flex" justifyContent="center">
-          <GitHubButton
+          <a
+            className="github-button"
             href="https://github.com/creativetimofficial/soft-ui-dashboard-react"
             data-icon="octicon-star"
             data-size="large"
@@ -236,7 +234,7 @@ function Configurator() {
             aria-label="Star creativetimofficial/soft-ui-dashboard-react on GitHub"
           >
             Star
-          </GitHubButton>
+          </a>
         </SoftBox>
         <SoftBox mt={3} textAlign="center">
           <SoftBox mb={0.5}>
