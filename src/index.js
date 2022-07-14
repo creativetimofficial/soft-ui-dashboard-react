@@ -14,18 +14,17 @@ Coded by www.creative-tim.com
 */
 
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "App";
 
 // Soft UI Dashboard React Context Provider
 import { SoftUIControllerProvider } from "context";
 
-ReactDOM.render(
+createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <SoftUIControllerProvider>
       <App />
     </SoftUIControllerProvider>
-  </BrowserRouter>,
-  document.getElementById("root")
+  </BrowserRouter>
 );
