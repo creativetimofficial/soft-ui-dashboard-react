@@ -1,12 +1,12 @@
 /**
 =========================================================
-* Soft UI Dashboard React - v4.0.0
+* LxL Crew UI Soft - React Native - v4.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Product Page: https://www.lxlcrew.dev/
+* Copyright 2022 LxL Crew | Developed by Ahiezer Dev (@programameste)
 
-Coded by www.creative-tim.com
+Coded by Ahidroid (@programameste)
 
  =========================================================
 
