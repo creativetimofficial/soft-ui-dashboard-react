@@ -37,6 +37,7 @@ During the development of this dashboard, we have used many existing resources f
 - [React ChartJS 2](http://reactchartjs.github.io/react-chartjs-2/#/) - Simple yet flexible React charting for designers & developers.
 - [ChromaJS](https://gka.github.io/chroma.js/) - A small-ish zero-dependency JavaScript library for all kinds of color conversions and color scales.
 - [UUID](https://github.com/uuidjs/uuid) - JavaScript library for generating random id numbers.
+- [Nepcha Analytics](https://nepcha.com?ref=readme) for the analytics tool. Nepcha is already integrated with Soft UI Dashboard React. You can use it to gain insights into your sources of traffic.
 
 Let us know your thoughts below. And good luck with development!
 
@@ -169,6 +170,7 @@ At present, we officially aim to support the last two versions of the following 
 - [License Agreement](https://www.creative-tim.com/license?ref=readme-sudr)
 - [Support](https://www.creative-tim.com/contact-us?ref=readme-sudr)
 - Issues: [Github Issues Page](https://github.com/creativetimofficial/soft-ui-dashboard-react/issues)
+- [Nepcha Analytics](https://nepcha.com?ref=readme) - Analytics tool for your website
 
 ## Reporting Issues
 
