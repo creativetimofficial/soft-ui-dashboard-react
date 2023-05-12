@@ -1,5 +1,10 @@
 # Change Log
 
+## [4.0.1] 2023-05-12
+
+- Update dependencies
+- Fix installation issues
+
 ## [4.0.0] 2022-07-04
 
 - Rename components prefix from Sui to Soft.
