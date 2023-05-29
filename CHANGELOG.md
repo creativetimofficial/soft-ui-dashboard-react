@@ -1,6 +1,6 @@
 # Change Log
 
-## [4.0.1] 2023-05-12
+## [4.0.1] 2023-05-29
 
 - Update dependencies
 - Fix installation issues
