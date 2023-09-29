@@ -55,7 +55,7 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
   ));
 
   return (
-    <Card>
+    (<Card>
       <SoftBox pt={3} pb={2} px={2} textAlign="center">
         <SoftBadge
           variant="contained"
@@ -78,35 +78,35 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
         {renderSpecifications}
         {action.type === "internal" ? (
           <SoftBox mt={3}>
-            <SoftButton
+            <SoftBox
               component={Link}
               to={action.route}
               variant="gradient"
               color={action.color}
-              fullWidth
-            >
+              fullWidth="true"
+              >
               {action.label}&nbsp;
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </SoftButton>
+            </SoftBox>
           </SoftBox>
         ) : (
           <SoftBox mt={3}>
-            <SoftButton
+            <SoftBox
               component="a"
               href={action.route}
               target="_blank"
               rel="noreferrer"
               variant="gradient"
               color={action.color}
-              fullWidth
+              
             >
               {action.label}&nbsp;
               <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-            </SoftButton>
+            </SoftBox>
           </SoftBox>
         )}
       </SoftBox>
-    </Card>
+    </Card>)
   );
 }
 

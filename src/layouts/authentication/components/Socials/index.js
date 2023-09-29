@@ -19,8 +19,8 @@ import SoftBox from "components/SoftBox";
 
 function Socials() {
   return (
-    <SoftBox display="flex" justifyContent="center">
-      <SoftButton variant="outlined" color="light">
+    (<SoftBox display="flex" justifyContent="center">
+      <SoftBox variant="contained" color="light" >
         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g transform="translate(3.000000, 3.000000)" fillRule="nonzero">
@@ -32,9 +32,9 @@ function Socials() {
             </g>
           </g>
         </svg>
-      </SoftButton>
+      </SoftBox>
       <SoftBox px={1}>
-        <SoftButton variant="outlined" color="light">
+        <SoftBox variant="contained" color="light" >
           <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
             <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g transform="translate(7.000000, 0.564551)" fill="#000000" fillRule="nonzero">
@@ -42,9 +42,9 @@ function Socials() {
               </g>
             </g>
           </svg>
-        </SoftButton>
+        </SoftBox>
       </SoftBox>
-      <SoftButton variant="outlined" color="light">
+      <SoftBox variant="contained" color="light" >
         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
           <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g transform="translate(3.000000, 2.000000)" fillRule="nonzero">
@@ -67,8 +67,8 @@ function Socials() {
             </g>
           </g>
         </svg>
-      </SoftButton>
-    </SoftBox>
+      </SoftBox>
+    </SoftBox>)
   );
 }
 
