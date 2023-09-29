@@ -85,7 +85,7 @@ function Configurator() {
   });
 
   return (
-    <ConfiguratorRoot variant="permanent" ownerState={{ openConfigurator }}>
+    (<ConfiguratorRoot variant="permanent" ownerState={{ openConfigurator }}>
       <SoftBox
         display="flex"
         justifyContent="space-between"
@@ -115,9 +115,7 @@ function Configurator() {
           close
         </Icon>
       </SoftBox>
-
       <Divider />
-
       <SoftBox pt={1.25} pb={3} px={3}>
         <SoftBox>
           <SoftTypography variant="h6">Sidenav Colors</SoftTypography>
@@ -165,29 +163,26 @@ function Configurator() {
               mt: 2,
             }}
           >
-            <SoftButton
-              color="info"
-              variant={transparentSidenav ? "gradient" : "outlined"}
-              onClick={handleTransparentSidenav}
-              disabled={disabled}
-              fullWidth
-              sx={{
-                mr: 1,
-                ...sidenavTypeButtonsStyles,
-              }}
+            <SoftBox
+              component={Link}
+              href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/soft-ui-dashboard-react"
+              target="_blank"
+              rel="noreferrer"
+              color="dark"
+              
             >
               Transparent
-            </SoftButton>
-            <SoftButton
-              color="info"
-              variant={transparentSidenav ? "outlined" : "gradient"}
-              onClick={handleWhiteSidenav}
-              disabled={disabled}
-              fullWidth
-              sx={sidenavTypeButtonsStyles}
-            >
+            </SoftBox>
+            <SoftBox
+              component={Link}
+              href="https://www.creative-tim.com/product/soft-ui-dashboard-react"
+              target="_blank"
+              rel="noreferrer"
+              color="dark"
+              variant="gradient"
+              >
               White
-            </SoftButton>
+            </SoftBox>
           </SoftBox>
         </SoftBox>
         <SoftBox mt={3} mb={2} lineHeight={1}>
@@ -200,29 +195,27 @@ function Configurator() {
 
         <SoftBox mt={3} mb={2}>
           <SoftBox mb={2}>
-            <SoftButton
+            <SoftBox
               component={Link}
-              href="https://www.creative-tim.com/product/soft-ui-dashboard-react"
+              href="//twitter.com/intent/tweet?text=Check%20Soft%20UI%20Dashboard%20React%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23react%23mui&url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard-react"
               target="_blank"
               rel="noreferrer"
               color="dark"
-              variant="gradient"
-              fullWidth
-            >
+              >
               free download
-            </SoftButton>
+            </SoftBox>
           </SoftBox>
-          <SoftButton
-            component={Link}
-            href="https://www.creative-tim.com/learning-lab/react/quick-start/soft-ui-dashboard/"
-            target="_blank"
-            rel="noreferrer"
-            color="dark"
-            variant="outlined"
-            fullWidth
+          <SoftBox
+            color="info"
+            variant={transparentSidenav ? 'contained' : 'gradient'}
+            onClick={handleWhiteSidenav}
+            disabled={disabled}
+            fullWidth="true"
+            sx={sidenavTypeButtonsStyles}
+            
           >
             view documentation
-          </SoftButton>
+          </SoftBox>
         </SoftBox>
         <SoftBox display="flex" justifyContent="center">
           <a
@@ -243,16 +236,17 @@ function Configurator() {
 
           <SoftBox display="flex" justifyContent="center">
             <SoftBox mr={1.5}>
-              <SoftButton
+              <SoftBox
                 component={Link}
-                href="//twitter.com/intent/tweet?text=Check%20Soft%20UI%20Dashboard%20React%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23react%23mui&url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard-react"
+                href="https://www.creative-tim.com/learning-lab/react/quick-start/soft-ui-dashboard/"
                 target="_blank"
                 rel="noreferrer"
                 color="dark"
-              >
+                variant="outlined"
+                >
                 <TwitterIcon />
                 &nbsp; Tweet
-              </SoftButton>
+              </SoftBox>
             </SoftBox>
             <SoftButton
               component={Link}
@@ -267,7 +261,7 @@ function Configurator() {
           </SoftBox>
         </SoftBox>
       </SoftBox>
-    </ConfiguratorRoot>
+    </ConfiguratorRoot>)
   );
 }
 

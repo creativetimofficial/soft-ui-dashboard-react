@@ -26,7 +26,7 @@ import SoftButton from "components/SoftButton";
 
 function Bill({ name, company, email, vat, noGutter }) {
   return (
-    <SoftBox
+    (<SoftBox
       component="li"
       display="flex"
       justifyContent="space-between"
@@ -56,9 +56,9 @@ function Bill({ name, company, email, vat, noGutter }) {
             ml={{ xs: -1.5, sm: 0 }}
           >
             <SoftBox mr={1}>
-              <SoftButton variant="text" color="error">
+              <SoftBox variant="contained" color="dark" >
                 <Icon>delete</Icon>&nbsp;delete
-              </SoftButton>
+              </SoftBox>
             </SoftBox>
             <SoftButton variant="text" color="dark">
               <Icon>edit</Icon>&nbsp;edit
@@ -88,7 +88,7 @@ function Bill({ name, company, email, vat, noGutter }) {
           </SoftTypography>
         </SoftTypography>
       </SoftBox>
-    </SoftBox>
+    </SoftBox>)
   );
 }
 

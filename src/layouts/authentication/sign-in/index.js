@@ -39,7 +39,7 @@ function SignIn() {
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
   return (
-    <CoverLayout
+    (<CoverLayout
       title="Welcome back"
       description="Enter your email and password to sign in"
       image={curved9}
@@ -73,9 +73,9 @@ function SignIn() {
           </SoftTypography>
         </SoftBox>
         <SoftBox mt={4} mb={1}>
-          <SoftButton variant="gradient" color="info" fullWidth>
+          <SoftBox variant="gradient" color="info" fullWidth="true" >
             sign in
-          </SoftButton>
+          </SoftBox>
         </SoftBox>
         <SoftBox mt={3} textAlign="center">
           <SoftTypography variant="button" color="text" fontWeight="regular">
@@ -93,7 +93,7 @@ function SignIn() {
           </SoftTypography>
         </SoftBox>
       </SoftBox>
-    </CoverLayout>
+    </CoverLayout>)
   );
 }
 
