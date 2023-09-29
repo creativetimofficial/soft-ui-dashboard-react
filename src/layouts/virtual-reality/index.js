@@ -45,7 +45,7 @@ function VRInfo() {
   const { d1, h2, fontWeightMedium } = typography;
 
   return (
-    <BaseLayout>
+    (<BaseLayout>
       <SoftBox
         minHeight="100vh"
         ml={{ xs: 0, md: 10 }}
@@ -76,43 +76,34 @@ function VRInfo() {
 
               <SoftBox my={{ xs: 0, md: 2 }} mx={{ xs: 2, md: 0 }}>
                 <Tooltip title="Home" placement="right">
-                  <SoftButton
-                    size="large"
-                    iconOnly
-                    sx={({ palette: { dark }, borders: { borderRadius } }) => ({
-                      color: dark.main,
-                      borderRadius: borderRadius.lg,
-                    })}
+                  <SoftBox
+                    color={dark.main}
+                    borderRadius="lg"
+                    
                   >
                     <Icon>home</Icon>
-                  </SoftButton>
+                  </SoftBox>
                 </Tooltip>
               </SoftBox>
               <SoftBox mb={{ xs: 0, md: 2 }} mr={{ xs: 2, md: 0 }}>
                 <Tooltip title="Search" placement="right">
-                  <SoftButton
-                    size="large"
-                    iconOnly
-                    sx={({ palette: { dark }, borders: { borderRadius } }) => ({
-                      color: dark.main,
-                      borderRadius: borderRadius.lg,
-                    })}
+                  <SoftBox
+                    color={dark.main}
+                    borderRadius={borderRadius.lg}
+                    
                   >
                     <Icon>search</Icon>
-                  </SoftButton>
+                  </SoftBox>
                 </Tooltip>
               </SoftBox>
               <Tooltip title="Minimize" placement="right">
-                <SoftButton
-                  size="large"
-                  iconOnly
-                  sx={({ palette: { dark }, borders: { borderRadius } }) => ({
-                    color: dark.main,
-                    borderRadius: borderRadius.lg,
-                  })}
+                <SoftBox
+                  color={dark.main}
+                  borderRadius="lg"
+                  
                 >
                   <Icon>more_horiz</Icon>
-                </SoftButton>
+                </SoftBox>
               </Tooltip>
             </SoftBox>
           </Grid>
@@ -160,7 +151,7 @@ function VRInfo() {
           </Grid>
         </Grid>
       </SoftBox>
-    </BaseLayout>
+    </BaseLayout>)
   );
 }
 

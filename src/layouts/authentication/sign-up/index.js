@@ -42,7 +42,7 @@ function SignUp() {
   const handleSetAgremment = () => setAgremment(!agreement);
 
   return (
-    <BasicLayout
+    (<BasicLayout
       title="Welcome!"
       description="Use these awesome forms to login or create new account in your project for free."
       image={curved6}
@@ -89,9 +89,9 @@ function SignUp() {
               </SoftTypography>
             </SoftBox>
             <SoftBox mt={4} mb={1}>
-              <SoftButton variant="gradient" color="dark" fullWidth>
+              <SoftBox variant="gradient" color="dark" >
                 sign up
-              </SoftButton>
+              </SoftBox>
             </SoftBox>
             <SoftBox mt={3} textAlign="center">
               <SoftTypography variant="button" color="text" fontWeight="regular">
@@ -111,7 +111,7 @@ function SignUp() {
           </SoftBox>
         </SoftBox>
       </Card>
-    </BasicLayout>
+    </BasicLayout>)
   );
 }
 

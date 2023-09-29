@@ -70,7 +70,7 @@ function DefaultNavbar({ transparent, light, action }) {
   }, []);
 
   return (
-    <Container>
+    (<Container>
       <SoftBox
         py={1.5}
         px={{ xs: transparent ? 4 : 5, sm: transparent ? 2 : 5, lg: transparent ? 0 : 5 }}
@@ -115,16 +115,16 @@ function DefaultNavbar({ transparent, light, action }) {
         {action &&
           (action.type === "internal" ? (
             <SoftBox display={{ xs: "none", lg: "inline-block" }}>
-              <SoftButton
+              <SoftBox
                 component={Link}
                 to={action.route}
                 variant="gradient"
-                color={action.color ? action.color : "info"}
-                size="small"
-                circular
+                color={action.color ? action.color : 'dark'}
+                borderRadius="50%"
+                
               >
                 {action.label}
-              </SoftButton>
+              </SoftBox>
             </SoftBox>
           ) : (
             <SoftBox display={{ xs: "none", lg: "inline-block" }}>
@@ -155,7 +155,7 @@ function DefaultNavbar({ transparent, light, action }) {
         </SoftBox>
       </SoftBox>
       {mobileView && <DefaultNavbarMobile open={mobileNavbar} close={closeMobileNavbar} />}
-    </Container>
+    </Container>)
   );
 }
 

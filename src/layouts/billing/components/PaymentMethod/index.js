@@ -35,15 +35,15 @@ function PaymentMethod() {
   const { borderWidth, borderColor } = borders;
 
   return (
-    <Card id="delete-account">
+    (<Card id="delete-account">
       <SoftBox pt={2} px={2} display="flex" justifyContent="space-between" alignItems="center">
         <SoftTypography variant="h6" fontWeight="medium">
           Payment Method
         </SoftTypography>
-        <SoftButton variant="gradient" color="dark">
+        <SoftBox variant="gradient" color="dark" >
           <Icon sx={{ fontWeight: "bold" }}>add</Icon>
           &nbsp;add new card
-        </SoftButton>
+        </SoftBox>
       </SoftBox>
       <SoftBox p={2}>
         <Grid container spacing={3}>
@@ -93,7 +93,7 @@ function PaymentMethod() {
           </Grid>
         </Grid>
       </SoftBox>
-    </Card>
+    </Card>)
   );
 }
 
