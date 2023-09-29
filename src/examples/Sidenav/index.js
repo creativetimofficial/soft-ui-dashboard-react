@@ -128,7 +128,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
   });
 
   return (
-    <SidenavRoot {...rest} variant="permanent" ownerState={{ transparentSidenav, miniSidenav }}>
+    (<SidenavRoot {...rest} variant="permanent" ownerState={{ transparentSidenav, miniSidenav }}>
       <SoftBox pt={3} pb={1} px={4} textAlign="center">
         <SoftBox
           display={{ xs: "block", xl: "none" }}
@@ -160,20 +160,20 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
       <SoftBox pt={2} my={2} mx={2} mt="auto">
         <SidenavCard />
         <SoftBox mt={2}>
-          <SoftButton
+          <SoftBox
             component="a"
             href="https://creative-tim.com/product/soft-ui-dashboard-pro-react"
             target="_blank"
             rel="noreferrer"
             variant="gradient"
             color={color}
-            fullWidth
-          >
+            fullWidth="true"
+            >
             upgrade to pro
-          </SoftButton>
+          </SoftBox>
         </SoftBox>
       </SoftBox>
-    </SidenavRoot>
+    </SidenavRoot>)
   );
 }
 
