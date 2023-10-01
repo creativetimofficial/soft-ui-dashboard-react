@@ -49,9 +49,14 @@ function ProfilesList({ title, profiles }) {
       </SoftBox>
       <SoftBox ml="auto">
         {action.type === "internal" ? (
-          <SoftButton component={Link} to={action.route} variant="text" color="info">
+          <SoftBox
+            component={Link}
+            to={action.route}
+            variant="contained"
+            color="info"
+            >
             {action.label}
-          </SoftButton>
+          </SoftBox>
         ) : (
           <SoftButton
             component="a"
